@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 BASE_REQUIRED = [
+    "docs/STRATEGIC_REVIEW_TEMPLATE.md",
     "releases/HANDOFF_TEMPLATE.md",
     "docs/BACKUP_RESTORE_POLICY.md",
     "docs/WEEKLY_CHECKPOINT_TEMPLATE.md",
