@@ -2,21 +2,34 @@
 
 Use this whenever returning to the project after a break or when a new agent/team takes over.
 
-## Canonical recovery sequence
-1. Read `docs/PM_CONTROL.md`.
-2. Confirm **ACTIVE VERSION**.
-3. Read `releases/<active-version>.md`.
-4. Inspect current `main` SHA and CI status.
-5. Inspect open issues for the active release.
-6. Read the latest release snapshot (if any).
-7. Check blockers in `docs/RISKS.md`.
-8. Read only the Decision Log entries relevant to the current task.
-9. Ignore Parking Lot unless planning the next release.
-10. Do not start NEXT until the current Release Gate passes.
+## 60-second recovery sequence
+1. Read `docs/CONTEXT_CAPSULE.md` — restore the current state.
+2. Read `docs/NORTH_STAR.md` — restore the long-term WHY.
+3. Read `docs/PM_CONTROL.md` — confirm WHERE/NOW.
+4. Confirm **ACTIVE VERSION** and read `releases/<active-version>.md`.
+5. Inspect current `main` SHA and CI status.
+6. Inspect open issues for the active release.
+7. Read the latest completed release snapshot.
+8. Check blockers in `docs/RISKS.md`.
+9. Read only Decision Log entries relevant to the current task.
+10. Ignore Parking Lot unless planning future scope.
+11. State one **NEXT EXACT ACTION** before doing work.
+12. Do not start NEXT VERSION until the current Release Gate passes.
+
+## WHY → WHERE → NOW → NEXT check
+Before resuming, be able to answer:
+
+- **WHY:** What is the North Star?
+- **WHERE:** Which capability/version are we in?
+- **NOW:** What exact gate/task is active?
+- **NEXT:** What one action should happen next?
+
+If any answer is unclear, do not create new scope. Run a North Star Drift Review first.
 
 ## Source-of-truth rule
 - Chat history is not authoritative project state.
 - Human/AI memory is not authoritative project state.
+- `NORTH_STAR.md` is the long-term strategic anchor.
 - GitHub is authoritative for engineering/release state.
 - Economic Database will be authoritative for numerical observations.
 - Google Drive is authoritative for designated human-readable reports/plans where linked.
@@ -27,10 +40,19 @@ Require commit/CI/test/evidence appropriate to the task.
 
 ## Handoff minimum
 Every handoff must state:
+- North Star capability being advanced;
 - active version;
 - main SHA;
 - current issue/task;
+- WHY / WHAT / PROOF / NEXT;
 - what changed;
 - verification status;
 - blockers/UNKNOWNs;
 - exact next action.
+
+## Long-break rule
+If the project has been idle for more than one release cycle or the current state conflicts with the Roadmap:
+1. freeze new work;
+2. run `docs/DRIFT_REVIEW_TEMPLATE.md`;
+3. reconcile PM Control, Context Capsule, release contract, issues, and Calendar;
+4. resume only after one coherent current state is established.
