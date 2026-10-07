@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Thailand Economic OS — PM Control</title>
+<style>
+:root{color-scheme:dark;--bg:#07111f;--panel:#0c1b2e;--line:#1e3a5f;--txt:#eef6ff;--muted:#9fb4c9;--cyan:#67e8f9;--green:#5ee6a8;--amber:#ffd166}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;background:radial-gradient(circle at top,#102743 0,#07111f 46%);color:var(--txt)}
+.wrap{max-width:1120px;margin:auto;padding:28px 18px 56px}.eyebrow{color:var(--cyan);letter-spacing:.16em;font-size:.78rem;font-weight:800}h1{font-size:clamp(2rem,6vw,4.2rem);margin:.15em 0}.sub{color:var(--muted);max-width:820px;font-size:1.05rem}.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:26px}.card{background:linear-gradient(180deg,rgba(16,39,67,.92),rgba(9,24,42,.94));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 16px 45px rgba(0,0,0,.22)}.hero{grid-column:span 8}.gate{grid-column:span 4}.half{grid-column:span 6}.full{grid-column:1/-1}.label{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em}.version{font-size:2.2rem;font-weight:900;margin:.2em 0;color:var(--green)}.status{display:inline-block;padding:.35rem .6rem;border:1px solid #2e8b71;border-radius:999px;color:var(--green);font-weight:800}.bar{height:9px;background:#122a45;border-radius:99px;overflow:hidden;margin:14px 0}.bar i{display:block;width:20%;height:100%;background:linear-gradient(90deg,var(--cyan),var(--green))}.big{font-size:2rem;font-weight:900;color:var(--amber)}ul{padding-left:1.2rem}li{margin:.45rem 0}.road{display:flex;gap:7px;align-items:center;overflow:auto;padding-bottom:8px}.node{white-space:nowrap;padding:.55rem .8rem;border:1px solid var(--line);border-radius:999px;color:var(--muted)}.node.active{color:#07111f;background:var(--green);border-color:var(--green);font-weight:900}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}.rule{border-left:3px solid var(--amber);padding-left:14px;color:#f5e7b9}.foot{margin-top:28px;color:var(--muted);font-size:.86rem}@media(max-width:760px){.hero,.gate,.half{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="eyebrow">THAILAND ECONOMIC OS · PROJECT CONTROL</div>
+<h1>เศรษฐกิจไทย<br>ระบบวิเคราะห์ที่ตรวจสอบได้</h1>
+<p class="sub">หน้าประตูหลักของโปรเจกต์: บอกว่าเรากำลังทำเวอร์ชันไหน ต้องผ่านอะไร และอะไรยังห้ามทำ เพื่อไม่ให้แผนระยะยาวทำให้หลุดโฟกัสจากงานปัจจุบัน</p>
+
+<section class="grid">
+<article class="card hero">
+<div class="label">Active version</div>
+<div class="version">V0.1 — FOUNDATION</div>
+<span class="status">ACTIVE · WIP 1</span>
+<h2>Current Goal</h2>
+<p>สร้าง foundation ที่รองรับ Data → Models → Agents → Audit โดยยังไม่ implement economic features.</p>
+<div class="bar"><i></i></div>
+<p class="rule"><strong>UNKNOWN ≠ PASS</strong><br>V0.2 ห้ามเริ่มจน V0.1 Release Gate ผ่านครบพร้อมหลักฐาน</p>
+</article>
+
+<article class="card gate">
+<div class="label">Current Gate</div>
+<div class="big">V0.1</div>
+<ul>
+<li>Repository topology</li><li>PM Control</li><li>Architecture</li><li>Data Contract</li><li>Schemas</li><li>Source Registry</li><li>Audit rules</li><li>Agent Governance</li><li>Recovery</li><li>CI + Pages verify</li>
+</ul>
+</article>
+
+<article class="card half">
+<div class="label">Now</div>
+<h2>Foundation Work</h2>
+<ul><li>Freeze architecture</li><li>Machine-checkable schemas</li><li>Source registry P0/P1</li><li>CI verification</li><li>Release evidence</li></ul>
+</article>
+
+<article class="card half">
+<div class="label">Next</div>
+<h2>V0.2 — Core Data Connectors</h2>
+<p>BOT · NESDC · TPSO · MOF · Customs · selected NSO</p>
+<p>ยังไม่เริ่มจน V0.1 ผ่าน Gate</p>
+</article>
+
+<article class="card full">
+<div class="label">Roadmap</div>
+<h2>Capability Path</h2>
+<div class="road">
+<span class="node active">V0.1 Foundation</span><span>→</span><span class="node">V0.4 Data Truth</span><span>→</span><span class="node">V0.8 Forecast</span><span>→</span><span class="node">V1.0 Multi-Agent</span><span>→</span><span class="node">V1.4 Policy Lab</span><span>→</span><span class="node">V2.3 Digital Twin</span><span>→</span><span class="node">V3.0 AI Cabinet</span><span>→</span><span class="node">V4.0 Economic OS</span>
+</div>
+</article>
+
+<article class="card full">
+<div class="label">Project control</div>
+<h2>เริ่มจากเอกสารเหล่านี้</h2>
+<p><a href="docs/PM_CONTROL.md">PM Control</a> · <a href="releases/V0.1.md">V0.1 Release Contract</a> · <a href="docs/ARCHITECTURE.md">Architecture</a> · <a href="docs/DATA_CONTRACT.md">Data Contract</a> · <a href="docs/SOURCE_REGISTRY.md">Source Registry</a> · <a href="docs/RECOVERY_PROTOCOL.md">Recovery Protocol</a> · <a href="docs/PARKING_LOT.md">Parking Lot</a></p>
+<p><a href="https://docs.google.com/document/d/19I_F-c3frzuHTVZ53L08SAPCV3gpAhDO9bxIzul5H1k/edit">Google Drive Master Roadmap</a></p>
+</article>
+</section>
+<p class="foot">Engineering source of truth: GitHub · Numerical truth: Economic Database (future V0.4) · Human knowledge layer: Google Drive</p>
+</main>
+</body>
+</html>
