@@ -7,6 +7,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 BASE_REQUIRED = [
+    "releases/HANDOFF_TEMPLATE.md",
+    "docs/BACKUP_RESTORE_POLICY.md",
+    "docs/WEEKLY_CHECKPOINT_TEMPLATE.md",
+    "PROJECT_STATE.json",
     "README.md",
     "index.html",
     "docs/NORTH_STAR.md",
@@ -42,6 +46,18 @@ ok = True
 for rel in BASE_REQUIRED:
     if not (ROOT / rel).exists():
         ok = fail(f"missing required file: {rel}") and ok
+
+# PROJECT_STATE is the machine-readable NOW layer.
+state_path = ROOT / "PROJECT_STATE.json"
+if state_path.exists():
+    try:
+        state = json.loads(state_path.read_text(encoding="utf-8"))
+        for key in ["active_version","active_release","active_issue","next_exact_action","state_updated_at"]:
+            if key not in state:
+                ok = fail(f"PROJECT_STATE missing key: {key}") and ok
+        print("PASS: PROJECT_STATE machine-readable consistency fields")
+    except Exception as exc:
+        ok = fail(f"invalid PROJECT_STATE.json: {exc}") and ok
 
 # Machine-readable schemas must at least parse as JSON.
 for p in sorted((ROOT / "schemas").glob("*.json")):
