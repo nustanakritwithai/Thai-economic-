@@ -6,10 +6,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-REQUIRED = [
+BASE_REQUIRED = [
     "README.md",
     "index.html",
+    "docs/NORTH_STAR.md",
+    "docs/CONTEXT_CAPSULE.md",
     "docs/PM_CONTROL.md",
+    "docs/MASTER_ROADMAP.md",
     "docs/ARCHITECTURE.md",
     "docs/DATA_CONTRACT.md",
     "docs/SOURCE_REGISTRY.md",
@@ -19,7 +22,10 @@ REQUIRED = [
     "docs/RISKS.md",
     "docs/PARKING_LOT.md",
     "docs/RECOVERY_PROTOCOL.md",
+    "docs/DRIFT_REVIEW_TEMPLATE.md",
+    ".github/ISSUE_TEMPLATE/active-release-task.md",
     "releases/V0.1.md",
+    "releases/snapshots/V0.1-final.md",
     "schemas/source.schema.json",
     "schemas/series.schema.json",
     "schemas/observation.schema.json",
@@ -32,10 +38,12 @@ def fail(msg):
     return False
 
 ok = True
-for rel in REQUIRED:
+
+for rel in BASE_REQUIRED:
     if not (ROOT / rel).exists():
         ok = fail(f"missing required file: {rel}") and ok
 
+# Machine-readable schemas must at least parse as JSON.
 for p in sorted((ROOT / "schemas").glob("*.json")):
     try:
         json.loads(p.read_text(encoding="utf-8"))
@@ -43,28 +51,103 @@ for p in sorted((ROOT / "schemas").glob("*.json")):
     except Exception as exc:
         ok = fail(f"invalid JSON {p}: {exc}") and ok
 
-pm = (ROOT / "docs/PM_CONTROL.md")
-if pm.exists():
-    text = pm.read_text(encoding="utf-8")
-    if "V0.1 Foundation" not in text or "WIP limit" not in text:
-        ok = fail("PM_CONTROL must identify V0.1 and WIP limit") and ok
+# Determine the active release from PM Control instead of hard-coding a version.
+pm_path = ROOT / "docs/PM_CONTROL.md"
+active_version = None
+active_name = None
+if pm_path.exists():
+    pm_text = pm_path.read_text(encoding="utf-8")
+    m = re.search(r"^- \*\*Active version:\*\* (V\d+\.\d+) (.+)$", pm_text, re.MULTILINE)
+    if not m:
+        ok = fail("PM_CONTROL must contain one canonical '**Active version:** Vx.y Name' line") and ok
     else:
-        print("PASS: PM Control active version/WIP rule")
+        active_version, active_name = m.group(1), m.group(2).strip()
+        print(f"PASS: active release parsed as {active_version} {active_name}")
+    if "WIP limit:** 1 active version" not in pm_text:
+        ok = fail("PM_CONTROL must enforce WIP limit = 1 active version") and ok
+    if "UNKNOWN ≠ PASS" not in pm_text:
+        ok = fail("PM_CONTROL must preserve UNKNOWN ≠ PASS") and ok
+    for anchor in ["docs/NORTH_STAR.md", "docs/CONTEXT_CAPSULE.md"]:
+        if anchor not in pm_text:
+            ok = fail(f"PM_CONTROL must link strategic anchor {anchor}") and ok
 
-release = ROOT / "releases/V0.1.md"
-if release.exists():
-    text = release.read_text(encoding="utf-8")
-    if "UNKNOWN ≠ PASS" not in text:
-        ok = fail("V0.1 contract must preserve UNKNOWN ≠ PASS") and ok
+# Active release contract must exist and carry strategic alignment.
+if active_version:
+    current_release = ROOT / f"releases/{active_version}.md"
+    if not current_release.exists():
+        ok = fail(f"missing active release contract: releases/{active_version}.md") and ok
     else:
-        print("PASS: V0.1 UNKNOWN rule")
+        release_text = current_release.read_text(encoding="utf-8")
+        if "**Status:** ACTIVE" not in release_text:
+            ok = fail(f"{active_version} release contract must be ACTIVE while PM Control says it is active") and ok
+        for phrase in ["WHY", "WHAT", "PROOF", "NEXT"]:
+            if phrase not in release_text:
+                ok = fail(f"{active_version} release contract missing strategic field: {phrase}") and ok
+        if "UNKNOWN ≠ PASS" not in release_text:
+            ok = fail(f"{active_version} contract must preserve UNKNOWN ≠ PASS") and ok
+        print(f"PASS: active release contract releases/{active_version}.md")
 
+# README cannot silently advertise a different active version.
+readme_path = ROOT / "README.md"
+if readme_path.exists() and active_version:
+    readme_text = readme_path.read_text(encoding="utf-8")
+    section = re.search(r"## Active version\s+\*\*(.+?)\*\*", readme_text, re.DOTALL)
+    if not section:
+        ok = fail("README must declare an Active version") and ok
+    elif not section.group(1).startswith(active_version + " "):
+        ok = fail(
+            f"README active version '{section.group(1)}' disagrees with PM Control '{active_version} {active_name}'"
+        ) and ok
+    else:
+        print("PASS: README active version matches PM Control")
+
+# North Star and Context Capsule are required anti-drift anchors.
+north = ROOT / "docs/NORTH_STAR.md"
+if north.exists():
+    t = north.read_text(encoding="utf-8")
+    for phrase in [
+        "Digital Economic Twin of Thailand",
+        "Autonomous AI Economic Organization",
+        "Autonomy must never exceed auditability",
+        "One active version at a time",
+    ]:
+        if phrase not in t:
+            ok = fail(f"NORTH_STAR missing invariant: {phrase}") and ok
+    print("PASS: North Star invariants")
+
+capsule = ROOT / "docs/CONTEXT_CAPSULE.md"
+if capsule.exists():
+    t = capsule.read_text(encoding="utf-8")
+    for heading in [
+        "## CURRENT",
+        "## WHY CURRENT MATTERS",
+        "## CURRENT GATE",
+        "## NEXT EXACT ACTION",
+        "## DO NOT DO YET",
+    ]:
+        if heading not in t:
+            ok = fail(f"CONTEXT_CAPSULE missing recovery field: {heading}") and ok
+    if active_version and active_version not in t:
+        ok = fail("CONTEXT_CAPSULE does not mention active version") and ok
+    print("PASS: Context Capsule recovery fields")
+
+# Issue template must prevent strategy-free work.
+issue_template = ROOT / ".github/ISSUE_TEMPLATE/active-release-task.md"
+if issue_template.exists():
+    t = issue_template.read_text(encoding="utf-8")
+    for heading in ["## WHY", "## WHAT", "## PROOF", "## NEXT"]:
+        if heading not in t:
+            ok = fail(f"active issue template missing {heading}") and ok
+    print("PASS: WHY/WHAT/PROOF/NEXT issue contract")
+
+# Basic series naming invariant.
 pattern = re.compile(r"^[A-Z][A-Z0-9_]{2,95}$")
-for sample in ["BOT_PCI_TOTAL","TPSO_CPI_HEADLINE","NESDC_GDP_REAL"]:
+for sample in ["BOT_PCI_TOTAL", "TPSO_CPI_HEADLINE", "NESDC_GDP_REAL"]:
     if not pattern.match(sample):
         ok = fail(f"series ID convention failed sample {sample}") and ok
 print("PASS: series ID convention samples")
 
 if not ok:
     sys.exit(1)
-print("PASS: repository V0.1 baseline validation")
+
+print(f"PASS: project-control validation for active release {active_version}")
