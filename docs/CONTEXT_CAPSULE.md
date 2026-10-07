@@ -65,7 +65,7 @@ This is the single current execution entry point.
 - Current planned day: **Day 1 / Week 1**
 - Current focus: **BOT Data Ecosystem Map**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
-- Calendar: Day 1–28 are scheduled as individual project events.
+- Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
 
 Research rule:
