@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nustanakritwithai.github.io/Thai-economic-/schemas/prediction.schema.json",
+  "title": "Economic Prediction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "prediction_id","created_at","target","horizon","forecast",
+    "data_vintage","model_version","locked"
+  ],
+  "properties": {
+    "prediction_id": {"type":"string","pattern":"^PRED-[0-9]{8}-[A-Z0-9_]+-[0-9]{3}$"},
+    "created_at": {"type":"string","format":"date-time"},
+    "target": {"type":"string","minLength":1},
+    "target_period": {"type":["string","null"]},
+    "horizon": {"type":"string","minLength":1},
+    "forecast": {"type":"number"},
+    "lower_bound": {"type":["number","null"]},
+    "upper_bound": {"type":["number","null"]},
+    "confidence_level": {"type":["number","null"],"minimum":0,"maximum":1},
+    "data_vintage": {"type":"string","format":"date-time"},
+    "model_version": {"type":"string","minLength":1},
+    "model_weights": {"type":"object"},
+    "locked": {"const":true},
+    "actual": {"type":["number","null"]},
+    "error": {"type":["number","null"]},
+    "postmortem_id": {"type":["string","null"]}
+  }
+}
