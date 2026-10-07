@@ -29,5 +29,15 @@
   "current_research_day": 1,
   "current_week": 1,
   "current_focus": "Day 1 — BOT Data Ecosystem Map",
-  "daily_log_required": true
+  "daily_log_required": true,
+  "calendar_sync": {
+    "status": "SYNCED",
+    "synced_at": "2026-10-08T05:13:00+07:00",
+    "timezone": "Asia/Bangkok",
+    "daily_events_count": 28,
+    "window_start": "2026-10-08",
+    "window_end": "2026-11-04",
+    "window_event_url": "https://www.google.com/calendar/event?eid=cjljbHJmbGp0MGVib2RpMTZya2k1bmI1a2MgbnVzdGFuYWtyaXR3aXRoYWlAbQ",
+    "note": "Calendar events are navigation/reminder aids only. Calendar completion is not release evidence."
+  }
 }
