@@ -1,0 +1,18 @@
+name: V0.1 Foundation Validation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate V0.1 repository contract
+        run: python3 scripts/validate_repo.py
