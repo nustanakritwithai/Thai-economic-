@@ -36,6 +36,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Current focus:** BOT Data Ecosystem Map
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
+- **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
 
 ## Current execution issue
 #11 — V0.2-01: Inventory official P0 data endpoints  
