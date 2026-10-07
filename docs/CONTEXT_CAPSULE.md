@@ -1,0 +1,108 @@
+# Thailand Economic OS — Context Capsule
+
+> Read this first when returning after a break. It is intentionally short.
+
+## PROJECT
+Thailand Economic OS
+
+## NORTH STAR
+**Digital Economic Twin of Thailand + Autonomous AI Economic Organization**
+
+Full anchor: `docs/NORTH_STAR.md`
+
+## CURRENT
+**V0.2 — Core Data Connectors**
+
+Status: **ACTIVE — PLANNING / IMPLEMENTATION**
+
+## WHY CURRENT MATTERS
+V0.2 is not about “downloading government data.”
+
+It establishes **reliable acquisition of numerical evidence** that every later layer depends on.
+
+```text
+V0.2 Reliable Acquisition
+        ↓
+V0.3 Reliable Validation/Normalization
+        ↓
+V0.4 Numerical Truth / Economic DB
+        ↓
+V0.6 Understand Present
+        ↓
+V0.8 Forecast Future
+        ↓
+V1.x Multi-Agent Economic Organization
+        ↓
+V2.x National Digital Twin
+        ↓
+V3–V4 Autonomous Economic Intelligence
+```
+
+If connector provenance, timestamps, checksums, idempotency, and failure behavior are weak now, every forecast and policy simulation later becomes less trustworthy.
+
+## LAST COMPLETED
+**V0.1 Foundation — COMPLETE**
+
+Evidence:
+- CI PASS
+- GitHub Pages deployment PASS
+- Snapshot: `releases/snapshots/V0.1-final.md`
+
+## CURRENT RELEASE CONTRACT
+`releases/V0.2.md`
+
+## CURRENT OBJECTIVE
+Prove a small set of official P0 connectors end-to-end:
+1. BOT
+2. NESDC
+3. TPSO
+4. MOF
+5. Customs
+
+Do not ingest everything. Prove the pattern first.
+
+## CURRENT GATE
+A V0.2 connector is not complete until it proves:
+- raw snapshot preservation;
+- source identity;
+- `retrieved_at`;
+- checksum;
+- parser version;
+- rerun/idempotency behavior;
+- isolated failure behavior;
+- fixtures/tests;
+- CI evidence.
+
+## NEXT EXACT ACTION
+Inventory the exact official endpoint/file candidates for all P0 sources, then choose the minimum high-value BOT series for the first connector proof.
+
+## DO NOT DO YET
+- Full V0.3 normalization engine
+- Production Economic Database
+- GDP/CPI forecasting
+- Economic State scoring
+- Multi-Agent runtime
+- Policy simulation
+- Digital Twin
+
+Future ideas go to `docs/PARKING_LOT.md`.
+
+## RECOVERY PATH
+```text
+CONTEXT_CAPSULE
+→ NORTH_STAR
+→ PM_CONTROL
+→ CURRENT RELEASE CONTRACT
+→ current GitHub Issue
+→ main SHA + CI
+→ exact next action
+```
+
+## DRIFT CHECK
+Before continuing, answer:
+1. Does current work still support V0.2?
+2. Does V0.2 still clearly support the North Star?
+3. Has any future-version idea become active without passing the current gate?
+4. Is the exact next action still explicit?
+
+If any answer is unclear: stop new scope and run a North Star Drift Review.
