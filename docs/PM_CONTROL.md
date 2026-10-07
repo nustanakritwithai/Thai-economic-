@@ -20,7 +20,11 @@
 - **WHERE:** `docs/MASTER_ROADMAP.md`
 - **NOW / recovery:** `docs/CONTEXT_CAPSULE.md`
 - **Current release:** `releases/V0.2.md`
+- **Machine-readable NOW:** `PROJECT_STATE.json`
+- **Weekly continuity:** `docs/WEEKLY_CHECKPOINT_TEMPLATE.md`
 - **Monthly drift review:** `docs/DRIFT_REVIEW_TEMPLATE.md`
+- **Semiannual strategy review:** `docs/STRATEGIC_REVIEW_TEMPLATE.md`
+- **Backup/restore:** `docs/BACKUP_RESTORE_POLICY.md`
 
 ## Primary goal
 Implement a small, reliable set of official public-data connectors and prove retrieval, raw preservation, checksums, idempotency, and failure isolation before expanding data coverage.
@@ -73,7 +77,7 @@ New ideas go to `docs/PARKING_LOT.md`.
 - Recovery protocol: `docs/RECOVERY_PROTOCOL.md`
 
 ## Recovery shortcut
-Read `docs/CONTEXT_CAPSULE.md` → `docs/NORTH_STAR.md` → this file → `releases/V0.2.md` → current issue → main/CI → continue only the current gate.
+Read `PROJECT_STATE.json` → `docs/CONTEXT_CAPSULE.md` → `docs/NORTH_STAR.md` → this file → `releases/V0.2.md` → current issue → main/CI → continue only the current gate.
 
 ## Anti-drift rule
 Every substantial task must answer **WHY → WHAT → PROOF → NEXT**. If the connection to the North Star is unclear, move it to Parking Lot and run a Drift Review before continuing.
