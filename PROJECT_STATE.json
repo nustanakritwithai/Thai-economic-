@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "project": "Thailand Economic OS",
+  "north_star_ref": "docs/NORTH_STAR.md",
+  "north_star_summary": "Digital Economic Twin of Thailand + Autonomous AI Economic Organization",
+  "active_version": "V0.2",
+  "active_release": "releases/V0.2.md",
+  "active_issue": 11,
+  "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
+  "status": "ACTIVE",
+  "current_gate": "Core Data Connectors",
+  "next_exact_action": "Execute Issue #11: inventory official P0 endpoints/files, then choose the minimum high-value BOT dataset or series for the first connector proof.",
+  "blocked": false,
+  "blockers": [],
+  "previous_release": "V0.1",
+  "last_verified_main": "f89a10d2dd60a132c058faaa4ad221f62e34289a",
+  "last_verified_ci_run": 37688474118,
+  "last_verified_pages_run": 37688474143,
+  "state_updated_at": "2026-10-08T04:18:37+07:00",
+  "stale_after_days": 14
+}
