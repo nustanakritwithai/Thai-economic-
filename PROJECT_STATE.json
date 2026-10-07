@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "project": "Thailand Economic OS",
   "north_star_ref": "docs/NORTH_STAR.md",
   "north_star_summary": "Digital Economic Twin of Thailand + Autonomous AI Economic Organization",
@@ -7,16 +7,27 @@
   "active_release": "releases/V0.2.md",
   "active_issue": 11,
   "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
-  "status": "ACTIVE",
-  "current_gate": "Core Data Connectors",
-  "next_exact_action": "Execute Issue #11: inventory official P0 endpoints/files, then choose the minimum high-value BOT dataset or series for the first connector proof.",
+  "status": "ACTIVE_DEEP_RESEARCH",
+  "current_gate": "Issue #11 Deep Research — P0 Source Inventory",
+  "next_exact_action": "Day 1: map the official BOT data ecosystem—Developer Portal, Statistics product, documentation hierarchy, series-discovery path, observations path, and official alternatives; record evidence and UNKNOWNs.",
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
-  "last_verified_main": "44706c439c6758fd7d4475e3159ccab81da14196",
+  "last_verified_main": "caa6cc62ba1ffae416d4c0b5dd27966c389dbf1b",
   "last_verified_ci_run": 37691026679,
   "last_verified_pages_run": 37688474143,
   "pages_refresh_pending_for_latest_ui": true,
-  "state_updated_at": "2026-10-08T04:40:21+07:00",
-  "stale_after_days": 14
+  "state_updated_at": "2026-10-08T05:13:00+07:00",
+  "stale_after_days": 14,
+  "current_plan_ref": "docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md",
+  "research_window": {
+    "start_date": "2026-10-08",
+    "planned_end_date": "2026-11-04",
+    "extension_allowed": true,
+    "rule": "Do not close Issue #11 or open Issue #12 merely because the planned end date is reached; critical UNKNOWNs extend research."
+  },
+  "current_research_day": 1,
+  "current_week": 1,
+  "current_focus": "Day 1 — BOT Data Ecosystem Map",
+  "daily_log_required": true
 }
