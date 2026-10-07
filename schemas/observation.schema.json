@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nustanakritwithai.github.io/Thai-economic-/schemas/observation.schema.json",
+  "title": "Economic Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "series_id","period","value","unit","frequency","source_id",
+    "release_date","retrieved_at","vintage","revision","quality_status","checksum"
+  ],
+  "properties": {
+    "series_id": {"type":"string","pattern":"^[A-Z][A-Z0-9_]{2,95}$"},
+    "period": {"type":"string","minLength":1},
+    "value": {"type":["number","null"]},
+    "unit": {"type":"string","minLength":1},
+    "frequency": {"type":"string","enum":["daily","weekly","monthly","quarterly","annual","irregular"]},
+    "source_id": {"type":"string","pattern":"^[A-Z][A-Z0-9_]{1,31}$"},
+    "release_date": {"type":["string","null"],"format":"date-time"},
+    "retrieved_at": {"type":"string","format":"date-time"},
+    "vintage": {"type":"string","format":"date-time"},
+    "revision": {"type":"integer","minimum":0},
+    "quality_status": {"type":"string","enum":["VALID","WARNING","INVALID","QUARANTINED","UNKNOWN"]},
+    "checksum": {"type":"string","minLength":16},
+    "raw_artifact_id": {"type":["string","null"]},
+    "parser_version": {"type":["string","null"]},
+    "notes": {"type":["string","null"]}
+  }
+}
