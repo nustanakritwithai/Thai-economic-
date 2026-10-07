@@ -16,3 +16,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate project memory, active release, schemas, and contracts
         run: python3 scripts/validate_repo.py
+      - name: Check stale project state
+        run: python3 scripts/check_stale_state.py
