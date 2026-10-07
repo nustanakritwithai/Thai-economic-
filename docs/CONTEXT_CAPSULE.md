@@ -51,6 +51,13 @@ Evidence:
 ## CURRENT RELEASE CONTRACT
 `releases/V0.2.md`
 
+## CURRENT ISSUE
+**#11 — V0.2-01: Inventory official P0 data endpoints**
+
+https://github.com/nustanakritwithai/Thai-economic-/issues/11
+
+This is the single current execution entry point.
+
 ## CURRENT OBJECTIVE
 Prove a small set of official P0 connectors end-to-end:
 1. BOT
@@ -74,7 +81,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Inventory the exact official endpoint/file candidates for all P0 sources, then choose the minimum high-value BOT series for the first connector proof.
+Execute Issue #11: inventory official P0 endpoints/files, then choose the minimum high-value BOT series/dataset for the first connector proof.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
