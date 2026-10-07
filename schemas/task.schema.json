@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nustanakritwithai.github.io/Thai-economic-/schemas/task.schema.json",
+  "title": "Agent Task",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["task_id","agent","objective","status","created_at"],
+  "properties": {
+    "task_id": {"type":"string","pattern":"^TASK-[0-9]{8}-[0-9]{4}$"},
+    "parent_task_id": {"type":["string","null"],"pattern":"^TASK-[0-9]{8}-[0-9]{4}$"},
+    "agent": {"type":"string","minLength":1},
+    "objective": {"type":"string","minLength":1},
+    "status": {"type":"string","enum":["PENDING","RUNNING","PASS","FAIL","UNKNOWN","BLOCKED"]},
+    "created_at": {"type":"string","format":"date-time"},
+    "started_at": {"type":["string","null"],"format":"date-time"},
+    "completed_at": {"type":["string","null"],"format":"date-time"},
+    "data_vintage": {"type":["string","null"],"format":"date-time"},
+    "model_version": {"type":["string","null"]},
+    "confidence": {"type":["number","null"],"minimum":0,"maximum":1},
+    "evidence_ids": {"type":"array","items":{"type":"string"}},
+    "review_status": {"type":"string","enum":["NOT_REQUIRED","PENDING","PASS","FAIL","UNKNOWN"]}
+  }
+}
