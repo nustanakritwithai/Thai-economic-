@@ -15,6 +15,13 @@
 - Pages PASS: run 37686940970
 - Snapshot: `releases/snapshots/V0.1-final.md`
 
+## Strategic anchors
+- **WHY:** `docs/NORTH_STAR.md`
+- **WHERE:** `docs/MASTER_ROADMAP.md`
+- **NOW / recovery:** `docs/CONTEXT_CAPSULE.md`
+- **Current release:** `releases/V0.2.md`
+- **Monthly drift review:** `docs/DRIFT_REVIEW_TEMPLATE.md`
+
 ## Primary goal
 Implement a small, reliable set of official public-data connectors and prove retrieval, raw preservation, checksums, idempotency, and failure isolation before expanding data coverage.
 
@@ -62,4 +69,7 @@ New ideas go to `docs/PARKING_LOT.md`.
 - Recovery protocol: `docs/RECOVERY_PROTOCOL.md`
 
 ## Recovery shortcut
-Read this file → read `releases/V0.2.md` → inspect main/CI/open V0.2 issues → continue only the current gate.
+Read `docs/CONTEXT_CAPSULE.md` → `docs/NORTH_STAR.md` → this file → `releases/V0.2.md` → current issue → main/CI → continue only the current gate.
+
+## Anti-drift rule
+Every substantial task must answer **WHY → WHAT → PROOF → NEXT**. If the connection to the North Star is unclear, move it to Parking Lot and run a Drift Review before continuing.
