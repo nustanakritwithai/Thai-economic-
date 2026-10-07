@@ -25,8 +25,12 @@
 ## Primary goal
 Implement a small, reliable set of official public-data connectors and prove retrieval, raw preservation, checksums, idempotency, and failure isolation before expanding data coverage.
 
+## Current execution issue
+#11 — V0.2-01: Inventory official P0 data endpoints  
+https://github.com/nustanakritwithai/Thai-economic-/issues/11
+
 ## NOW
-1. Inventory exact official P0 endpoints/files
+1. Execute Issue #11 — Inventory exact official P0 endpoints/files
 2. Select minimum high-value series per source
 3. Define connector interface and raw artifact convention
 4. Implement BOT connector first
