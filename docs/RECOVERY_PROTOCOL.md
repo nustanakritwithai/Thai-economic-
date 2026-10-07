@@ -3,18 +3,19 @@
 Use this whenever returning to the project after a break or when a new agent/team takes over.
 
 ## 60-second recovery sequence
-1. Read `docs/CONTEXT_CAPSULE.md` — restore the current state.
-2. Read `docs/NORTH_STAR.md` — restore the long-term WHY.
-3. Read `docs/PM_CONTROL.md` — confirm WHERE/NOW.
-4. Confirm **ACTIVE VERSION** and read `releases/<active-version>.md`.
-5. Inspect current `main` SHA and CI status.
-6. Inspect open issues for the active release.
-7. Read the latest completed release snapshot.
-8. Check blockers in `docs/RISKS.md`.
-9. Read only Decision Log entries relevant to the current task.
-10. Ignore Parking Lot unless planning future scope.
-11. State one **NEXT EXACT ACTION** before doing work.
-12. Do not start NEXT VERSION until the current Release Gate passes.
+1. Read `PROJECT_STATE.json` — machine-readable current truth.
+2. Read `docs/CONTEXT_CAPSULE.md` — restore the current state.
+3. Read `docs/NORTH_STAR.md` — restore the long-term WHY.
+4. Read `docs/PM_CONTROL.md` — confirm WHERE/NOW.
+5. Confirm **ACTIVE VERSION** and read `releases/<active-version>.md`.
+6. Inspect current `main` SHA and CI status.
+7. Inspect open issues for the active release.
+8. Read the latest completed release snapshot.
+9. Check blockers in `docs/RISKS.md`.
+10. Read only Decision Log entries relevant to the current task.
+11. Ignore Parking Lot unless planning future scope.
+12. State one **NEXT EXACT ACTION** before doing work.
+13. Do not start NEXT VERSION until the current Release Gate passes.
 
 ## WHY → WHERE → NOW → NEXT check
 Before resuming, be able to answer:
@@ -29,6 +30,7 @@ If any answer is unclear, do not create new scope. Run a North Star Drift Review
 ## Source-of-truth rule
 - Chat history is not authoritative project state.
 - Human/AI memory is not authoritative project state.
+- `PROJECT_STATE.json` is the machine-readable NOW layer.
 - `NORTH_STAR.md` is the long-term strategic anchor.
 - GitHub is authoritative for engineering/release state.
 - Economic Database will be authoritative for numerical observations.
