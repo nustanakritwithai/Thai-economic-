@@ -38,3 +38,16 @@ Decisions are append-only. Reversals create a new decision referencing the old o
 
 ## DEC-012 — Monthly North Star Drift Review
 **Decision:** At least monthly, review whether detailed execution remains aligned with the North Star, Roadmap, WIP=1 rule, active release scope, and architecture. Drift detection does not bypass Release Gates.
+
+
+## DEC-013 — PROJECT_STATE.json is the machine-readable NOW authority
+**Decision:** `PROJECT_STATE.json` is the canonical machine-readable summary of active version, active issue, current gate, blockers, verified baselines, and NEXT EXACT ACTION. Human-readable PM/Context files must agree with it.
+
+## DEC-014 — Stale project memory is a CI failure
+**Decision:** If repository work continues more than the configured stale window after PROJECT_STATE was refreshed, CI must fail until project memory is reconciled. Idle time alone does not make the state stale.
+
+## DEC-015 — Weekly continuity checkpoints are operational hygiene
+**Decision:** Run a short weekly checkpoint for continuity. It must not redesign strategy; uncertainty or contradiction escalates to a North Star Drift Review.
+
+## DEC-016 — Backups are unproven until restore succeeds
+**Decision:** For future Economic Database and raw evidence storage, backup existence is insufficient. Restore evidence becomes release-blocking starting with the database layer (V0.4).
