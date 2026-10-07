@@ -2,7 +2,7 @@
 
 ## Project state
 - **Active version:** V0.2 Core Data Connectors
-- **Status:** ACTIVE — PLANNING
+- **Status:** ACTIVE — DEEP RESEARCH
 - **WIP limit:** 1 active version
 - **Engineering source of truth:** this GitHub repository
 - **Human knowledge layer:** Google Drive Master Roadmap
@@ -29,18 +29,25 @@
 ## Primary goal
 Implement a small, reliable set of official public-data connectors and prove retrieval, raw preservation, checksums, idempotency, and failure isolation before expanding data coverage.
 
+## Current research plan
+- **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
+- **Window:** 2026-10-08 → 2026-11-04
+- **Current day:** Day 1 / Week 1
+- **Current focus:** BOT Data Ecosystem Map
+- **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
+- **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
+
 ## Current execution issue
 #11 — V0.2-01: Inventory official P0 data endpoints  
 https://github.com/nustanakritwithai/Thai-economic-/issues/11
 
 ## NOW
-1. Execute Issue #11 — Inventory exact official P0 endpoints/files
-2. Select minimum high-value series per source
-3. Define connector interface and raw artifact convention
-4. Implement BOT connector first
-5. Add fixtures/tests
-6. Repeat for NESDC, TPSO, MOF, Customs
-7. Run V0.2 release gate
+1. Execute **Day 1 — BOT Data Ecosystem Map**
+2. Continue the 28-day Issue #11 research plan one day/question at a time
+3. Preserve daily evidence logs and explicit UNKNOWNs
+4. Complete Week 1 BOT → Week 2 NESDC/TPSO → Week 3 MOF/Customs → Week 4 validation/freeze
+5. Do not define/implement the production connector until Issue #11 is complete
+6. If Day 28 still has critical UNKNOWNs, extend Issue #11 instead of forcing PASS
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof
