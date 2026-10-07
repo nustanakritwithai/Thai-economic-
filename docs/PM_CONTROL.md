@@ -2,7 +2,7 @@
 
 ## Project state
 - **Active version:** V0.1 Foundation
-- **Status:** ACTIVE
+- **Status:** ACTIVE — FINAL VERIFICATION
 - **WIP limit:** 1 active version
 - **Engineering source of truth:** this GitHub repository
 - **Human knowledge layer:** Google Drive Master Roadmap
@@ -12,33 +12,28 @@
 Freeze the minimum architecture, data contracts, governance, and verification rules required so V0.2 can add real public-data connectors without redesigning the foundation.
 
 ## NOW
-1. Bootstrap repository topology
-2. Freeze Architecture V0.1
-3. Define Economic Data Contract
-4. Define core JSON schemas
-5. Register P0/P1 public data sources
-6. Define audit IDs and traceability
-7. Define Agent Governance baseline
-8. Add CI validation
-9. Verify GitHub Pages PM dashboard
-10. Run V0.1 release gate
+1. Verify GitHub Pages public deployment
+2. Run final V0.1 release gate
+3. Create final release snapshot only after all checks PASS
+4. Change Active Version to V0.2 only after the snapshot is committed
 
 ## CURRENT GATE — V0.1
-- [ ] Repository topology complete
-- [ ] PM Control complete
-- [ ] GitHub Pages control dashboard verified
-- [ ] Architecture baseline frozen
-- [ ] Data Contract defined
-- [ ] Core schemas validate
-- [ ] Source Registry created
-- [ ] Audit/ID convention defined
-- [ ] Agent Governance baseline defined
-- [ ] Recovery Protocol defined
-- [ ] CI validation passes
-- [ ] V0.1 verification evidence recorded
+- [x] Repository topology complete
+- [x] PM Control complete
+- [ ] GitHub Pages control dashboard verified — **UNKNOWN**
+- [x] Architecture baseline frozen
+- [x] Data Contract defined
+- [x] Core schemas validate
+- [x] Source Registry created
+- [x] Audit/ID convention defined
+- [x] Agent Governance baseline defined
+- [x] Recovery Protocol defined
+- [x] CI validation passes
+- [x] V0.1 verification evidence recorded in release contract
+- [ ] Final V0.1 release snapshot committed
 
-## BLOCKERS
-None recorded at initialization. Any new blocker must be added to `docs/RISKS.md` and referenced from here.
+## BLOCKERS / UNVERIFIED
+- **GitHub Pages public deployment:** `index.html` exists on `main`, but the public Pages endpoint has not yet been independently verified by the current toolchain. Keep this item UNKNOWN until direct evidence exists.
 
 ## NEXT
 **V0.2 Core Data Connectors**
@@ -57,7 +52,9 @@ V0.3 Validation → V0.4 Economic Database → V0.5 Calculation → V0.6 Economi
 New ideas go to `docs/PARKING_LOT.md`; they do not become active work automatically.
 
 ## Last verified
-- Initial repository commit: `31f27d4d2c31e07f947031bc8ea79dcba3d49766`
+- Main SHA: `5f7f9320b9f574becc9be57059e2c1423f61ba55`
+- CI: **PASS** — GitHub Actions run 37685155980
+- CI URL: https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37685155980
 - Active release contract: `releases/V0.1.md`
 
 ## Recovery shortcut
