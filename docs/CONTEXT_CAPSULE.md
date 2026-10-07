@@ -58,6 +58,21 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 
 This is the single current execution entry point.
 
+## CURRENT RESEARCH MODE
+**Issue #11 Deep Research — 28-day planned window**
+
+- Planned window: **2026-10-08 → 2026-11-04**
+- Current planned day: **Day 1 / Week 1**
+- Current focus: **BOT Data Ecosystem Map**
+- Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
+- Calendar: Day 1–28 are scheduled as individual project events.
+- Extension is allowed. Calendar completion does not equal research PASS.
+
+Research rule:
+> Depth and evidence are the constraint; time is not the release gate.
+
+Production connector implementation must not begin until Issue #11 is evidence-complete.
+
 ## CURRENT OBJECTIVE
 Prove a small set of official P0 connectors end-to-end:
 1. BOT
@@ -81,7 +96,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Execute Issue #11: inventory official P0 endpoints/files, then choose the minimum high-value BOT series/dataset for the first connector proof.
+Day 1: map the official BOT data ecosystem—Developer Portal, Statistics product, documentation hierarchy, series-discovery path, observations path, and official alternatives. Record official evidence, confidence, UNKNOWNs, design impact, and one next question.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
