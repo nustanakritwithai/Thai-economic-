@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://nustanakritwithai.github.io/Thai-economic-/schemas/series.schema.json",
+  "title": "Economic Series",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["series_id","source_id","name","frequency","unit","seasonal_adjustment","description"],
+  "properties": {
+    "series_id": {"type":"string","pattern":"^[A-Z][A-Z0-9_]{2,95}$"},
+    "source_id": {"type":"string","pattern":"^[A-Z][A-Z0-9_]{1,31}$"},
+    "name": {"type":"string","minLength":1},
+    "frequency": {"type":"string","enum":["daily","weekly","monthly","quarterly","annual","irregular"]},
+    "unit": {"type":"string","minLength":1},
+    "seasonal_adjustment": {"type":"string","enum":["SA","NSA","N/A","UNKNOWN"]},
+    "description": {"type":"string","minLength":1},
+    "dimensions": {"type":"object"},
+    "active": {"type":"boolean","default":true}
+  }
+}
