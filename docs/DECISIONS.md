@@ -25,3 +25,16 @@ Decisions are append-only. Reversals create a new decision referencing the old o
 
 ## DEC-008 — Auditability over autonomy
 **Decision:** Automation may not become more autonomous than the system's ability to reproduce and inspect its actions.
+
+
+## DEC-009 — North Star is a separate strategic authority
+**Decision:** `docs/NORTH_STAR.md` defines the long-term WHY and changes rarely. Daily execution documents must not silently redefine the ultimate destination.
+
+## DEC-010 — Project context must be recoverable without chat memory
+**Decision:** `docs/CONTEXT_CAPSULE.md` must contain CURRENT / WHY CURRENT MATTERS / CURRENT GATE / NEXT EXACT ACTION / DO NOT DO YET so a new human or agent can resume from repository state.
+
+## DEC-011 — Every active task uses WHY → WHAT → PROOF → NEXT
+**Decision:** Work without a clear strategic WHY, bounded WHAT, verification PROOF, and explicit NEXT is not ready to start.
+
+## DEC-012 — Monthly North Star Drift Review
+**Decision:** At least monthly, review whether detailed execution remains aligned with the North Star, Roadmap, WIP=1 rule, active release scope, and architecture. Drift detection does not bypass Release Gates.
