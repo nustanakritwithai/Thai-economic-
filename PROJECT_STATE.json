@@ -9,7 +9,7 @@
   "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
   "status": "ACTIVE_DEEP_RESEARCH",
   "current_gate": "Issue #11 Deep Research — P0 Source Inventory",
-  "next_exact_action": "Day 1 Round 4: challenge the updated BOT architecture—decide whether API Product/Series and Publication Table/Report/File must be modeled as parallel entity families, define identifier namespaces (table_code/report_id/series_code/API/spec version), and test whether the same economic concept can map to multiple BOT objects without over-modeling.",
+  "next_exact_action": "Day 1 Round 5: map each BOT surface to its role—acquisition, metadata, human verification, lifecycle/change signal, fallback, semantic bridge—and build an evidence-backed relationship graph without implementing database tables.",
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
@@ -28,7 +28,7 @@
   },
   "current_research_day": 1,
   "current_week": 1,
-  "current_focus": "Day 1 Round 3 COMPLETE — BOT Ecosystem Gap Hunt",
+  "current_focus": "Day 1 Round 4 COMPLETE — BOT Architecture Challenge",
   "daily_log_required": true,
   "calendar_sync": {
     "status": "SYNCED",
@@ -43,16 +43,18 @@
   "completed_research_days": [
     1
   ],
-  "latest_research_artifact": "research/issue-11/day-01-r3-bot-ecosystem-gap-hunt.md",
+  "latest_research_artifact": "research/issue-11/day-01-r4-bot-architecture-challenge.md",
   "day_01_status": "PASS_FOR_ECOSYSTEM_MAPPING",
   "next_planned_day": 2,
-  "next_planned_focus": "Day 1 Round 4 — Architecture Challenge",
+  "next_planned_focus": "Day 1 Round 5 — Source Relationship Mapping",
   "completed_day_01_rounds": [
     1,
     2,
-    3
+    3,
+    4
   ],
   "day_01_round_02_status": "PASS",
-  "next_planned_round": 4,
-  "day_01_round_03_status": "PASS"
+  "next_planned_round": 5,
+  "day_01_round_03_status": "PASS",
+  "day_01_round_04_status": "PASS"
 }
