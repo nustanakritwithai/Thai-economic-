@@ -1,0 +1,41 @@
+name: BOT One-Shot Unauthenticated HTTP Diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-http-negative-diagnostic.yml"
+      - "research/issue-11/diagnostics/bot_http_negative_probe.py"
+      - "research/issue-11/diagnostics/test_bot_http_negative_probe.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bot-unauthenticated-http-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  one-shot-no-token:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout no-token diagnostic
+        uses: actions/checkout@v4
+
+      - name: Run offline unit tests (no network)
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_bot_http_negative_probe.py' -v
+
+      - name: Single GET without Authorization (one candidate operation)
+        run: |
+          python3 research/issue-11/diagnostics/bot_http_negative_probe.py --output-dir bot-http-negative-evidence
+          cat bot-http-negative-evidence/http-summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload sanitized no-token evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-unauthenticated-http-${{ github.run_id }}
+          path: bot-http-negative-evidence/
+          if-no-files-found: error
+          retention-days: 30
