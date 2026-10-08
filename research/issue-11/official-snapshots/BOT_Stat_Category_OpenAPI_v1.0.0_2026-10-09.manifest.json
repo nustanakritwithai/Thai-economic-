@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "provider": "Bank of Thailand",
+  "project": "Thailand Economic OS",
+  "issue": 11,
+  "kind": "OFFICIAL_PUBLIC_STAT_CATEGORY_RAW_OPENAPI",
+  "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/d48f73217fdf41995a38859ed2b6e2d5/docs/download",
+  "retrieved_at_utc": "2026-10-08T18:35:38.356810+00:00",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "original_bytes": 6799,
+  "original_sha256": "282a1ceb6e707e702957eb6d507f04a98dc4be48cc15ec9e1608c81a7c1f2fcd",
+  "gzip_path": "research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.json.gz",
+  "gzip_bytes": 1483,
+  "gzip_sha256": "663895274a24012b0bd816c32a6d72dea39fff37626f17c4036bc5ac67f82b48",
+  "git_blob_sha": "efe133af498bc58bd31654e15943d74da535b322",
+  "compression": "gzip_level9_mtime0",
+  "info": {
+    "openapi": "3.0.1",
+    "version": "1.0.0",
+    "title": "Stat Category"
+  },
+  "base_url": "https://gateway.api.bot.or.th/categorylist",
+  "operations": [
+    {
+      "method": "GET",
+      "path": "/category_list/",
+      "declared_responses": [
+        "200"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/series_list/",
+      "required_parameter": "category",
+      "declared_responses": [
+        "200"
+      ]
+    }
+  ],
+  "authorization": {
+    "type": "apiKey",
+    "in": "header",
+    "name": "Authorization",
+    "scheme_key": "clientIdHeader"
+  },
+  "declared_401": false,
+  "acquisition_run": 37825476140,
+  "artifact_id": 11571700056,
+  "raw_artifact_bytes_extracted_and_sha256_verified": true,
+  "note": "Official PUBLIC spec snapshot, not an authenticated BOT response or provider revision changelog.",
+  "day02_gate": "BLOCKED_CRITICAL_EVIDENCE",
+  "rule": "UNKNOWN != PASS"
+}
