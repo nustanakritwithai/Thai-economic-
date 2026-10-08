@@ -43,7 +43,7 @@ No account login, secret collection, live positive/negative gateway request, thr
 |---|---|---|
 | New portal Account uses sign-up + email verification; legacy users re-register | **CONFIRMED** | E01 + E02; registration != product approval |
 | Product catalogue and Statistics Plan subscription option exist | **CONFIRMED** | E02 + E04; product contains 3 listed Statistics APIs |
-| 'Access with this plan' immediately grants access | **CORRECTED / NOT TRUE** | E02 §2.6 states cart choice is **not yet approved**; request is pending |
+| Product/Plan added to cart is **not** the same as Approved Access | **CONFIRMED** | R1 already said this correctly; E02 §2.6 explicitly states cart subscription is not yet approved |
 | User creates/selects Application and submits request | **CONFIRMED** | E02 §§2.7–2.12 + E08 |
 | 'Existing App' necessarily reuses token, product rights or app ownership | **STILL UNKNOWN** | E02 §2.9 Thai prose about creating a new app using prior name is ambiguous versus 'Existing app' button in E08; no entitlement cardinality proved |
 | An app may contain one or several credential sets | **CONFIRMED AS SCREENSHOT WORDING ONLY** | E08 states this; how real credential reuse/scopes work UNKNOWN; future ownership capability not present-current proof |
@@ -137,6 +137,10 @@ Do not assume: OAuth2, JWT, a Bearer prefix requirement or rejection, a product-
 **UNKNOWN:** D2-AUTH-U01..U11 and BOT-U01..U09 all remain explicit.
 **IMPACT:** No app/credential/quotas assumptions can be promoted into production connectors.
 **NEXT QUESTION:** R3, subject to a legitimate usable BOT credential: can a **single safe positive request** demonstrate authentication without exposing a secret? If no legitimate credential, mark DOCUMENTED AUTH = PASS / LIVE AUTH TEST = BLOCKED, never manufacture 200 OK.
+
+## 10A. R2 editorial correction (2026-10-08)
+
+During post-commit quality review, the R2 claim matrix was corrected to avoid falsely attributing the statement 'cart selection immediately grants access' to R1. The R1 artifact had **already correctly separated cart selection from approval**. R2 classification for that **actual R1 claim** is CONFIRMED, not CORRECTED. The supporting BOT Manual evidence, UNKNOWN register, conclusions and machine JSON are unchanged. The preceding R2 commit remains available in Git history as a transparent audit trail.
 
 ## 11. STOP BOUNDARY
 

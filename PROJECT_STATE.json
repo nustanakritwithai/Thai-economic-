@@ -13,11 +13,11 @@
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
-  "last_verified_main": "024ee2b8c6bd6c68c6cf475713b7e5435134b178",
-  "last_verified_ci_run": 37761937433,
-  "last_verified_pages_run": 37761937362,
+  "last_verified_main": "238037c1584e4718fb2c2895dd6848d671d639e5",
+  "last_verified_ci_run": 37762686813,
+  "last_verified_pages_run": 37762686739,
   "pages_refresh_pending_for_latest_ui": false,
-  "state_updated_at": "2026-10-08T10:19:04.157Z",
+  "state_updated_at": "2026-10-08T10:20:27.179Z",
   "stale_after_days": 14,
   "current_plan_ref": "docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md",
   "research_window": {
@@ -98,5 +98,6 @@
     "D2-AUTH-U09",
     "D2-AUTH-U10",
     "D2-AUTH-U11"
-  ]
+  ],
+  "day_02_r2_editorial_correction": "2026-10-08; R1 cart-not-approval correctly classified CONFIRMED; previous R2 matrix miswording fixed transparently in Git history"
 }
