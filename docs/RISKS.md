@@ -1,7 +1,17 @@
 # Risk & Blocker Register
 
 ## Active blockers
-None at initialization.
+- **BOT-R3-CRED-01 (OPEN, scoped to V0.2 Issue #11 / Day 02 R3 positive live auth):** no approved usable BOT Statistics token is available to the current authorized execution context. This is **not** proof of provider denial, account nonexistence, network failure or global project research blockage. Other evidence research (including R4 safe negative behavior) may continue. Details below.
+
+## BOT-R3-CRED-01 — Approved BOT Credential for Positive Authentication
+**Status:** OPEN / BLOCKED ONLY FOR DAY-02 R3 LIVE POSITIVE AUTH.
+**Owner:** authorized BOT Developer Portal account/Application administrator (approval/secret provision); research operator (single test/evidence after safe authorization).
+**Affected:** V0.2, Issue #11, Day 02 R3 positive test and Day-02 Gate's live access evidence.
+**Evidence:** BOT Manual https://portal.api.bot.or.th/manual specifies Approved Access before copied Token. In the 2026-10-08 R3 execution context, no legitimate usable approved Token and no authorized token-bearing runtime were available; zero HTTP requests were sent. Artifact: `research/issue-11/day-02-r3-bot-positive-access-blocked.md`.
+**Impact:** documented auth PASS (docs-only); live positive auth BLOCKED, not HTTP failure and not PASS. No release gate closure.
+**Workaround:** preserve blocked proof, continue R4 safe negative/error research without inferring real auth success or an HTTP error taxonomy. Do not paste tokens into chat or source control.
+**Resolution:** app/Statistics entitlement approved; credential supplied to a trusted secret-injected runner; exact safe request operation verified; one actual successful response captured as sanitized telemetry in a separate additive artifact, with CI/review as appropriate.
+**Non-goals:** no unauthorized account browsing, no secret inspection, no mock 200 and no production connector implementation.
 
 ## R-001 — Source schema changes
 **Risk:** Public agencies may change APIs/files without notice.

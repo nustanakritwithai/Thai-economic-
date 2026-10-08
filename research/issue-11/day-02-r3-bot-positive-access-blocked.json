@@ -1,0 +1,115 @@
+{
+  "record_version": 1,
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue": 11,
+  "day": 2,
+  "round": 3,
+  "execution_date": "2026-10-08",
+  "timezone": "Asia/Bangkok",
+  "round_status": "BLOCKED_PRECONDITION_RECORDED",
+  "documented_auth": {
+    "status": "PASS_DOCUMENTATION_ONLY_WITH_R2_CAVEATS",
+    "basis": [
+      "https://portal.api.bot.or.th/manual",
+      "https://portal.api.bot.or.th/migration",
+      "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1"
+    ]
+  },
+  "live_auth_test": {
+    "status": "BLOCKED_NO_APPROVED_CREDENTIAL_AVAILABLE_IN_EXECUTION_CONTEXT",
+    "attempt_id": "D2-R3-001",
+    "request_sent": false,
+    "request_count": 0,
+    "request_url": null,
+    "method": null,
+    "http_status": null,
+    "content_type": null,
+    "latency_ms": null,
+    "response_size_bytes": null,
+    "nonsecret_response_headers": null,
+    "retrieved_at": null,
+    "raw_response_artifact": null,
+    "token_captured": false,
+    "token_hash_captured": false,
+    "gateway_error": null
+  },
+  "scope_disclaimer": "NO_AUDIT_OF_ACCOUNT_OR_SECRET_STORE; CREDENTIAL_EXISTENCE_OUTSIDE_CONTEXT_UNKNOWN",
+  "candidate_target": {
+    "product": "Statistics",
+    "api": "Stat Category",
+    "official_documented_listen_path": "/categorylist",
+    "api_base": "https://gateway.api.bot.or.th/categorylist",
+    "full_operation_url": null,
+    "method": null,
+    "not_executed": true,
+    "requires_current_spec_confirmation": true
+  },
+  "blocker": {
+    "id": "BOT-R3-CRED-01",
+    "owner": "Authorized BOT account/application administrator + research operator",
+    "scope": "DAY02_R3_LIVE_POSITIVE_ONLY",
+    "not_global_research_blocker": true,
+    "status": "OPEN",
+    "basis": "Approved Access required in BOT Manual; no authorized credential or secure token-bearing runtime accessible to this R3 session",
+    "resolution": "Proof of Statistics Approved Access and legitimate token available in trusted runner; exact GET or other method/operation verified; one live sanitized success response",
+    "workaround": "DOCUMENTED_AUTH_PASS_LIVE_AUTH_BLOCKED; R4 may proceed with its separate safe constraints"
+  },
+  "evidence": [
+    {
+      "id": "R3-E01",
+      "url": "https://portal.api.bot.or.th/manual",
+      "date": "2026-10-08",
+      "role": "approved_access_token_and_http_header"
+    },
+    {
+      "id": "R3-E02",
+      "url": "https://portal.api.bot.or.th/migration",
+      "date": "2026-10-08",
+      "role": "canonical_gateway_header"
+    },
+    {
+      "id": "R3-E03",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "date": "2026-10-08",
+      "role": "statistics_product_and_listen_path"
+    },
+    {
+      "id": "R3-E04",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/d48f73217fdf41995a38859ed2b6e2d5/docs",
+      "date": "2026-10-08",
+      "role": "category_api_candidate_dynamic_rendering_caveat"
+    }
+  ],
+  "maintained_day2_unknowns": [
+    "D2-AUTH-U01",
+    "D2-AUTH-U02",
+    "D2-AUTH-U03",
+    "D2-AUTH-U04",
+    "D2-AUTH-U05",
+    "D2-AUTH-U06",
+    "D2-AUTH-U07",
+    "D2-AUTH-U08",
+    "D2-AUTH-U09",
+    "D2-AUTH-U10",
+    "D2-AUTH-U11"
+  ],
+  "maintained_bot_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "day02_gate": "NOT_ASSESSED",
+  "issue_status": "OPEN",
+  "production_connector": "HOLD",
+  "next_round": 4,
+  "next_round_status": "NOT_STARTED",
+  "next_action": "Day2 R4 safe negative/error behavior research; keep R3 positive live auth BLOCKED and avoid inventing codes",
+  "rule": "UNKNOWN != PASS"
+}
