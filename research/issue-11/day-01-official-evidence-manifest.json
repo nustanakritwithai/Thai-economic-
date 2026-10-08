@@ -1,0 +1,132 @@
+{
+  "manifest_version": 1,
+  "provider": "BOT",
+  "evidence_date": "2026-10-08",
+  "preservation_level": "URL_DATE_CLAIM_MANIFEST",
+  "immutable_external_snapshots_available": false,
+  "sources": [
+    {
+      "id": "BOT-E01",
+      "url": "https://portal.api.bot.or.th/",
+      "role": [
+        "current_api_portal"
+      ],
+      "supports": [
+        "BOT-CLM-001",
+        "BOT-CLM-010"
+      ]
+    },
+    {
+      "id": "BOT-E02",
+      "url": "https://portal.api.bot.or.th/migration",
+      "role": [
+        "migration_authority"
+      ],
+      "supports": [
+        "BOT-CLM-001",
+        "BOT-CLM-010"
+      ]
+    },
+    {
+      "id": "BOT-E03",
+      "url": "https://portal.api.bot.or.th/manual",
+      "role": [
+        "auth_admin",
+        "operational_guidance"
+      ],
+      "supports": [
+        "BOT-CLM-006"
+      ]
+    },
+    {
+      "id": "BOT-E04",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "role": [
+        "statistics_product_contract"
+      ],
+      "supports": [
+        "BOT-CLM-002",
+        "BOT-CLM-007"
+      ]
+    },
+    {
+      "id": "BOT-E05",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e581631f50164ffc72525b11050b5744/docs",
+      "role": [
+        "search_series_contract"
+      ],
+      "supports": [
+        "BOT-CLM-003",
+        "BOT-CLM-008"
+      ]
+    },
+    {
+      "id": "BOT-E06",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e2dcfd41460e49a86276db01aeb3cd1f/docs",
+      "role": [
+        "observations_contract"
+      ],
+      "supports": [
+        "BOT-CLM-004",
+        "BOT-CLM-005",
+        "BOT-CLM-008"
+      ]
+    },
+    {
+      "id": "BOT-E07",
+      "url": "https://www.bot.or.th/en/statistics.html",
+      "role": [
+        "statistics_publication_surface"
+      ],
+      "supports": [
+        "BOT-CLM-009",
+        "BOT-CLM-010"
+      ]
+    },
+    {
+      "id": "BOT-E08",
+      "url": "https://www.bot.or.th/en/statistics/revised-table-list.html",
+      "role": [
+        "publication_lifecycle"
+      ],
+      "supports": [
+        "BOT-CLM-011"
+      ]
+    },
+    {
+      "id": "BOT-E09",
+      "url": "https://www.bot.or.th/en/statistics/economic-and-financial-index-and-indicators.html",
+      "role": [
+        "semantic_bridge"
+      ],
+      "supports": [
+        "BOT-CLM-015"
+      ]
+    },
+    {
+      "id": "BOT-E10",
+      "url": "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?language=ENG&reportID=995",
+      "role": [
+        "btws_human_verification",
+        "publication_identity"
+      ],
+      "supports": [
+        "BOT-CLM-013",
+        "BOT-CLM-016"
+      ]
+    },
+    {
+      "id": "BOT-E11",
+      "url": "https://app.bot.or.th/BTWS_STAT/statistics/DownloadFile.aspx?file=EC_EI_003_S3_ENG.PDF",
+      "role": [
+        "pci_semantic_metadata",
+        "revision_policy"
+      ],
+      "supports": [
+        "PCI revision/vintage evidence"
+      ]
+    }
+  ],
+  "caveat": "URLs can change. This manifest does not substitute for immutable raw source snapshots/checksums.",
+  "rule": "Official source first; UNKNOWN != PASS."
+}
