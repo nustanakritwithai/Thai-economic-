@@ -1,0 +1,33 @@
+name: BOT R3 Public Environment Protection Inspection (no secrets)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-r3-env-metadata.yml"
+      - "research/issue-11/diagnostics/bot_r3_env_metadata.py"
+      - "research/issue-11/diagnostics/test_bot_r3_env_metadata.py"
+
+permissions:
+  contents: read
+
+jobs:
+  read-public-protections-only:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify fail-closed metadata classifications using synthetic fixtures
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_bot_r3_env_metadata.py' -v
+      - name: Read public GitHub Environment metadata only (no token or secrets APIs)
+        run: |
+          python3 research/issue-11/diagnostics/bot_r3_env_metadata.py --output-dir bot-r3-environment-evidence
+          cat bot-r3-environment-evidence/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload safe metadata-only receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-r3-environment-readiness-${{ github.run_id }}
+          path: bot-r3-environment-evidence/
+          if-no-files-found: error
+          retention-days: 30
