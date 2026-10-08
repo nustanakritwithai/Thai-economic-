@@ -13,7 +13,7 @@ Full anchor: `docs/NORTH_STAR.md`
 ## CURRENT
 **V0.2 — Core Data Connectors**
 
-Status: **ACTIVE — PLANNING / IMPLEMENTATION**
+Status: **ACTIVE — DEEP RESEARCH / IMPLEMENTATION HOLD**
 
 ## WHY CURRENT MATTERS
 V0.2 is not about “downloading government data.”
@@ -62,12 +62,16 @@ This is the single current execution entry point.
 **Issue #11 Deep Research — 28-day planned window**
 
 - Planned window: **2026-10-08 → 2026-11-04**
-- Current planned day: **Day 1 COMPLETE / Week 1**
-- Current focus: **Day 1 Round 7 COMPLETE — Contradiction Resolution**
-- Latest research artifact: `research/issue-11/day-01-r7-bot-contradiction-resolution.md`
-- Machine-readable contradiction register: `research/issue-11/day-01-r7-bot-contradiction-resolution.json`
-- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge, R5 Source Relationship Mapping, R6 Evidence Hardening, R7 Contradiction Resolution**
-- Next planned round: **R8 — Day 1 Freeze**
+- Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
+- Current focus: **Day 1 post-freeze hardening COMPLETE**
+- Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
+- Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
+- Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
+- Limitations review: `research/issue-11/day-01-limitations-review.md`
+- Closure audit: **SELF-AUDIT PASS 10/10**; independent semantic audit remains future validation
+- Day 1 rounds complete: **R1–R8**
+- Next planned day: **Day 2 — BOT Authentication & API Behavior**
+- Day 2 status: **PLANNED ONLY / NOT STARTED**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -100,7 +104,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-STOP after Day 1 closure. Next scheduled work is Day 2 — BOT Authentication & API Behavior. Do not start it in this work block unless explicitly authorized.
+Keep Day 2 as plan only. Day 1 post-freeze hardening is complete. Start Day 2 — BOT Authentication & API Behavior only when explicitly authorized.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
