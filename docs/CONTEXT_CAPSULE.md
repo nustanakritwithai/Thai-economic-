@@ -72,6 +72,7 @@ This is the single current execution entry point.
 - Day 1 rounds complete: **R1–R8**
 - Next planned day: **Day 2 — BOT Authentication & API Behavior**
 - Day 2 status: **PLANNED ONLY / NOT STARTED**
+- Day 2 plan: `research/issue-11/day-02-plan-only.md`
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
