@@ -63,10 +63,10 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Current planned day: **Day 1 COMPLETE / Week 1**
-- Current focus: **Day 1 Round 3 COMPLETE — Gap Hunt**
-- Latest research artifact: `research/issue-11/day-01-r3-bot-ecosystem-gap-hunt.md`
-- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt**
-- Next planned round: **R4 — Architecture Challenge**
+- Current focus: **Day 1 Round 4 COMPLETE — Architecture Challenge**
+- Latest research artifact: `research/issue-11/day-01-r4-bot-architecture-challenge.md`
+- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge**
+- Next planned round: **R5 — Source Relationship Mapping**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -99,7 +99,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 1 Round 4: challenge the updated BOT architecture. Decide whether API Product/Series and Publication Table/Report/File must be modeled as parallel entity families, define identifier namespaces, and test whether the same economic concept can map to multiple BOT objects without forcing false one-to-one mappings.
+Day 1 Round 5: assign explicit roles to each BOT surface (acquisition, metadata, verification, lifecycle/change signal, fallback, semantic bridge) and build an evidence-backed relationship graph. Do not implement database tables.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
