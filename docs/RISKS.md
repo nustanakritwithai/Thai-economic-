@@ -34,6 +34,15 @@ Both are scoped to missing live evidence, not global blockers of the Issue #11 r
 **Mitigation/workaround:** treat as ambiguous; preserve both literal strings and defer exact downtime-window interpretation. Current service health remains UNKNOWN. No automated maintenance handling from this research claim.
 **Closure condition:** official corrected notice or explicit BOT API support confirmation resolving the scheduled end time and timezone; preserve earlier original evidence and document amendment. Official BOT API contact listed at https://portal.api.bot.or.th/about-us; **no contact sent**.
 
+## BOT-R6-PUBLIC-LEAK-01 — Public Repository and Pages Secret Exposure Path
+**Classification:** OPEN DESIGN RISK, not a confirmed leak or incident.
+**Owner:** Future security lead and repository maintainer.
+**Affected:** V0.2 Issue #11 R6 and future BOT connector security gate.
+**Evidence:** public repo; inspected Pages workflow copies PROJECT_STATE.json, docs/, releases/, schemas/ into publicly deployed _site. Inspected validation workflow runs on push and PR with contents read. Neither file references BOT credentials; a full repo/configured Secrets scan was not performed. R6: research/issue-11/day-02-r6-bot-secret-security.md.
+**Impact:** accidental Token or TOKEN HASH in tracked files, issues, workflow output or artifacts could be redistributed by Git history/Pages.
+**Mitigation (NOT IMPLEMENTED):** trusted private secret facility/server worker, no BOT secret in general CI or Pages, synthetic canary leakage checks, independent security review and approval.
+**Closure:** reviewed operational proof of secret-free repo/CI/Pages with canaries and restricted private runtime. Structural CI PASS alone is insufficient.
+
 ## R-001 — Source schema changes
 **Risk:** Public agencies may change APIs/files without notice.
 **Mitigation:** raw snapshots, parser tests, schema checks, source-health alerts.

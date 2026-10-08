@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day 2 R5 Rate Limit & Operations documentary evidence RECORDED, runtime enforcement UNKNOWN; R3/R4 live BLOCKED; R6 NOT STARTED
+- **Current focus:** Day 2 R6 BOT Secret & Security Model DESIGN RECORDED / NOT IMPLEMENTED; R3/R4 live BLOCKED; R7 NOT STARTED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -41,13 +41,14 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Closure audit:** SELF-AUDIT PASS 10/10; independent semantic audit remains future validation
 - **Completed Day 1 rounds:** R1–R8
 - **Next planned day:** Day 2 — BOT Authentication & API Behavior
-- **Day 2 status:** R1/R2 RECORDED / R3 LIVE AUTH BLOCKED / R4 ORIGIN HTTP BLOCKED / R5 DOC RECORDED (not live PASS) / R6 NOT STARTED / Day-02 Gate NOT ASSESSED
+- **Day 2 status:** R1/R2 RECORDED / R3/R4 live BLOCKED / R5 DOC RECORDED / R6 SECURITY DESIGN RECORDED (not runtime PASS) / R7 NOT STARTED / Gate NOT ASSESSED
 - **Day 2 plan:** `research/issue-11/day-02-plan-only.md`
 - **Day 2 R1 artifact:** `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
 - **Day 2 R2 artifacts:** `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `research/issue-11/day-02-r2-bot-auth-revalidation.json` (2026-10-08)
 - **Day 2 R3 artifacts:** `research/issue-11/day-02-r3-bot-positive-access-blocked.md` and `.json` — documented auth PASS (documentation only); live positive test BLOCKED; zero HTTP calls (2026-10-08)
 - **Day 2 R4 artifacts:** `research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md` and `.json` — DNS error `curl 6`, `http_code=000` means no HTTP, not a BOT response; R4 negative status evidence BLOCKED.
 - **Day 2 R5 artifacts:** `research/issue-11/day-02-r5-bot-rate-operations.md` and `.json` — official advertised Product rates, Dashboard telemetry and maintenance notice; live enforcement/Retry-After UNKNOWN; bilingual maintenance time conflict unresolved.
+- **Day 2 R6 artifacts:** research/issue-11/day-02-r6-bot-secret-security.md and .json. Security DESIGN only, no tokens/secret manager/runtime test.
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -57,15 +58,13 @@ Implement a small, reliable set of official public-data connectors and prove ret
 https://github.com/nustanakritwithai/Thai-economic-/issues/11
 
 ## NOW
-1. Day 1 BOT Ecosystem Research: **FROZEN v1.1 / GATE PASS** (preserved)
-2. Closure Audit: **SELF-AUDIT PASS 10/10**; independent semantic review future validation
-3. Day 2 R1/R2: **RECORDED**; R3: **BLOCKED** (no approved credential); R4: **RECORDED / origin HTTP BLOCKED** (DNS); R5: **DOC RESEARCH RECORDED**, runtime scope/headers/maintenance time UNKNOWN
-4. Next scheduled research: Day 2 — BOT Authentication & API Behavior; next exact round = R6 Secret & Security Model only (R3/R4 live blockers OPEN)
-5. Issue #11 remains OPEN
-6. Production connector implementation remains HOLD
+1. Day 1 BOT FROZEN v1.1 / GATE PASS, preserved.
+2. Day 2 R1/R2 recorded; R3 live positive BLOCKED (credential); R4 negative HTTP BLOCKED (DNS); R5 documentary research recorded; R6 security design RECORDED, NOT DEPLOYED.
+3. Open blockers BOT-R3-CRED-01 and BOT-R4-EGRESS-01, open risks BOT-R5-MAINT-01 and BOT-R6-PUBLIC-LEAK-01 (exposure-path risk only).
+4. Issue #11 OPEN; Day-02 Gate NOT ASSESSED; production connector HOLD.
 
 ## NEXT EXACT ACTION
-Day 2 R6 — design an evidence-backed BOT Secret & Security Model, including future runtime secret injection, logging/CI redaction and rotation/revocation assumptions. Do NOT obtain/store/commit credentials or implement connector. R5 advertised plans documented but enforcement scope/Retry-After UNKNOWN; 3 Oct 2026 bilingual maintenance end-time conflict remains unresolved (`BOT-R5-MAINT-01`). R3 token blocker `BOT-R3-CRED-01` OPEN; R4 egress blocker `BOT-R4-EGRESS-01` OPEN. Issue #11 OPEN; Day-02 Gate NOT ASSESSED; production connector HOLD.
+Day 2 R7 Contradiction Resolution ONLY. Challenge TOKEN/TOKEN HASH, Existing App, rate screenshot/product, maintenance bilingual times and public CI/Pages secrecy; do not silently close UNKNOWNs. R7 NOT STARTED; no connector/Token work.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof
