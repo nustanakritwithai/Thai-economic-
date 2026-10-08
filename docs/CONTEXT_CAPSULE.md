@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day 2 Critical Evidence Gap #1: BOT Gateway DNS/TCP/TLS PASS on GitHub-hosted runner only; R3/R4 live HTTP still BLOCKED; Frozen v1/Gate BLOCKED_CRITICAL_EVIDENCE unchanged**
+- Current focus: **Day-2 Gap #2: one no-token GET obtained HTTP 401 from BOT Gateway hostname on GitHub Runner; exact API method/auth semantics remain UNKNOWN; R3 BLOCKED and overall R4/Day-02 Gate BLOCKED**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -84,6 +84,7 @@ This is the single current execution entry point.
 - Day 2 Recovery Self-Audit: `research/issue-11/day-02-closure-audit.md` — SAME-AGENT PASS 10/10 for recovering answers, NOT independent semantic/API certification.
 - Day 2 Gate decision: `research/issue-11/day-02-gate.md` — BLOCKED_CRITICAL_EVIDENCE; missing R3/R4 live origin HTTP, enforcement, security controls; research Day2 is NOT added to completed days.
 - Day-02 gap #1 network evidence: research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.md and research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.json — real GitHub Actions run 37796439277 verifies BOT Portal/Gateway DNS/TCP/TLS (no HTTP/token); original local DNS failure persists as historical evidence; R3/R4 remain BLOCKED.
+- Day-02 gap #2 observed HTTP: `research/issue-11/day-02-r4-followup-http-2026-10-09.md` and `research/issue-11/day-02-r4-followup-http-2026-10-09.json` — GitHub [run 37822323186](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37822323186) completed one GET with no Authorization, response HTTP 401 / application/json / Content-Length 46 header; exact official Method/error cause UNKNOWN; R3 remains BLOCKED, R4 error taxonomy partial.
 - Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
@@ -117,7 +118,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day-02 gap #1 transport verified on GitHub-hosted runner: DNS/TCP/TLS PASS, but zero HTTP; original R4 local runner remains unverified. **Next exact action:** verify specific BOT read-only endpoint/method and separately authorize one safe unauthenticated origin HTTP probe on reachable runner; R3 positive auth still separately BLOCKED pending legitimate secure credential. Preserve Frozen v1; **Day-02 Gate BLOCKED_CRITICAL_EVIDENCE**, no Day3/connector.
+Day-02 Gap #2 now has one actual HTTP 401 from an unauthenticated GET to composed BOT Stat Category path on GitHub Runner (run 37822323186). GET Method is a safe candidate, **not officially proven via raw OpenAPI**; 401 cause/response JSON body not read and provider-specific auth error semantics remain UNKNOWN. **Next exact action:** obtain/verify official raw API specification and clarify the 401 cause safely; R3 positive test independently requires approved BOT Statistics Token via trusted secret store. Day-02 Frozen v1 and Gate BLOCKED_CRITICAL_EVIDENCE stay, no Day3/connector.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
