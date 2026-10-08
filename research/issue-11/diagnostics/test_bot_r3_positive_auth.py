@@ -99,12 +99,12 @@ class TestR3(unittest.TestCase):
         self.assertNotIn("SYNTHETIC_SECRET_NEVER_LOG", json.dumps(r))
 
     def test_401_never_reads_raw_error_body(self):
-        resp = FakeResponse(status=401, body=b'{"private":"secret"}')
+        resp = FakeResponse(status=401, body=b'{"error":"RAW_ERROR_SENTINEL_728_NO_LOG"}')
         c = FakeConnection(response=resp)
         r = probe(live=True, env=env(), factory=build(c), context_factory=object)
         self.assertEqual(r["status"], "HTTP_OBSERVED_NO_POSITIVE_ACCESS_PROOF")
         self.assertEqual(resp.read_calls, 0)
-        self.assertNotIn("private", json.dumps(r))
+        self.assertNotIn("RAW_ERROR_SENTINEL_728_NO_LOG", json.dumps(r))
 
     def test_html_200_does_not_pass(self):
         resp = FakeResponse(mime="text/html")
