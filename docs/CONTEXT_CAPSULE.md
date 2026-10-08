@@ -63,9 +63,10 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Current planned day: **Day 1 COMPLETE / Week 1**
-- Current focus: **Day 1 frozen — BOT Data Ecosystem Map**
-- Latest research artifact: `research/issue-11/day-01-bot-data-ecosystem-map.md`
-- Next planned day: **Day 2 — BOT Authentication & API Behavior**
+- Current focus: **Day 1 Round 2 COMPLETE — Independent Revalidation**
+- Latest research artifact: `research/issue-11/day-01-r2-bot-ecosystem-revalidation.md`
+- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation**
+- Next planned round: **R3 — Gap Hunt**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -98,7 +99,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 2: verify BOT account/subscription/application approval flow, Authorization token behavior, missing/invalid credential responses, rate-limit/quota signals, and connector-relevant error patterns. Freeze Day 2 findings before Day 3.
+Day 1 Round 3: hunt for what R1/R2 missed—especially the official downloadable List of Statistics APIs, possible BTWS table/report ↔ API series mappings, archive/version surfaces, and any missing metadata/discovery paths.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
