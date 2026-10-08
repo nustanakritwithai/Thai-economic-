@@ -1,6 +1,6 @@
 # Day-02 Gap #5 — BOT R3 owner approval and protected execution gate
 
-**Status:** Metadata-only proof can run; BOT Approved Access, Token and protected runner remain UNVERIFIED until actually evidenced.
+**Status:** Public GitHub metadata check executed 2026-10-09 02:12 ICT: complete public Environment list HTTP200 does not list bot-statistics-r3 (run 37830244351). Owner/admin setup required. BOT Approved Access and Token remain UNKNOWN.
 **Project:** Thailand Economic OS / V0.2 / Issue #11.
 **Day-02 Evidence Gate:** BLOCKED_CRITICAL_EVIDENCE. Frozen v1 historical record unchanged.
 

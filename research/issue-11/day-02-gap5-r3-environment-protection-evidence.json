@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue": 11,
+  "day": 2,
+  "gap": 5,
+  "status": "R3_PROTECTED_ENV_NOT_LISTED_IN_COMPLETE_PUBLIC_GITHUB_ENVIRONMENT_LIST",
+  "evidence_scope": "METADATA_ONLY_NO_BOT_OR_SECRETS_ACCESS",
+  "observation": {
+    "admin_bypass_disabled": "UNKNOWN",
+    "bot_http_requests": 0,
+    "bot_statistics_approved_access_verified": false,
+    "bot_token_provisioned_or_checked": false,
+    "branch_policy_http_status": null,
+    "checked_at_utc": "2026-10-08T19:12:55.848782+00:00",
+    "classification": "BLOCKED_TARGET_NOT_LISTED_IN_COMPLETE_PUBLIC_ENVIRONMENT_LIST",
+    "custom_branch_policies": false,
+    "day02_gate": "BLOCKED_CRITICAL_EVIDENCE",
+    "deployment_protection_metadata_pass": false,
+    "environment_found_in_list": false,
+    "environment_http_status": 404,
+    "environment_list_complete": true,
+    "environment_list_http_status": 200,
+    "environment_name": "bot-statistics-r3",
+    "environment_retrievable": false,
+    "evidence_kind": "PUBLIC_GITHUB_ENVIRONMENT_PROTECTION_METADATA_ONLY",
+    "fetch_count": 2,
+    "github_credentials_used": false,
+    "github_secret_names_or_values_read": false,
+    "issue": 11,
+    "limitations": [
+      "Metadata is publicly retrievable on some repositories and can be unavailable without authentication",
+      "A standalone 404 is not proof of absence; a full public list of environments strengthens the same-time classification",
+      "Required reviewer metadata does not establish a particular reviewer gave approval for a job",
+      "No Secrets API, secret names/values, BOT portal account, Token, or live BOT requests checked",
+      "A metadata pass alone CANNOT enable R3 or certify actual environment secret injection",
+      "Existing secret-free research workflow remains offline-only"
+    ],
+    "live_r3_executed": false,
+    "live_r3_request_authorized": false,
+    "main_is_only_permitted_branch": false,
+    "prevent_self_review": "UNKNOWN",
+    "project": "Thailand Economic OS",
+    "repository": "nustanakritwithai/Thai-economic-",
+    "required_reviewer_count_positive": false,
+    "required_reviewer_rule_present": false,
+    "rule": "UNKNOWN != PASS",
+    "runner": {
+      "commit_sha": "0d9350d9a1e87410c12da8478eec594063df11fb",
+      "github_run_id": "37830244351"
+    },
+    "schema_version": 1
+  },
+  "provenance": {
+    "run_id": 37830244351,
+    "run_url": "https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37830244351",
+    "job_id": 113493406166,
+    "commit_sha": "0d9350d9a1e87410c12da8478eec594063df11fb",
+    "offline_fixture_tests_passed": 12,
+    "offline_fixture_tests_total": 12,
+    "artifact_id": 11573530435,
+    "artifact_name": "bot-r3-environment-readiness-37830244351",
+    "artifact_zip_independently_verified": false,
+    "observation_source": "GITHUB_ACTIONS_JOB_LOG_JSON_LINE",
+    "preceding_environment_get_only_run": 37830025754,
+    "preceding_status": 404,
+    "conclusion_time_scope": "2026-10-09T02:12:55+07:00"
+  },
+  "proof_boundaries": {
+    "environment_exact_name": "bot-statistics-r3",
+    "environment_get_http_status": 404,
+    "all_environment_list_http_status": 200,
+    "returned_list_complete": true,
+    "name_present": false,
+    "name_absence_conclusion": "AT_THIS_CHECK_PUBLIC_COMPLETE_ENV_LIST_DOES_NOT_INCLUDE_R3_ENV_NAME",
+    "not_proof_of_absent_token_elsewhere": true,
+    "not_proof_of_bot_owner_approval_denied": true,
+    "environment_security_rules_verified": false,
+    "required_reviewers_verified": false,
+    "self_review_prevention_verified": false,
+    "branch_restrictions_verified": false,
+    "bypass_prevention_verified": false,
+    "secret_store_verified": false,
+    "bot_account_access_verified": false,
+    "real_token_accessed": false,
+    "real_bot_requests": 0
+  },
+  "external_actions": [
+    {
+      "owner": "GITHUB_REPO_ADMIN",
+      "action": "Create bot-statistics-r3 via repository Settings > Environments, configure required reviewers, Prevent self-review, restrict allowed deployment branch to main and disable admin bypass where available",
+      "verification": "Repeat public metadata-only run; inspect real environment Settings"
+    },
+    {
+      "owner": "BOT_APPLICATION_OWNER",
+      "action": "Verify Statistics Product Approved Access in BOT Developer Portal; never share Token in ChatGPT/Issue",
+      "verification": "nonsecret owner attestation without account IDs"
+    },
+    {
+      "owner": "INDEPENDENT_SECURITY_REVIEWER",
+      "action": "Verify environment secret protection and token existence (metadata only), approve separate manual-only protected R3 one-shot if policy allows",
+      "verification": "restricted access review; do not read Token values"
+    }
+  ],
+  "next": "Owner completes protected Environment/Approved Access externally; re-run metadata probe and independently review secret inventory/access controls before separate live R3 one-shot.",
+  "blockers_open": [
+    "BOT-R3-CRED-01",
+    "BOT-R4-EGRESS-01"
+  ],
+  "day02_freeze": "FROZEN_v1_UNCHANGED",
+  "day02_gate": "BLOCKED_CRITICAL_EVIDENCE",
+  "issue_state": "OPEN",
+  "production_connector": "HOLD",
+  "day03": "NOT_AUTHORIZED",
+  "rule": "UNKNOWN != PASS"
+}

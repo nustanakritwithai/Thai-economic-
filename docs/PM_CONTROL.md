@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day-2 Gap #4 R3 offline harness PASS 10/10 synthetic tests, zero actual BOT Token/HTTP; R3 live/Gate BLOCKED
+- **Current focus:** Day-2 Gap #5 public Environment inspection: bot-statistics-r3 NOT LISTED in complete public GitHub Environment response; no privileged runner/Token, R3 BLOCKED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -58,6 +58,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Day-2 Gap #3 official Stat Category OAS:** `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.manifest.json` + archived `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.json.gz` (original SHA256 `282a1ceb6e707e702957eb6d507f04a98dc4be48cc15ec9e1608c81a7c1f2fcd`).
 - **Day-2 Gap #3 canonical GET no-auth 401:** `research/issue-11/day-02-gap3-canonical-http-2026-10-09.md` and `research/issue-11/day-02-gap3-canonical-http-2026-10-09.json`; verified OpenAPI GET /category_list/, run [37826019253](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37826019253); no Token, no response body, cause UNKNOWN; Day-02 Gate BLOCKED.
 - **Day-2 Gap #4 R3 readiness:** research/issue-11/day-02-gap4-r3-offline-readiness.md and research/issue-11/day-02-gap4-r3-offline-readiness.json; GitHub run 37828117237 PASS 10/10 mocked tests; actual offline request count 0, actual BOT Token access 0; GitHub Environment/approved BOT entitlement not verified.
+- **Day-2 Gap #5:** research/issue-11/day-02-gap5-r3-environment-protection-evidence.md and research/issue-11/day-02-gap5-r3-environment-protection-evidence.json; GitHub [run 37830244351](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37830244351) public Metadata GET 404; complete public listing HTTP200 excludes bot-statistics-r3; 12/12 mocked tests pass. Environment owner config required; no Secrets/BOT API consulted.
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -69,11 +70,11 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 ## NOW
 1. Day 1 BOT FROZEN v1.1 / GATE PASS, preserved.
 2. Day 2 R1–R8 research RECORDS preserved; Day-02 documentary evidence FROZEN v1, same-agent recovery self-audit PASS 10/10 only. **Day-02 Gate BLOCKED_CRITICAL_EVIDENCE (NOT PASS).**
-3. Gap #1 GitHub runner DNS/TCP/TLS PASS; Gap #2 noncanonical HTTP401; Gap #3 official raw OpenAPI GET confirmed and canonical no-token 401 observed; Gap #4 R3 offline research harness passed 10/10 synthetic tests but ZERO real credential/HTTP. R3 live remains BLOCKED; R4 full taxonomy still OPEN; Day-02 Gate BLOCKED.
+3. Gaps #1–3 BOT network, raw OAS and canonical no-token 401 documented. Gap #4 R3 OFFLINE mock PASS 10/10. Gap #5 inspected public repository Environment Metadata: bot-statistics-r3 NOT LISTED in complete public Environment list, so real protection not verified/configured. R3 live BLOCKED; R4 full taxonomy OPEN; Day-02 Gate BLOCKED.
 4. Issue #11 remains OPEN, current research day stays Day 2 (not marked completed). Production connector HOLD, no Day 3 automatic start.
 
 ## NEXT EXACT ACTION
-Day-2 Gap #4 test harness and fail-closed offline receipt are verified only (10/10 tests; HTTP count 0). External owner action required: confirm BOT Statistics Application Approved Access, configure and independently verify protected private Secret Store/runner approvals, and provision Token directly there, never in ChatGPT, GitHub Issues/Commits or public Pages. A separate manual-only credential-bearing job requires security review BEFORE any live R3 request. R3 BOT-R3-CRED-01 OPEN, Day-02 Frozen v1/Gate BLOCKED_CRITICAL_EVIDENCE, Issue #11 OPEN, production connector HOLD, no Day3.
+Gap #5 public GitHub Environment list (run 37830244351) did not include bot-statistics-r3. Authorized GitHub repo admin needs to create protected Environment with required genuine reviewer(s), prevent self-review, main-only deployment branches and no admin bypass when supported. Authorized BOT owner must independently confirm Statistics Approved Access. Re-check actual Settings/metadata and secret existence (NEVER secret value), then approve separate manual-only trusted R3 runner and one real GET. No such privileged job/token is configured by current code. R3 BLOCKED, Frozen v1 and Day-02 Gate BLOCKED_CRITICAL_EVIDENCE, Issue #11 OPEN, production connector HOLD, no Day3.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof

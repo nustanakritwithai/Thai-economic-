@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day-2 Gap #4 R3 offline safety harness PASS 10/10 mocks, zero actual HTTP/Token; actual Approved Access and protected runner unverified, R3/Gate BLOCKED**
+- Current focus: **Day-2 Gap #5 public GitHub Environment inspection: bot-statistics-r3 NOT LISTED in complete public Environment response, owner/admin configuration required; R3/Gate BLOCKED**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -87,6 +87,7 @@ This is the single current execution entry point.
 - Day-02 gap #2 observed HTTP: `research/issue-11/day-02-r4-followup-http-2026-10-09.md` and `research/issue-11/day-02-r4-followup-http-2026-10-09.json` — GitHub [run 37822323186](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37822323186) completed one GET with no Authorization, response HTTP 401 / application/json / Content-Length 46 header; exact official Method/error cause UNKNOWN; R3 remains BLOCKED, R4 error taxonomy partial.
 - Day-2 Gap #3 current official raw API: `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.json.gz` plus `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.manifest.json`, SHA256 `282a1ceb6e707e702957eb6d507f04a98dc4be48cc15ec9e1608c81a7c1f2fcd`; GET /category_list/ verified, and GitHub [canonical GET run 37826019253](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37826019253) observed HTTP401 without Token. Evidence `research/issue-11/day-02-gap3-canonical-http-2026-10-09.md` + `research/issue-11/day-02-gap3-canonical-http-2026-10-09.json`; BOT 401 cause UNKNOWN; R3/Gate BLOCKED.
 - Day-2 Gap #4 R3 offline readiness: research/issue-11/day-02-gap4-r3-offline-readiness.md and research/issue-11/day-02-gap4-r3-offline-readiness.json; GitHub run 37828117237 passed 10/10 synthetic tests; preflight sent zero requests and read no credential. Live R3 still BLOCKED.
+- Day-2 Gap #5 public protection metadata: research/issue-11/day-02-gap5-r3-environment-protection-evidence.md and research/issue-11/day-02-gap5-r3-environment-protection-evidence.json; GitHub Actions [37830244351](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37830244351) 12/12 mock tests PASS; exact Environment GET=404, complete public Environment list HTTP200 excludes bot-statistics-r3. No Secrets queried, no BOT calls. Owner must configure and approve.
 - Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
@@ -120,7 +121,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day-2 Gap #4 is offline readiness ONLY (GitHub test 10/10 mock PASS, 0 real HTTP, no real Token read). Next requires the authorized BOT owner to verify Statistics Approved Access and a security/repo administrator to inspect/protect private runner and secret store, before one separately approved manual real GET. No secrets in chat/issues/repo. R3 BLOCKED; Day-02 Frozen v1 and Gate BLOCKED_CRITICAL_EVIDENCE, Issue #11 OPEN, no Day 3 or connector.
+Gap #5: A complete public GitHub Environment listing did NOT contain bot-statistics-r3 on 2026-10-09 02:12 ICT. GitHub Repository admin must configure real protected Environment/reviewer/main-only branch and prevent self-review/admin bypass where available; BOT App owner confirms Statistics Approved Access separately. Re-run read-only metadata check and independently verify Secret presence (NOT value) before a separate manual-only privileged R3 job is even proposed. No Token in ChatGPT/Issues/commits, no live R3 yet. Day-02 Frozen v1/Gate BLOCKED_CRITICAL_EVIDENCE; Issue #11 OPEN; no Day3/connector.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
