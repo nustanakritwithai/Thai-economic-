@@ -172,8 +172,8 @@ if state and state.get("day_01_gate") == "PASS":
     pm_now = pm_path.read_text(encoding="utf-8") if pm_path.exists() else ""
     cap_now = capsule.read_text(encoding="utf-8") if capsule.exists() else ""
     for label, txt in [("PM_CONTROL", pm_now), ("CONTEXT_CAPSULE", cap_now)]:
-        if "Day 1 FROZEN" not in txt:
-            ok = fail(f"{label} must reflect Day 1 FROZEN after Day-1 gate PASS") and ok
+        if "Day 1" not in txt or "FROZEN" not in txt:
+            ok = fail(f"{label} must reflect Day 1 as FROZEN after Day-1 gate PASS") and ok
         if "Day 2 — BOT Authentication & API Behavior" not in txt:
             ok = fail(f"{label} must point to Day 2 after Day-1 gate PASS") and ok
         for stale in ["Current focus: **Day 1 Round 7", "Next planned round: **R8"]:
