@@ -1,0 +1,745 @@
+{
+  "schema_version": 1,
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue": 11,
+  "day": 2,
+  "round": 7,
+  "research_date": "2026-10-08",
+  "scheduled_day02_date": "2026-10-09",
+  "status": "CONTRADICTION_REVIEW_RECORDED_WITH_CONTROLLED_UNKNOWNS",
+  "independence": "CURRENT_AGENT_SOURCE_REVIEW_NOT_EXTERNAL_INDEPENDENT_SEMANTIC_CERTIFICATION",
+  "preservation_level": "OFFICIAL_URL_DATE_CLAIM_AND_PROJECT_GIT_HISTORY_NOT_EXTERNAL_RAW_SNAPSHOT",
+  "external_immutable_raw_snapshots_guaranteed": false,
+  "prior_rounds": {
+    "R1": "RECORDED",
+    "R2": "REVALIDATED_WITH_CAVEATS",
+    "R3": "POSITIVE_AUTH_BLOCKED_NO_APPROVED_CREDENTIAL",
+    "R4": "NEGATIVE_HTTP_BLOCKED_LOCAL_DNS_ZERO_ORIGIN_HTTP",
+    "R5": "DOCUMENTARY_EVIDENCE_RECORDED_ENFORCEMENT_UNKNOWN",
+    "R6": "SECURITY_DESIGN_ONLY_NOT_IMPLEMENTED"
+  },
+  "test_activity": {
+    "live_bot_token_used": false,
+    "bot_gateway_requests_r7": 0,
+    "observed_bot_origin_http_responses_r7": 0,
+    "secret_store_accessed": false,
+    "connector_work": false,
+    "rate_stress": false
+  },
+  "classification_taxonomy": [
+    "RESOLVED",
+    "SCOPE_MISMATCH",
+    "CONFIG_DIFFERENCE",
+    "UI_TERMINOLOGY",
+    "LIVE_BEHAVIOR_DIFF",
+    "UNKNOWN"
+  ],
+  "summary": {
+    "case_count": 19,
+    "resolved_scope_or_authority": 11,
+    "controlled_unknown_cases": 8,
+    "newly_proven_live_gateway_semantics": 0,
+    "critical_unknowns_claimed_closed": 0
+  },
+  "sources": [
+    {
+      "id": "R7-E01",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/manual",
+      "scope": "Account/Product/Plan/app/approval/token/header, Postman and Dashboard examples",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E02",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/migration",
+      "scope": "Legacy-to-new gateway/header priority",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E03",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "scope": "Currently advertised Statistics product rate/quota and auth label",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E04",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%207-1.png",
+      "scope": "Illustrative cart Statistics Plan rate 1000 calls per minute",
+      "method": "OFFICIAL_STATIC_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E05",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%207-2.png",
+      "scope": "Create new app / Existing app selection wording",
+      "method": "OFFICIAL_STATIC_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E06",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%209.png",
+      "scope": "Distinct APP ID/TOKEN/TOKEN HASH, ROTATE/REVOKE, Never, 1000/minute sample",
+      "method": "OFFICIAL_STATIC_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E07",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%2010-1.png",
+      "scope": "Postman Authorization header placeholder new portal Token",
+      "method": "OFFICIAL_STATIC_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E08",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%2011-2.png",
+      "scope": "Dashboard demo chart with 403 Forbidden",
+      "method": "OFFICIAL_STATIC_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E09",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/exchange-rates-1",
+      "scope": "Current Exchange Rates Product 200 calls/hour",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E10",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/interest-rates-1",
+      "scope": "Current Interest Rates Product 200 calls/hour",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E11",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/maintenance/BOT_API_Maintenance.html",
+      "scope": "03 Oct 2026 TH 9-11 vs EN 9-23 textual discrepancy",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E12",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/terms",
+      "scope": "Access secrecy and BOT authority to modify service limits",
+      "method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E13",
+      "kind": "BOT_OFFICIAL",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e2dcfd41460e49a86276db01aeb3cd1f/docs",
+      "scope": "Observations spec page: direct public extraction shell only; indexed content from BOT URL",
+      "method": "DYNAMIC_SPEC_INCOMPLETE",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null
+    },
+    {
+      "id": "R7-E14",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r1-bot-auth-discovery.md",
+      "scope": "R1 first-pass BOT authentication claims",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r1-bot-auth-discovery.md"
+    },
+    {
+      "id": "R7-E15",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r2-bot-auth-revalidation.md",
+      "scope": "Same-agent independent official-source revalidation and corrections",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r2-bot-auth-revalidation.md"
+    },
+    {
+      "id": "R7-E16",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r3-bot-positive-access-blocked.json",
+      "scope": "No legitimate approved credential and no positive request",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r3-bot-positive-access-blocked.json"
+    },
+    {
+      "id": "R7-E17",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json",
+      "scope": "Local DNS curl exit 6 and no completed origin HTTP",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json"
+    },
+    {
+      "id": "R7-E18",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r5-bot-rate-operations.json",
+      "scope": "Advertised quota/plan rates, operational unknowns and maintenance risk",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r5-bot-rate-operations.json"
+    },
+    {
+      "id": "R7-E19",
+      "kind": "REPO_RECORD",
+      "path": "research/issue-11/day-02-r6-bot-secret-security.json",
+      "scope": "Design-only secret security model and proposed acceptance checks",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/research/issue-11/day-02-r6-bot-secret-security.json"
+    },
+    {
+      "id": "R7-E20",
+      "kind": "REPO_WORKFLOW",
+      "path": ".github/workflows/validate.yml",
+      "scope": "Current PR/push validation, no BOT secret read in inspected YAML",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/.github/workflows/validate.yml"
+    },
+    {
+      "id": "R7-E21",
+      "kind": "REPO_WORKFLOW",
+      "path": ".github/workflows/pages.yml",
+      "scope": "Current public Pages build copies state/docs/releases/schemas",
+      "checked_date": "2026-10-08",
+      "source_content_immutable_snapshot_sha256": null,
+      "git_ref": "f543f31ba33ba94a6fa6c622e7ec30f6f64563a0",
+      "url": "https://github.com/nustanakritwithai/Thai-economic-/blob/f543f31ba33ba94a6fa6c622e7ec30f6f64563a0/.github/workflows/pages.yml"
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "R7-C01",
+      "topic": "Old gateway and header vs current API",
+      "left_claim": "Legacy X-IBM-Client-Id and apigw1.bot.or.th",
+      "right_claim": "Migration Guide requires Authorization and gateway.api.bot.or.th",
+      "classification": "RESOLVED",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E02"
+      ],
+      "decision": "Current migration guide and product-specific docs govern present machine access; legacy becomes history only.",
+      "remaining_unknowns": [],
+      "closure_route": "Revalidate if BOT issues another migration.",
+      "invalidation_condition": "New authoritative BOT gateway/header notice."
+    },
+    {
+      "id": "R7-C02",
+      "topic": "Subscribe/cart success vs Approved Access",
+      "left_claim": "Cart displays Product subscribed/Success",
+      "right_claim": "Manual explicitly states cart Product not yet approved; submit request then Approved Access",
+      "classification": "RESOLVED",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E04"
+      ],
+      "decision": "Cart selection = request preparation, not entitlement; R1 had already stated this correctly.",
+      "remaining_unknowns": [],
+      "closure_route": "No further closure needed; future account evidence only for specific approval.",
+      "invalidation_condition": "BOT changes approval flow."
+    },
+    {
+      "id": "R7-C03",
+      "topic": "TOKEN vs TOKEN HASH vs APP ID",
+      "left_claim": "BOT credential UI has three distinct labels; Token described as unique app ID",
+      "right_claim": "Manual instructs Copy Token into Authorization; TOKEN HASH described as app/auth server password",
+      "classification": "SCOPE_MISMATCH",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E06",
+        "R7-E07"
+      ],
+      "decision": "Separation of fields and documented copied Token path are supported; TOKEN HASH technical/on-wire role cannot be deduced.",
+      "remaining_unknowns": [
+        "D2-AUTH-U02",
+        "R6-U01"
+      ],
+      "closure_route": "Explicit current BOT specification/provider answer; authorized account test when secure.",
+      "invalidation_condition": "BOT publishes matching field definitions and wire examples.",
+      "r7_unknown_id": "R7-U01"
+    },
+    {
+      "id": "R7-C04",
+      "topic": "Auth Token / API Key / authToken terminology",
+      "left_claim": "Product UI says Auth Token, screenshot says authToken",
+      "right_claim": "Indexed API documentation uses API Key; Manual says Authorization header with copied Token",
+      "classification": "UI_TERMINOLOGY",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E03",
+        "R7-E06",
+        "R7-E07",
+        "R7-E13"
+      ],
+      "decision": "Different UI and security-scheme labels are not evidence of OAuth/JWT/Bearer semantics; header name and documented copy path stand.",
+      "remaining_unknowns": [
+        "D2-AUTH-U07",
+        "R6-U01",
+        "BOT-U07"
+      ],
+      "closure_route": "Save official raw current API spec and secure positive test; clarify exact credential type with BOT.",
+      "invalidation_condition": "Versioned source explicitly defines auth scheme/token formats.",
+      "r7_unknown_id": "R7-U02"
+    },
+    {
+      "id": "R7-C05",
+      "topic": "Existing App text vs selection control",
+      "left_claim": "Manual Thai prose describes creating app using earlier name and separate Product",
+      "right_claim": "Illustration radio control says Existing app; actual reuse/credential sharing not specified",
+      "classification": "UI_TERMINOLOGY",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E05"
+      ],
+      "decision": "Only option existence is proven; no inference about shared token, multi-product approval or actual reuse.",
+      "remaining_unknowns": [
+        "D2-AUTH-U03",
+        "D2-AUTH-U04",
+        "R6-U02"
+      ],
+      "closure_route": "Explicit BOT app/product cardinality docs or authorized redacted portal workflow.",
+      "invalidation_condition": "BOT clarifies Existing App backend behavior.",
+      "r7_unknown_id": "R7-U03"
+    },
+    {
+      "id": "R7-C06",
+      "topic": "Statistics Manual rate vs current Product rate",
+      "left_claim": "Official unversioned Manual screenshot: 1000 calls per minute",
+      "right_claim": "Current live-displayed Statistics Product: 2000 calls per hour",
+      "classification": "UNKNOWN",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E03",
+        "R7-E04",
+        "R7-E06"
+      ],
+      "decision": "A genuine two-source configuration-text mismatch; current page authoritative for current advertised number only. Cause/version/scope/enforcement UNKNOWN.",
+      "remaining_unknowns": [
+        "BOT-U06",
+        "D2-AUTH-U08",
+        "R5-U08"
+      ],
+      "closure_route": "Dated plan/version/config history or BOT support clarification; lawful measured configuration if available.",
+      "invalidation_condition": "Versioned authoritative schedule explains both snapshots.",
+      "r7_unknown_id": "R7-U04"
+    },
+    {
+      "id": "R7-C07",
+      "topic": "Unlimited Quota vs finite Rate",
+      "left_claim": "Statistics Plan says Quota unlimited",
+      "right_claim": "Same plan says Rate 2000 calls per hour",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E03"
+      ],
+      "decision": "They are separately displayed dimensions; unlimited quota is NOT permission for unlimited call frequency.",
+      "remaining_unknowns": [
+        "BOT-U06"
+      ],
+      "closure_route": "Enforcement interpretation still separately unknown under R5.",
+      "invalidation_condition": "Official BOT redefines plan-label semantics."
+    },
+    {
+      "id": "R7-C08",
+      "topic": "Different BOT product rates",
+      "left_claim": "Statistics displays 2000/hour",
+      "right_claim": "Exchange/Interest display 200/hour",
+      "classification": "CONFIG_DIFFERENCE",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E03",
+        "R7-E09",
+        "R7-E10"
+      ],
+      "decision": "No BOT-wide single rate; different Product/Plan displays coexist. Actual per-token enforcement remains unknown.",
+      "remaining_unknowns": [
+        "BOT-U06"
+      ],
+      "closure_route": "No contradiction to close; record per-product advertised plan only.",
+      "invalidation_condition": "Rate pages or actual enforcement contract changes."
+    },
+    {
+      "id": "R7-C09",
+      "topic": "Displayed plan rate vs actual enforcement",
+      "left_claim": "Product UI displays Rate/Quota",
+      "right_claim": "No authenticated/over-limit HTTP or headers observed in R3–R5",
+      "classification": "UNKNOWN",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E03",
+        "R7-E16",
+        "R7-E17",
+        "R7-E18"
+      ],
+      "decision": "Display does not define enforcement key, window algorithm, Retry-After, 429 or reset headers.",
+      "remaining_unknowns": [
+        "BOT-U06",
+        "R5-U01",
+        "R5-U02",
+        "R5-U03",
+        "R5-U04"
+      ],
+      "closure_route": "Explicit BOT enforcement contract or naturally encountered safe origin HTTP evidence; no stress testing.",
+      "invalidation_condition": "BOT publishes measured limiter scope and headers.",
+      "r7_unknown_id": "R7-U05"
+    },
+    {
+      "id": "R7-C10",
+      "topic": "Manual 200 example vs R3 blocked",
+      "left_claim": "BOT Manual illustrates 200 OK after successful Postman example",
+      "right_claim": "R3 produced zero live authenticated requests due to unavailable approved credential in this agent context",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E07",
+        "R7-E16"
+      ],
+      "decision": "Demonstration is not project runtime evidence; live positive auth stays BLOCKED without a fabricated 200.",
+      "remaining_unknowns": [
+        "D2-AUTH-U07",
+        "BOT-R3-CRED-01"
+      ],
+      "closure_route": "One legitimate token-bearing safe request from trusted runtime, separately recorded.",
+      "invalidation_condition": "Independent real response becomes available."
+    },
+    {
+      "id": "R7-C11",
+      "topic": "Dashboard 403 illustration vs R4 zero HTTP",
+      "left_claim": "BOT Dashboard example displays 403 Forbidden in pie chart",
+      "right_claim": "R4 local curl failed DNS and observed no BOT Gateway HTTP response",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E08",
+        "R7-E17"
+      ],
+      "decision": "UI error category existence does not classify actual gateway errors; R4 has no origin 403/401/429.",
+      "remaining_unknowns": [
+        "D2-AUTH-U11",
+        "BOT-R4-EGRESS-01"
+      ],
+      "closure_route": "Safe origin negative request after network preconditions; retain raw status as observed.",
+      "invalidation_condition": "New real safe error response is captured."
+    },
+    {
+      "id": "R7-C12",
+      "topic": "Local DNS failure vs externally readable BOT web docs",
+      "left_claim": "R4 runner could not resolve portal/gateway and curl http_code=000",
+      "right_claim": "A separate web reader can retrieve official BOT Portal documents",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E02",
+        "R7-E17"
+      ],
+      "decision": "Different clients/surfaces; local resolver failure is not evidence BOT is down, and public documentation retrieval does not establish gateway egress.",
+      "remaining_unknowns": [
+        "BOT-R4-EGRESS-01"
+      ],
+      "closure_route": "Use an authorized egress-enabled runner and measure origin HTTP; no extrapolation.",
+      "invalidation_condition": "Controlled comparison from same runner shows gateway transport."
+    },
+    {
+      "id": "R7-C13",
+      "topic": "Bilingual maintenance notice end time",
+      "left_claim": "3 Oct 2026 Thai notice ends 11:00",
+      "right_claim": "Same BOT page English notice ends 11:00 PM (23:00)",
+      "classification": "UNKNOWN",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E11",
+        "R7-E18"
+      ],
+      "decision": "A real official textual time contradiction; neither 2-hour nor 14-hour downtime is proven. Preserve BOTH strings.",
+      "remaining_unknowns": [
+        "R5-U07",
+        "BOT-R5-MAINT-01"
+      ],
+      "closure_route": "BOT corrected notice or explicit official clarification including local timezone.",
+      "invalidation_condition": "Official corrigendum explicitly resolves the interval.",
+      "r7_unknown_id": "R7-U06"
+    },
+    {
+      "id": "R7-C14",
+      "topic": "Past maintenance notice vs current service health",
+      "left_claim": "Official notice announces planned interruption on 3 Oct",
+      "right_claim": "Research performed 8 Oct; no current status API/actual measured outage",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E11",
+        "R7-E17",
+        "R7-E18"
+      ],
+      "decision": "Historical announcement cannot prove outage on research date or actual downtime duration.",
+      "remaining_unknowns": [
+        "R5-U06",
+        "R5-U09"
+      ],
+      "closure_route": "Separately establish service-health source; no current-outage claim.",
+      "invalidation_condition": "New time-scoped official outage evidence appears."
+    },
+    {
+      "id": "R7-C15",
+      "topic": "Rotate/Revoke and Never example vs actual lifecycle",
+      "left_claim": "BOT app screenshot shows ROTATE, REVOKE, EXPIRES Never",
+      "right_claim": "No approved account/real rotate, revoke, expiry, propagation or overlap tested",
+      "classification": "SCOPE_MISMATCH",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E06",
+        "R7-E16",
+        "R7-E19"
+      ],
+      "decision": "UI controls exist as illustrated; no global permanent credential lifetime or revocation guarantee.",
+      "remaining_unknowns": [
+        "D2-AUTH-U05",
+        "R6-U03"
+      ],
+      "closure_route": "Provider lifecycle policy or controlled owner-authorized test; no real secrets in issue/docs.",
+      "invalidation_condition": "BOT publishes or demonstrates actual lifecycle semantics.",
+      "r7_unknown_id": "R7-U07"
+    },
+    {
+      "id": "R7-C16",
+      "topic": "GitHub encrypted Secrets vs public GitHub/Pages",
+      "left_claim": "GitHub offers restricted Secrets and environment approvals in general",
+      "right_claim": "Repo PUBLIC; current Pages deploy copies PROJECT_STATE.json, docs/, releases/, schemas/ from source",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E19",
+        "R7-E20",
+        "R7-E21"
+      ],
+      "decision": "Secret-store features do not make tracked public files confidential; checked workflows do not explicitly contain BOT secret references; no full secret scan or incident evidence.",
+      "remaining_unknowns": [
+        "R6-U05",
+        "R6-U08",
+        "R6-U12",
+        "BOT-R6-PUBLIC-LEAK-01"
+      ],
+      "closure_route": "Approved settings audit and canary controls later; design risk OPEN not current breach.",
+      "invalidation_condition": "New audited runtime or actual leak evidence."
+    },
+    {
+      "id": "R7-C17",
+      "topic": "Security design contract vs operational security certification",
+      "left_claim": "R6 writes a comprehensive secret-boundary design",
+      "right_claim": "No private manager/worker, canary test or bot credential security controls implemented",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E19",
+        "R7-E20",
+        "R7-E21"
+      ],
+      "decision": "R6 is DESIGN RECORDED ONLY, no SEC-G01..SEC-G12 operational PASS and no connector authorization.",
+      "remaining_unknowns": [
+        "R6-U05",
+        "R6-U07",
+        "R6-U08"
+      ],
+      "closure_route": "Future reviewed implementation tests only after Issue #11 research gate.",
+      "invalidation_condition": "Implemented control/independent evidence changes status."
+    },
+    {
+      "id": "R7-C18",
+      "topic": "Indexed BOT Statistics API detail vs direct HTML extraction",
+      "left_claim": "R2 search-indexed BOT-source excerpt exposed API Key/Authorization example",
+      "right_claim": "Direct docs URL renders only page shell in public text retrieval; no immutable OpenAPI export",
+      "classification": "UNKNOWN",
+      "status": "CONTROLLED_UNKNOWN",
+      "evidence_ids": [
+        "R7-E01",
+        "R7-E13",
+        "R7-E15"
+      ],
+      "decision": "Manual/migration independently corroborate header, but raw versioned API spec export URL/history remains unproven.",
+      "remaining_unknowns": [
+        "BOT-U07",
+        "D2-AUTH-U09"
+      ],
+      "closure_route": "Obtain official spec export directly with bytes/version/checksum or explicit BOT support source.",
+      "invalidation_condition": "BOT makes stable spec export/history verifiably retrievable.",
+      "r7_unknown_id": "R7-U08"
+    },
+    {
+      "id": "R7-C19",
+      "topic": "Independent revalidation vs independent certification",
+      "left_claim": "R2 re-fetched primary sources instead of accepting R1 conclusions",
+      "right_claim": "The same assistant conducted R1 and R2; Day-01 closure audit was also a same-agent self-audit",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED",
+      "evidence_ids": [
+        "R7-E15",
+        "R7-E19"
+      ],
+      "decision": "Independent source challenge is not independent third-party semantic certification or live BOT behavior verification.",
+      "remaining_unknowns": [
+        "R6-U08"
+      ],
+      "closure_route": "Independent reviewer recommended later; structural CI proves repository consistency only.",
+      "invalidation_condition": "Third-party independent semantic audit becomes available."
+    }
+  ],
+  "r7_unknowns": [
+    {
+      "id": "R7-U01",
+      "case_id": "R7-C03",
+      "topic": "TOKEN vs TOKEN HASH vs APP ID",
+      "closure_route": "Explicit current BOT specification/provider answer; authorized account test when secure."
+    },
+    {
+      "id": "R7-U02",
+      "case_id": "R7-C04",
+      "topic": "Auth Token / API Key / authToken terminology",
+      "closure_route": "Save official raw current API spec and secure positive test; clarify exact credential type with BOT."
+    },
+    {
+      "id": "R7-U03",
+      "case_id": "R7-C05",
+      "topic": "Existing App text vs selection control",
+      "closure_route": "Explicit BOT app/product cardinality docs or authorized redacted portal workflow."
+    },
+    {
+      "id": "R7-U04",
+      "case_id": "R7-C06",
+      "topic": "Statistics Manual rate vs current Product rate",
+      "closure_route": "Dated plan/version/config history or BOT support clarification; lawful measured configuration if available."
+    },
+    {
+      "id": "R7-U05",
+      "case_id": "R7-C09",
+      "topic": "Displayed plan rate vs actual enforcement",
+      "closure_route": "Explicit BOT enforcement contract or naturally encountered safe origin HTTP evidence; no stress testing."
+    },
+    {
+      "id": "R7-U06",
+      "case_id": "R7-C13",
+      "topic": "Bilingual maintenance notice end time",
+      "closure_route": "BOT corrected notice or explicit official clarification including local timezone."
+    },
+    {
+      "id": "R7-U07",
+      "case_id": "R7-C15",
+      "topic": "Rotate/Revoke and Never example vs actual lifecycle",
+      "closure_route": "Provider lifecycle policy or controlled owner-authorized test; no real secrets in issue/docs."
+    },
+    {
+      "id": "R7-U08",
+      "case_id": "R7-C18",
+      "topic": "Indexed BOT Statistics API detail vs direct HTML extraction",
+      "closure_route": "Obtain official spec export directly with bytes/version/checksum or explicit BOT support source."
+    }
+  ],
+  "unclosed_inherited_unknowns": {
+    "bot_day01": [
+      "BOT-U01",
+      "BOT-U02",
+      "BOT-U03",
+      "BOT-U04",
+      "BOT-U05",
+      "BOT-U06",
+      "BOT-U07",
+      "BOT-U08",
+      "BOT-U09"
+    ],
+    "day02_auth": [
+      "D2-AUTH-U01",
+      "D2-AUTH-U02",
+      "D2-AUTH-U03",
+      "D2-AUTH-U04",
+      "D2-AUTH-U05",
+      "D2-AUTH-U06",
+      "D2-AUTH-U07",
+      "D2-AUTH-U08",
+      "D2-AUTH-U09",
+      "D2-AUTH-U10",
+      "D2-AUTH-U11"
+    ],
+    "day02_r5": [
+      "R5-U01",
+      "R5-U02",
+      "R5-U03",
+      "R5-U04",
+      "R5-U05",
+      "R5-U06",
+      "R5-U07",
+      "R5-U08",
+      "R5-U09",
+      "R5-U10"
+    ],
+    "day02_r6": [
+      "R6-U01",
+      "R6-U02",
+      "R6-U03",
+      "R6-U04",
+      "R6-U05",
+      "R6-U06",
+      "R6-U07",
+      "R6-U08",
+      "R6-U09",
+      "R6-U10",
+      "R6-U11",
+      "R6-U12"
+    ]
+  },
+  "scoped_live_blockers": [
+    "BOT-R3-CRED-01",
+    "BOT-R4-EGRESS-01"
+  ],
+  "open_research_risks": [
+    "BOT-R5-MAINT-01",
+    "BOT-R6-PUBLIC-LEAK-01"
+  ],
+  "r8": "NOT_STARTED",
+  "day02_gate": "NOT_ASSESSED",
+  "issue11": "OPEN",
+  "production_connector": "HOLD",
+  "r8_readiness": "DOCUMENTARY_CONTRADICTION_MAP_READY; LIVE_TEST_AND_OPERATIONAL_SECURITY_PROOF_MISSING",
+  "next_exact_action": "Day 2 R8 — prepare research freeze/recovery audit and explicit BLOCKED/UNKNOWN Day-02 Gate assessment; never claim PASS from documentation or date, and do not close Issue #11 or begin connector.",
+  "rule": "UNKNOWN != PASS"
+}
