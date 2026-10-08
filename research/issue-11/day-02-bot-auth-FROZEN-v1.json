@@ -1,0 +1,459 @@
+{
+  "schema_version": 1,
+  "profile_version": "DAY02-FROZEN-v1",
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue": 11,
+  "day": 2,
+  "scope": "DOCUMENTARY_RESEARCH_AND_RECOVERY",
+  "research_window_day": "2026-10-08",
+  "calendar_planned_day": "2026-10-09",
+  "status": "RESEARCH_FROZEN_V1_GATE_BLOCKED",
+  "freeze_date": "2026-10-08",
+  "pre_freeze_main_sha": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4",
+  "day_02_gate": "BLOCKED_CRITICAL_EVIDENCE",
+  "day_02_research_freeze_status": "FROZEN_v1_GATE_BLOCKED",
+  "completed_day_02_rounds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "rounds": [
+    {
+      "id": 1,
+      "status": "DOCUMENTATION_RECORDED",
+      "artifact_ref": "research/issue-11/day-02-r1-bot-auth-discovery.md"
+    },
+    {
+      "id": 2,
+      "status": "SOURCE_REVALIDATION_WITH_CORRECTIONS_AND_UNKNOWNS",
+      "artifact_ref": "research/issue-11/day-02-r2-bot-auth-revalidation.md"
+    },
+    {
+      "id": 3,
+      "status": "LIVE_POSITIVE_AUTH_BLOCKED",
+      "artifact_ref": "research/issue-11/day-02-r3-bot-positive-access-blocked.json"
+    },
+    {
+      "id": 4,
+      "status": "ORIGIN_HTTP_NEGATIVE_BLOCKED_LOCAL_DNS",
+      "artifact_ref": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json"
+    },
+    {
+      "id": 5,
+      "status": "DOCUMENTARY_RATE_OPERATIONS_ONLY",
+      "artifact_ref": "research/issue-11/day-02-r5-bot-rate-operations.json"
+    },
+    {
+      "id": 6,
+      "status": "SECURITY_DESIGN_ONLY_NOT_IMPLEMENTED",
+      "artifact_ref": "research/issue-11/day-02-r6-bot-secret-security.json"
+    },
+    {
+      "id": 7,
+      "status": "CONTRADICTION_REVIEW_19_CASES_8_UNKNOWN",
+      "artifact_ref": "research/issue-11/day-02-r7-bot-contradictions.json"
+    },
+    {
+      "id": 8,
+      "status": "RECOVERY_DOCUMENT_FREEZE_COMPLETE_GATE_BLOCKED",
+      "artifact_ref": "research/issue-11/day-02-bot-auth-FROZEN-v1.md"
+    }
+  ],
+  "r3_positive_auth": {
+    "status": "BLOCKED_NO_APPROVED_CREDENTIAL_AVAILABLE_IN_EXECUTION_CONTEXT",
+    "request_sent": false,
+    "request_count": 0,
+    "http_status": null,
+    "content_type": null,
+    "latency_ms": null,
+    "response_size_bytes": null,
+    "nonsecret_response_headers": null,
+    "provider_response_retrieved_at": null,
+    "blocker_id": "BOT-R3-CRED-01",
+    "owner": "AUTHORIZED_BOT_ACCOUNT_ADMIN_AND_RESEARCH_OPERATOR",
+    "provider_denial_proven": false
+  },
+  "r4_negative_error_behavior": {
+    "status": "BLOCKED_DNS_BEFORE_ORIGIN_HTTP",
+    "attempted_local_gateway_connections": 1,
+    "completed_gateway_http_exchanges": 0,
+    "origin_http_statuses_observed": [],
+    "origin_http_status": null,
+    "curl_exit_code": 6,
+    "curl_http_code_string": "000",
+    "transport_error": "LOCAL_DNS_RESOLUTION_FAILED",
+    "content_type": null,
+    "latency_ms_origin": null,
+    "response_size_bytes": null,
+    "nonsecret_response_headers": null,
+    "provider_response_retrieved_at": null,
+    "blocker_id": "BOT-R4-EGRESS-01",
+    "owner": "AUTHORIZED_NETWORK_RUNNER_RESEARCH_OPERATOR",
+    "bot_outage_proven": false
+  },
+  "r5_rate_operations": {
+    "status": "DOCUMENTARY_EVIDENCE_ONLY",
+    "advertised_rates": [
+      {
+        "product": "Statistics",
+        "quota": "Unlimited",
+        "calls": 2000,
+        "period": "hour",
+        "source": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1"
+      },
+      {
+        "product": "Exchange Rates",
+        "quota": "Unlimited",
+        "calls": 200,
+        "period": "hour",
+        "source": "https://portal.api.bot.or.th/portal/catalogue-products/exchange-rates-1"
+      },
+      {
+        "product": "Interest Rates",
+        "quota": "Unlimited",
+        "calls": 200,
+        "period": "hour",
+        "source": "https://portal.api.bot.or.th/portal/catalogue-products/interest-rates-1"
+      }
+    ],
+    "manual_illustrated_statistics_rate": "1000/minute",
+    "rate_conflict_resolved": false,
+    "enforcement_key": null,
+    "window_algorithm": null,
+    "retry_after_header": null,
+    "remaining_reset_headers": null,
+    "actual_throttle_status": null,
+    "dashboard_documentation_only": true,
+    "maintenance_notice_date": "2026-10-03",
+    "maintenance_thai_interval": "09:00-11:00",
+    "maintenance_english_interval": "09:00-23:00",
+    "maintenance_end_resolved": false,
+    "current_service_status": "UNKNOWN"
+  },
+  "r6_security_model": {
+    "status": "DESIGN_ONLY_NOT_DEPLOYED",
+    "repo_public": true,
+    "pages_publishes_paths": [
+      "index.html",
+      "PROJECT_STATE.json",
+      "docs/",
+      "releases/",
+      "schemas/"
+    ],
+    "token_or_token_hash_accessed": false,
+    "secret_manager_deployed": false,
+    "worker_deployed": false,
+    "canary_tests_run": false,
+    "security_controls_operational_pass": 0,
+    "approved_runtime_credential_present": false,
+    "token_hash_runtime_role": "UNKNOWN"
+  },
+  "r7_contradictions": {
+    "status": "DOCUMENTED_19_CASES_8_CONTROLLED_UNKNOWNS",
+    "summary": {
+      "case_count": 19,
+      "resolved_scope_or_authority": 11,
+      "controlled_unknown_cases": 8,
+      "newly_proven_live_gateway_semantics": 0,
+      "critical_unknowns_claimed_closed": 0
+    },
+    "controlled_unknown_case_ids": [
+      {
+        "id": "R7-U01",
+        "case_id": "R7-C03"
+      },
+      {
+        "id": "R7-U02",
+        "case_id": "R7-C04"
+      },
+      {
+        "id": "R7-U03",
+        "case_id": "R7-C05"
+      },
+      {
+        "id": "R7-U04",
+        "case_id": "R7-C06"
+      },
+      {
+        "id": "R7-U05",
+        "case_id": "R7-C09"
+      },
+      {
+        "id": "R7-U06",
+        "case_id": "R7-C13"
+      },
+      {
+        "id": "R7-U07",
+        "case_id": "R7-C15"
+      },
+      {
+        "id": "R7-U08",
+        "case_id": "R7-C18"
+      }
+    ],
+    "source_ref": "research/issue-11/day-02-r7-bot-contradictions.json"
+  },
+  "provenance_git_artifacts": [
+    {
+      "round": "R1",
+      "path": "research/issue-11/day-02-r1-bot-auth-discovery.md",
+      "git_blob_sha": "908ca6a8b231791b5d499ec87c0248b2e58b709e",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R2",
+      "path": "research/issue-11/day-02-r2-bot-auth-revalidation.md",
+      "git_blob_sha": "48f8472d27658ddbc6cdb7f0e36bb01bb38b48aa",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R2",
+      "path": "research/issue-11/day-02-r2-bot-auth-revalidation.json",
+      "git_blob_sha": "d53477f3223a8eb75c4bfbb821a17ab11d711b29",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R3",
+      "path": "research/issue-11/day-02-r3-bot-positive-access-blocked.md",
+      "git_blob_sha": "794dee6e29e1412d28cf3bfdc70a3e93e1120286",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R3",
+      "path": "research/issue-11/day-02-r3-bot-positive-access-blocked.json",
+      "git_blob_sha": "6591656b174b0247fa16b05d06101775782df6fd",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R4",
+      "path": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md",
+      "git_blob_sha": "f3edb0f5bcd6624d0fd195a382b397841b25ea08",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R4",
+      "path": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json",
+      "git_blob_sha": "6472de00c702ed78ad2fdeffdb169485c8590693",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R5",
+      "path": "research/issue-11/day-02-r5-bot-rate-operations.md",
+      "git_blob_sha": "bb30631f82600c9314eb27886744f6f06f9bde40",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R5",
+      "path": "research/issue-11/day-02-r5-bot-rate-operations.json",
+      "git_blob_sha": "a7d376081c78064f63dfa50cbef2a5e30f51f6cd",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R6",
+      "path": "research/issue-11/day-02-r6-bot-secret-security.md",
+      "git_blob_sha": "65eef37ba4328ceabf49fe0eff7c30d1f793aee4",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R6",
+      "path": "research/issue-11/day-02-r6-bot-secret-security.json",
+      "git_blob_sha": "5aacd92dfb683e725a1813ae1e1eb133cf3bc60d",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R7",
+      "path": "research/issue-11/day-02-r7-bot-contradiction-resolution.md",
+      "git_blob_sha": "928d19b906fc008f04147ebd6e764fd84890195e",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    },
+    {
+      "round": "R7",
+      "path": "research/issue-11/day-02-r7-bot-contradictions.json",
+      "git_blob_sha": "4c9194bc7ea45111cfd1fc18e1bd9de0356725b0",
+      "anchored_at_main": "9e6eed01cf7c7286a00d7cdf59d599bdebbda3d4"
+    }
+  ],
+  "day01_frozen_provenance": [
+    {
+      "path": "research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md",
+      "git_blob_sha": "8c4b4553148a6ddb6ded864c9311725f4f627c6e"
+    },
+    {
+      "path": "research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json",
+      "git_blob_sha": "2f75b63156abb84ab08cf538371cbe00309fe0e9"
+    }
+  ],
+  "unknown_registers": {
+    "bot_day01": [
+      "BOT-U01",
+      "BOT-U02",
+      "BOT-U03",
+      "BOT-U04",
+      "BOT-U05",
+      "BOT-U06",
+      "BOT-U07",
+      "BOT-U08",
+      "BOT-U09"
+    ],
+    "day02_auth": [
+      "D2-AUTH-U01",
+      "D2-AUTH-U02",
+      "D2-AUTH-U03",
+      "D2-AUTH-U04",
+      "D2-AUTH-U05",
+      "D2-AUTH-U06",
+      "D2-AUTH-U07",
+      "D2-AUTH-U08",
+      "D2-AUTH-U09",
+      "D2-AUTH-U10",
+      "D2-AUTH-U11"
+    ],
+    "day02_r5": [
+      "R5-U01",
+      "R5-U02",
+      "R5-U03",
+      "R5-U04",
+      "R5-U05",
+      "R5-U06",
+      "R5-U07",
+      "R5-U08",
+      "R5-U09",
+      "R5-U10"
+    ],
+    "day02_r6": [
+      "R6-U01",
+      "R6-U02",
+      "R6-U03",
+      "R6-U04",
+      "R6-U05",
+      "R6-U06",
+      "R6-U07",
+      "R6-U08",
+      "R6-U09",
+      "R6-U10",
+      "R6-U11",
+      "R6-U12"
+    ],
+    "day02_r7": [
+      "R7-U01",
+      "R7-U02",
+      "R7-U03",
+      "R7-U04",
+      "R7-U05",
+      "R7-U06",
+      "R7-U07",
+      "R7-U08"
+    ],
+    "labels_count": 50,
+    "overlapping_root_questions": true,
+    "inheritance_preserved": true,
+    "critical_unknowns_claimed_closed": 0
+  },
+  "scoped_blockers": [
+    {
+      "id": "BOT-R3-CRED-01",
+      "state": "OPEN",
+      "scope": "POSITIVE_LIVE_AUTH",
+      "closure": "SECURE_APPROVED_TOKEN_PLUS_VERIFIED_SAFE_ORIGIN_POSITIVE_RESPONSE"
+    },
+    {
+      "id": "BOT-R4-EGRESS-01",
+      "state": "OPEN",
+      "scope": "NEGATIVE_ORIGIN_HTTP",
+      "closure": "AUTHORIZED_EGRESS_DNS_CONNECTIVITY_PLUS_SAFE_ORIGIN_HTTP_RESPONSE"
+    }
+  ],
+  "research_risks": [
+    {
+      "id": "BOT-R5-MAINT-01",
+      "state": "OPEN",
+      "classification": "OFFICIAL_BILINGUAL_NOTICE_CONFLICT_NOT_CURRENT_OUTAGE"
+    },
+    {
+      "id": "BOT-R6-PUBLIC-LEAK-01",
+      "state": "OPEN",
+      "classification": "DESIGN_RISK_NOT_OBSERVED_SECRET_INCIDENT"
+    }
+  ],
+  "evidence_limitations": [
+    "BOT_OFFICIAL_REFERENCES_URL_DATE_CLAIM_NOT_RAW_IMMUTABLE_SNAPSHOTS",
+    "STABLE_RAW_API_SPEC_EXPORT_UNKNOWN",
+    "AUTH_ISSUER_AND_TOKEN_SEMANTICS_NOT_LIVE_TESTED",
+    "NO_HTTP_GATEWAY_RESPONSE",
+    "SAME_AGENT_RECOVERY_SELF_AUDIT_NOT_INDEPENDENT_SEMANTIC_CERTIFICATION",
+    "GITHUB_BLOB_HASHES_ONLY_REFER_TO_REPO_DOCUMENTS"
+  ],
+  "recovery_qa": [
+    {
+      "n": 1,
+      "q": "What is current BOT machine access and how does it differ from legacy?",
+      "a": "Current Developer Portal https://portal.api.bot.or.th/, gateway https://gateway.api.bot.or.th/ and header Authorization. apigw1.bot.or.th/bot/public and X-IBM-Client-Id are legacy; use current Migration Guide as authority."
+    },
+    {
+      "n": 2,
+      "q": "What exact documented enrollment workflow is known?",
+      "a": "Account signup/email verification → select Statistics Product/Plan → add to cart (NOT approved) → select/create Application → Submit Request → Approved Access → My apps → Copy Token → Authorization. No actual project account approval is confirmed."
+    },
+    {
+      "n": 3,
+      "q": "Are APP ID, TOKEN and TOKEN HASH the same, and is Bearer required?",
+      "a": "They are distinct UI fields. BOT Manual documents copied Token in Authorization. TOKEN HASH role, app/product cardinality, expiry and live prefix handling remain UNKNOWN; no successful token-bearing project request was measured."
+    },
+    {
+      "n": 4,
+      "q": "What positive and negative HTTP results were actually obtained?",
+      "a": "R3 performed ZERO authorized gateway requests: positive live test BLOCKED for lack of approved usable credential in current context. R4 attempted one unauthenticated local GET but curl failed DNS (exit 6, http_code=000); ZERO completed BOT origin HTTP responses. Every origin status, header, body and latency remains NOT OBSERVED."
+    },
+    {
+      "n": 5,
+      "q": "What is confirmed about rates, and what is not?",
+      "a": "Product-page advertised Statistics 2000/hour, Exchange Rates and Interest Rates 200/hour; quota shown as unlimited separately. An illustrative Manual screenshot shows Statistics 1000/min. Enforcement scope, key, rolling/fixed window, reset headers, 429 and Retry-After remain UNKNOWN."
+    },
+    {
+      "n": 6,
+      "q": "What do Dashboard and maintenance sources prove?",
+      "a": "Manual illustrates Performance/calls/error/latency/CSV/403 chart only, not this project's HTTP errors. 2026-10-03 notice has Thai end 11:00 and English end 23:00; actual downtime, corrected ending and present service health UNKNOWN."
+    },
+    {
+      "n": 7,
+      "q": "What security architecture is documented, implemented or not?",
+      "a": "BOT Terms require secrecy; public GitHub repo/Pages copy PROJECT_STATE, docs, releases, schemas. R6 proposes private secret store, trusted server-side worker and secret-free CI/Pages/agents; NO store, BOT token, rotation, canary test or security guard has been deployed or certified."
+    },
+    {
+      "n": 8,
+      "q": "What did R7 contradiction review establish?",
+      "a": "Nineteen cases: eleven narrowly resolved authority/scope differences, eight controlled UNKNOWNs R7-U01..R7-U08. No live BOT behavior proven and none of inherited BOT/D2/R5/R6 unknowns are closed."
+    },
+    {
+      "n": 9,
+      "q": "Which blockers/risks persist and who can resolve them?",
+      "a": "BOT-R3-CRED-01 requires authorized account owner + secure approved credential and trusted test runner; BOT-R4-EGRESS-01 requires authorized DNS/egress-enabled runner and safe origin response. BOT-R5-MAINT-01 requires BOT clarification; BOT-R6-PUBLIC-LEAK-01 needs reviewed future security controls/canary evidence and is not a confirmed leak."
+    },
+    {
+      "n": 10,
+      "q": "What exactly is frozen, what is the gate state, and what happens next?",
+      "a": "Frozen v1 documents a reproducible Day-02 research baseline only; SAME-AGENT recovery self-audit 10/10 does not certify BOT semantics. Day-02 evidence Gate BLOCKED_CRITICAL_EVIDENCE, not PASS; Issue #11 OPEN, production connector HOLD, Day-03 NOT authorized by this freeze. Next: obtain approved secret via secure channel, restore authorized egress, collect sanitized positive/negative HTTP evidence and resolve critical unknowns with additive amendment before reassessment."
+    }
+  ],
+  "recovery_self_audit": {
+    "kind": "SAME_AGENT_RECOVERY_SELF_AUDIT",
+    "status": "PASS_10_OF_10",
+    "question_count": 10,
+    "independent_semantic_certification": false
+  },
+  "day_03_authorized": false,
+  "issue11_state": "OPEN",
+  "production_connector": "HOLD",
+  "completed_research_days": [
+    1
+  ],
+  "active_research_day": 2,
+  "next_action": "TARGETED_DAY02_CRITICAL_EVIDENCE_GAP_CLOSURE_WITH_AUTHORIZED_CREDENTIAL_AND_EGRESS_PLUS_OFFICIAL_CLARIFICATIONS; FREEZE_AMENDMENT_THEN_GATE_REASSESSMENT",
+  "rule": "UNKNOWN != PASS"
+}

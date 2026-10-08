@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day 2 R7 BOT Authentication Contradiction Resolution RECORDED (11 narrow resolutions / 8 controlled UNKNOWNs); R3/R4 BLOCKED; R8 NOT STARTED**
+- Current focus: **Day 2 FROZEN Research Baseline v1 / Gate BLOCKED_CRITICAL_EVIDENCE; R3/R4 live BLOCKED; next Day-02 evidence gap closure**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -71,7 +71,7 @@ This is the single current execution entry point.
 - Closure audit: **SELF-AUDIT PASS 10/10**; independent semantic audit remains future validation
 - Day 1 rounds complete: **R1–R8**
 - Next planned day: **Day 2 — BOT Authentication & API Behavior**
-- Day 2 status: **R1/R2 RECORDED / R3 AUTH BLOCKED / R4 HTTP BLOCKED / R5 DOC RECORDED / R6 SECURITY DESIGN ONLY / R7 CONTRADICTION REVIEW RECORDED (8 UNKNOWN) / R8 NOT STARTED / GATE NOT ASSESSED**
+- Day 2 status: **R1–R8 evidence recorded / DOCUMENTARY RESEARCH FROZEN v1 / RECOVERY SELF-AUDIT PASS 10/10 / Gate BLOCKED_CRITICAL_EVIDENCE; R3/R4 live BLOCKED**
 - Day 2 plan: `research/issue-11/day-02-plan-only.md`
 - Day 2 R1 evidence: `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
 - Day 2 R2 evidence: `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `.json` (2026-10-08; corrections and UNKNOWNs explicit)
@@ -79,7 +79,10 @@ This is the single current execution entry point.
 - Day 2 R4 evidence: `research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md` and `.json` — curl exit 6 local DNS failure, no provider HTTP response; scoped blocker: `BOT-R4-EGRESS-01`.
 - Day 2 R5 evidence: `research/issue-11/day-02-r5-bot-rate-operations.md` and `.json` — documented Statistics 2,000/hour; Exchange/Interest 200/hour; Dashboard/CSV documented; rate enforcement/headers UNKNOWN; unresolved 3 Oct bilingual maintenance time discrepancy (`BOT-R5-MAINT-01`).
 - Day 2 R6 evidence: research/issue-11/day-02-r6-bot-secret-security.md and .json. DESIGN ONLY: private secret handling/CI/Pages model, not deployed. Risk BOT-R6-PUBLIC-LEAK-01 is not a confirmed leak.
-- Day 2 R7 evidence: research/issue-11/day-02-r7-bot-contradiction-resolution.md and research/issue-11/day-02-r7-bot-contradictions.json. 19 reviewed case records; 11 narrow resolutions; 8 controlled UNKNOWNs. No R3/R4 live proof; R8 NOT STARTED.
+- Day 2 R7 evidence: research/issue-11/day-02-r7-bot-contradiction-resolution.md and research/issue-11/day-02-r7-bot-contradictions.json. 19 reviewed cases; 11 narrow scope resolutions; 8 controlled UNKNOWNs.
+- Day 2 R8 Frozen recovery baseline: `research/issue-11/day-02-bot-auth-FROZEN-v1.md` and `.json` — documentary/recovery-only FROZEN v1; Day-02 Gate BLOCKED_CRITICAL_EVIDENCE.
+- Day 2 Recovery Self-Audit: `research/issue-11/day-02-closure-audit.md` — SAME-AGENT PASS 10/10 for recovering answers, NOT independent semantic/API certification.
+- Day 2 Gate decision: `research/issue-11/day-02-gate.md` — BLOCKED_CRITICAL_EVIDENCE; missing R3/R4 live origin HTTP, enforcement, security controls; research Day2 is NOT added to completed days.
 - Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
@@ -113,7 +116,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 2 R7 contradiction review is RECORDED (19 cases; 11 narrow authority/scope resolutions; 8 controlled UNKNOWNs). R3/R4 live evidence remains BLOCKED; R5 rate/maintenance and R6 security implementation UNKNOWNs remain open. **Next: R8 Freeze + Recovery Audit only (NOT STARTED)**. Do not force Day-02 Gate PASS, close Issue #11 or start production connectors.
+Day 2 R8 created FROZEN v1 documentary baseline and same-agent recovery self-audit (10/10); the **DAY-02 GATE = BLOCKED_CRITICAL_EVIDENCE**, not PASS. Next exact action: TARGETED DAY-02 EVIDENCE GAP CLOSURE (legitimately approved BOT Statistics Token via protected runner, DNS/egress access, real sanitized positive and negative HTTP), plus BOT critical contract clarification, then versioned amendment and Gate reassessment. Do NOT automatically advance to Day 3, close Issue #11 or begin connector implementation.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
