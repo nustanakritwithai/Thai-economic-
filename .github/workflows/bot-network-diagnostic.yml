@@ -1,0 +1,38 @@
+name: BOT Gateway Network Diagnostic (no credentials)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-network-diagnostic.yml"
+      - "research/issue-11/diagnostics/bot_network_probe.py"
+      - "research/issue-11/diagnostics/test_bot_network_probe.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bot-network-preflight-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  network-probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Checkout research scripts
+        uses: actions/checkout@v4
+      - name: Verify classification logic with offline unit tests
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_*.py' -v
+      - name: DNS TCP TLS preflight (no HTTP and no token)
+        run: |
+          python3 research/issue-11/diagnostics/bot_network_probe.py --output-dir bot-network-evidence
+          cat bot-network-evidence/network-summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain nonsecret machine evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-network-preflight-${{ github.run_id }}
+          path: bot-network-evidence/
+          if-no-files-found: error
+          retention-days: 30
