@@ -1,0 +1,37 @@
+name: BOT R3 Offline Credential Readiness (No Secrets)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-r3-offline-readiness.yml"
+      - "research/issue-11/diagnostics/bot_r3_positive_auth.py"
+      - "research/issue-11/diagnostics/test_bot_r3_positive_auth.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bot-r3-offline-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  offline-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run 10 mocked safety tests (synthetic tokens only)
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_bot_r3_positive_auth.py' -v
+      - name: Blocked preflight without reading any credential or calling BOT
+        run: |
+          python3 research/issue-11/diagnostics/bot_r3_positive_auth.py --mode offline --out-dir bot-r3-readiness
+          cat bot-r3-readiness/summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain secret-free readiness receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-r3-readiness-${{ github.run_id }}
+          path: bot-r3-readiness/
+          if-no-files-found: error
+          retention-days: 30
