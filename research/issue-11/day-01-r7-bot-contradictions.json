@@ -1,0 +1,121 @@
+{
+  "register_version": 1,
+  "provider": "BOT",
+  "research_day": 1,
+  "round": 7,
+  "evidence_date": "2026-10-08",
+  "contradictions": [
+    {
+      "id": "CR-01",
+      "topic": "legacy_vs_current_api_navigation",
+      "classification": "TRUE_CONTRADICTION_RESOLVED",
+      "status": "RESOLVED",
+      "rule": "Current API product/spec docs and Migration Guide outrank stale generic navigation for canonical machine endpoint."
+    },
+    {
+      "id": "CR-02",
+      "topic": "discontinued_series_label_vs_table_objects",
+      "classification": "TERMINOLOGY_AMBIGUITY",
+      "status": "RESOLVED_BY_SCOPE",
+      "rule": "Treat lifecycle evidence as publication table/report lifecycle unless API series linkage is explicit."
+    },
+    {
+      "id": "CR-03",
+      "topic": "publication_table_lifecycle_vs_api_series_lifecycle",
+      "classification": "SCOPE_MISMATCH",
+      "status": "CONTROLLED_UNKNOWN",
+      "remaining_unknowns": [
+        "BOT-U09"
+      ]
+    },
+    {
+      "id": "CR-04",
+      "topic": "pci_value_changes_across_publications",
+      "classification": "VINTAGE_DIFFERENCE",
+      "status": "RESOLVED",
+      "rule": "Preserve both vintages; do not overwrite earlier published values."
+    },
+    {
+      "id": "CR-05",
+      "topic": "general_vs_pci_release_schedule",
+      "classification": "NO_CONTRADICTION",
+      "status": "RESOLVED",
+      "rule": "Table-specific metadata governs when present."
+    },
+    {
+      "id": "CR-06",
+      "topic": "table_code_report_id_api_series_code",
+      "classification": "IDENTIFIER_NAMESPACE_DIFFERENCE",
+      "status": "CONTROLLED_UNKNOWN",
+      "remaining_unknowns": [
+        "BOT-U05"
+      ]
+    },
+    {
+      "id": "CR-07",
+      "topic": "product_rate_limits",
+      "classification": "CONFIG_SCOPE_DIFFERENCE",
+      "status": "RESOLVED",
+      "remaining_unknowns": [
+        "BOT-U06"
+      ]
+    },
+    {
+      "id": "CR-08",
+      "topic": "statistics_api_versions",
+      "classification": "CONFIG_SCOPE_DIFFERENCE",
+      "status": "RESOLVED",
+      "remaining_unknowns": [
+        "BOT-U07"
+      ]
+    },
+    {
+      "id": "CR-09",
+      "topic": "similar_titles_vs_identity",
+      "classification": "UNRESOLVED_MAPPING",
+      "status": "CONTROLLED_UNKNOWN",
+      "remaining_unknowns": [
+        "BOT-U02",
+        "BOT-U05"
+      ]
+    },
+    {
+      "id": "CR-10",
+      "topic": "api_vs_btws_file_official_truth",
+      "classification": "AUTHORITY_SCOPE_CONTROL",
+      "status": "CONTROLLED_UNKNOWN",
+      "remaining_unknowns": [
+        "BOT-U02",
+        "BOT-U04",
+        "BOT-U05",
+        "BOT-U08"
+      ]
+    },
+    {
+      "id": "CR-11",
+      "topic": "revision_policy_vs_observed_revision",
+      "classification": "NO_CONTRADICTION",
+      "status": "RESOLVED",
+      "rule": "Policy and retained vintage evidence reinforce each other."
+    },
+    {
+      "id": "CR-12",
+      "topic": "publication_table_changes_vs_canonical_concept",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED_BY_MODEL",
+      "rule": "Canonical concept may remain stable while source presentation identifiers change, subject to semantic revalidation."
+    }
+  ],
+  "open_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "rule": "Resolve by authority scope and evidence. Different vintage or identifier namespace is not automatically a contradiction. UNKNOWN != PASS."
+}
