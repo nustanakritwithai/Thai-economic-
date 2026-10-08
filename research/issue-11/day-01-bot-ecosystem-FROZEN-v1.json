@@ -1,0 +1,51 @@
+{
+  "profile_version": "DAY1-FROZEN-v1",
+  "provider": "BOT",
+  "freeze_date": "2026-10-08",
+  "scope": "ecosystem_understanding",
+  "status": "PENDING_CLOSURE_AUDIT",
+  "machine_access": {
+    "portal": "https://portal.api.bot.or.th/",
+    "gateway": "https://gateway.api.bot.or.th/",
+    "product": "Statistics",
+    "apis": [
+      "categorylist",
+      "search-series",
+      "observations"
+    ]
+  },
+  "publication_access": {
+    "human_verification": "BTWS",
+    "catalog": "BOT Statistics sector catalog",
+    "artifacts": [
+      "CSV",
+      "XLS/XLSX",
+      "metadata PDF",
+      "HTML snapshot"
+    ]
+  },
+  "identifier_namespaces": [
+    "BOT:product",
+    "BOT:api",
+    "BOT:api_series",
+    "BOT:table_code",
+    "BOT:report_id",
+    "ThailandOS:canonical_series"
+  ],
+  "architecture_hypothesis": "Parallel machine-access and publication-access source objects mapped by evidence to stable Thailand Economic OS Canonical Series.",
+  "confirmed_facts_count": 16,
+  "open_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "next_day": "Day 2 — BOT Authentication & API Behavior",
+  "implementation_hold": true,
+  "rule": "UNKNOWN != PASS"
+}
