@@ -62,8 +62,10 @@ This is the single current execution entry point.
 **Issue #11 Deep Research — 28-day planned window**
 
 - Planned window: **2026-10-08 → 2026-11-04**
-- Current planned day: **Day 1 / Week 1**
-- Current focus: **BOT Data Ecosystem Map**
+- Current planned day: **Day 1 COMPLETE / Week 1**
+- Current focus: **Day 1 frozen — BOT Data Ecosystem Map**
+- Latest research artifact: `research/issue-11/day-01-bot-data-ecosystem-map.md`
+- Next planned day: **Day 2 — BOT Authentication & API Behavior**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -96,7 +98,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 1: map the official BOT data ecosystem—Developer Portal, Statistics product, documentation hierarchy, series-discovery path, observations path, and official alternatives. Record official evidence, confidence, UNKNOWNs, design impact, and one next question.
+Day 2: verify BOT account/subscription/application approval flow, Authorization token behavior, missing/invalid credential responses, rate-limit/quota signals, and connector-relevant error patterns. Freeze Day 2 findings before Day 3.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
