@@ -1,0 +1,188 @@
+{
+  "register_version": 1,
+  "provider": "BOT",
+  "research_day": 1,
+  "round": 6,
+  "evidence_date": "2026-10-08",
+  "claims": [
+    {
+      "id": "BOT-CLM-001",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "current_api_platform",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/",
+        "https://portal.api.bot.or.th/migration"
+      ],
+      "invalidation": "BOT publishes a newer migration/current gateway/header."
+    },
+    {
+      "id": "BOT-CLM-002",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "statistics_product",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1"
+      ],
+      "invalidation": "Statistics Product API family/plan/rate changes."
+    },
+    {
+      "id": "BOT-CLM-003",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "search_series",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e581631f50164ffc72525b11050b5744/docs"
+      ],
+      "observed_spec_version": "1.0.0"
+    },
+    {
+      "id": "BOT-CLM-004",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "observations",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e2dcfd41460e49a86276db01aeb3cd1f/docs"
+      ],
+      "observed_spec_version": "1.0.3"
+    },
+    {
+      "id": "BOT-CLM-005",
+      "class": "FACT_WITH_UNKNOWN_MECHANICS",
+      "confidence": "HIGH",
+      "topic": "statistics_api_list",
+      "status": "PARTIAL",
+      "unknowns": [
+        "direct_url",
+        "file_type",
+        "schema",
+        "versioning",
+        "archive"
+      ]
+    },
+    {
+      "id": "BOT-CLM-006",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "application_auth_workflow",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/manual"
+      ]
+    },
+    {
+      "id": "BOT-CLM-007",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "product_rate_config",
+      "status": "PASS",
+      "evidence": [
+        "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+        "https://portal.api.bot.or.th/portal/catalogue-products/exchange-rates-1",
+        "https://portal.api.bot.or.th/portal/catalogue-products/interest-rates-1"
+      ]
+    },
+    {
+      "id": "BOT-CLM-008",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "per_api_spec_versions",
+      "status": "PASS"
+    },
+    {
+      "id": "BOT-CLM-009",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "statistics_publication_surface",
+      "status": "PASS",
+      "evidence": [
+        "https://www.bot.or.th/en/statistics.html"
+      ]
+    },
+    {
+      "id": "BOT-CLM-010",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "stale_official_navigation",
+      "status": "PASS",
+      "evidence": [
+        "https://www.bot.or.th/en/statistics.html",
+        "https://portal.api.bot.or.th/"
+      ]
+    },
+    {
+      "id": "BOT-CLM-011",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "publication_table_lifecycle",
+      "status": "PASS",
+      "evidence": [
+        "https://www.bot.or.th/en/statistics/revised-table-list.html"
+      ]
+    },
+    {
+      "id": "BOT-CLM-012",
+      "class": "NEGATIVE_FINDING_UNKNOWN",
+      "confidence": "HIGH",
+      "topic": "api_series_lifecycle",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "BOT-CLM-013",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "publication_identifier_namespaces",
+      "status": "PASS",
+      "evidence": [
+        "https://app.bot.or.th/BTWS_STAT/statistics/BOTWEBSTAT.aspx?language=ENG&reportID=995"
+      ]
+    },
+    {
+      "id": "BOT-CLM-014",
+      "class": "NEGATIVE_FINDING_UNKNOWN",
+      "confidence": "HIGH",
+      "topic": "table_to_api_series_mapping",
+      "status": "UNKNOWN"
+    },
+    {
+      "id": "BOT-CLM-015",
+      "class": "FACT",
+      "confidence": "HIGH",
+      "topic": "concept_to_table_bridge",
+      "status": "PASS",
+      "evidence": [
+        "https://www.bot.or.th/en/statistics/economic-and-financial-index-and-indicators.html"
+      ]
+    },
+    {
+      "id": "BOT-CLM-016",
+      "class": "SUPPORTED_DESIGN",
+      "confidence": "HIGH",
+      "topic": "btws_human_verification_role",
+      "status": "SUPPORTED"
+    },
+    {
+      "id": "BOT-CLM-017",
+      "class": "SUPPORTED_DESIGN",
+      "confidence": "HIGH",
+      "topic": "question_specific_authority",
+      "status": "SUPPORTED"
+    }
+  ],
+  "critical_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "rule": "UNKNOWN != PASS"
+}
