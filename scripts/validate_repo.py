@@ -75,7 +75,7 @@ active_version = None
 active_name = None
 if pm_path.exists():
     pm_text = pm_path.read_text(encoding="utf-8")
-    m = re.search(r"^- **Active version:** (V\d+\.\d+) (.+)$", pm_text, re.MULTILINE)
+    m = re.search(r"^- \*\*Active version:\*\* (V\d+\.\d+) (.+)$", pm_text, re.MULTILINE)
     if not m:
         ok = fail("PM_CONTROL must contain one canonical '**Active version:** Vx.y Name' line") and ok
     else:
@@ -109,7 +109,7 @@ if active_version:
 readme_path = ROOT / "README.md"
 if readme_path.exists() and active_version:
     readme_text = readme_path.read_text(encoding="utf-8")
-    section = re.search(r"## Active version\s+**(.+?)**", readme_text, re.DOTALL)
+    section = re.search(r"## Active version\s+\*\*(.+?)\*\*", readme_text, re.DOTALL)
     if not section:
         ok = fail("README must declare an Active version") and ok
     elif not section.group(1).startswith(active_version + " "):
