@@ -9,15 +9,15 @@
   "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
   "status": "ACTIVE_DEEP_RESEARCH",
   "current_gate": "Issue #11 Deep Research — P0 Source Inventory",
-  "next_exact_action": "Day 2 R5 — investigate official BOT product rates, quota enforcement scope, headers/Retry-After, portal operational telemetry and maintenance notices; documentary research only, no stress testing. Keep BOT-R3-CRED-01 and BOT-R4-EGRESS-01 OPEN, no connector implementation.",
+  "next_exact_action": "Day 2 R6 — evidence-based BOT Secret & Security Model only (secret injection, CI and log masking, rotation/revocation policy). Do not obtain/publish token, implement connector or assume R3/R4 passed. Preserve R5 rate/maintenance UNKNOWNs.",
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
-  "last_verified_main": "fe05f12a14c39b28a27b80fef8cc6210ab9f40ca",
-  "last_verified_ci_run": 37763673992,
-  "last_verified_pages_run": 37763674055,
+  "last_verified_main": "80d935c2fde9ee4d7c78cd7fc225afb792064f11",
+  "last_verified_ci_run": 37764200437,
+  "last_verified_pages_run": 37764200435,
   "pages_refresh_pending_for_latest_ui": false,
-  "state_updated_at": "2026-10-08T10:32:52.803Z",
+  "state_updated_at": "2026-10-08T10:39:39.533Z",
   "stale_after_days": 14,
   "current_plan_ref": "docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md",
   "research_window": {
@@ -28,7 +28,7 @@
   },
   "current_research_day": 2,
   "current_week": 1,
-  "current_focus": "Day 2 R4 negative/error behavior research RECORDED; HTTP error evidence BLOCKED by local DNS; R3 positive BLOCKED; R5 not started",
+  "current_focus": "Day 2 R5 BOT Rate Limit & Operations DOCUMENTARY RESEARCH RECORDED with runtime UNKNOWNs; R3/R4 live tests BLOCKED; R6 not started",
   "daily_log_required": true,
   "calendar_sync": {
     "status": "SYNCED",
@@ -43,7 +43,7 @@
   "completed_research_days": [
     1
   ],
-  "latest_research_artifact": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md",
+  "latest_research_artifact": "research/issue-11/day-02-r5-bot-rate-operations.md",
   "day_01_status": "FROZEN_v1_1",
   "next_planned_day": 2,
   "next_planned_focus": "BOT Authentication & API Behavior",
@@ -62,20 +62,20 @@
   "day_01_round_03_status": "PASS",
   "day_01_round_04_status": "PASS",
   "day_01_round_05_status": "PASS",
-  "latest_machine_research_artifact": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json",
+  "latest_machine_research_artifact": "research/issue-11/day-02-r5-bot-rate-operations.json",
   "day_01_round_06_status": "PASS",
   "day_01_round_07_status": "PASS",
   "day_01_gate": "PASS",
   "day_01_closure_audit": "SELF_AUDIT_PASS_10_OF_10",
-  "today_stop_point": "R4 documented with DNS transport block, no provider HTTP statuses; R3 positive blocked; R5 not started; Issue #11 OPEN; implementation HOLD",
+  "today_stop_point": "R5 documentation recorded; rate enforcement/headers remain UNKNOWN; R3 credential & R4 egress BLOCKED; R6 not started; Issue #11 OPEN; implementation HOLD",
   "day_01_independent_semantic_audit": "FUTURE_VALIDATION",
   "day_01_limitations_review": "research/issue-11/day-01-limitations-review.md",
   "day_01_evidence_manifest": "research/issue-11/day-01-official-evidence-manifest.json",
-  "day_02_status": "R1_R2_RECORDED_R3_AUTH_BLOCKED_R4_HTTP_BLOCKED_R5_NOT_STARTED",
+  "day_02_status": "R1_R2_RECORDED_R3_R4_LIVE_BLOCKED_R5_DOC_RECORDED_R6_NOT_STARTED",
   "verification_semantics": "last_verified_* records the most recent repository head verified before the current metadata commit; current-head truth is GitHub Actions.",
   "day_02_plan_ref": "research/issue-11/day-02-plan-only.md",
   "day_02_round_01_status": "DISCOVERY_RECORDED_AWAITING_INDEPENDENT_REVALIDATION",
-  "day_02_next_round": 5,
+  "day_02_next_round": 6,
   "day_02_first_execution_date": "2026-10-08",
   "day_02_plan_original_date": "2026-10-09",
   "day_02_gate": "NOT_ASSESSED",
@@ -120,5 +120,26 @@
   "day_02_negative_http_test": "BLOCKED_LOCAL_DNS_NO_PROVIDER_RESPONSE",
   "day_02_negative_http_statuses_observed": 0,
   "day_02_r4_local_attempts": 1,
-  "day_02_r4_completed_gateway_http_exchanges": 0
+  "day_02_r4_completed_gateway_http_exchanges": 0,
+  "day_02_round_05_status": "DOCUMENTARY_RESEARCH_RECORDED_WITH_RUNTIME_UNKNOWNS",
+  "day_02_rounds_with_records": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "day_02_rate_scope": "UNKNOWN",
+  "day_02_retry_after": "UNKNOWN_NOT_OBSERVED",
+  "day_02_dashboard_telemetry": "DOCUMENTED_UI_ONLY_NOT_LIVE_VERIFIED",
+  "day_02_maintenance_contradiction": "2026-10-03_TH_09_11_EN_09_23_UNRESOLVED",
+  "day_02_maintenance_current_service_state": "UNKNOWN",
+  "day_02_r5_live_request_count": 0,
+  "day_02_research_risks": [
+    {
+      "id": "BOT-R5-MAINT-01",
+      "scope": "OFFICIAL_BILINGUAL_MAINTENANCE_NOTICE_TIMING",
+      "status": "OPEN"
+    }
+  ]
 }

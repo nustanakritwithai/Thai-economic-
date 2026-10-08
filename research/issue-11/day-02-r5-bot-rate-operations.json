@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "provider": "BOT",
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue_number": 11,
+  "day": 2,
+  "round": 5,
+  "as_of_date": "2026-10-08",
+  "status": "DOCUMENTARY_RESEARCH_RECORDED_WITH_RUNTIME_UNKNOWNS",
+  "evidence_level": "OFFICIAL_URL_DATE_CLAIM_AND_ILLUSTRATIVE_SCREENSHOT",
+  "immutable_external_source_snapshots": false,
+  "live_api_calls_attempted_this_round": 0,
+  "live_api_http_responses_observed_this_round": 0,
+  "stress_tests": 0,
+  "source_evidence": [
+    {
+      "id": "R5-E01",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "role": "product_rate",
+      "scope": "STATISTICS",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E02",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/exchange-rates-1",
+      "role": "product_rate",
+      "scope": "EXCHANGE_RATES",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E03",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/interest-rates-1",
+      "role": "product_rate",
+      "scope": "INTEREST_RATES",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E04",
+      "url": "https://portal.api.bot.or.th/manual",
+      "role": "dashboard_manual",
+      "scope": "BOT_API",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E05",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%209.png",
+      "role": "app_rate_example",
+      "scope": "STATISTICS",
+      "method": "OFFICIAL_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E06",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%2011-1.png",
+      "role": "dashboard_overview_example",
+      "scope": "BOT_API",
+      "method": "OFFICIAL_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E07",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%2011-2.png",
+      "role": "dashboard_error_example",
+      "scope": "BOT_API",
+      "method": "OFFICIAL_ILLUSTRATION",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E08",
+      "url": "https://portal.api.bot.or.th/terms",
+      "role": "service_terms",
+      "scope": "BOT_API",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E09",
+      "url": "https://portal.api.bot.or.th/maintenance/BOT_API_Maintenance.html",
+      "role": "dated_maintenance_notice",
+      "scope": "BOT_API",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E10",
+      "url": "https://portal.api.bot.or.th/about-us",
+      "role": "provider_contact",
+      "scope": "BOT_API",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    },
+    {
+      "id": "R5-E11",
+      "url": "https://portal.api.bot.or.th/",
+      "role": "current_portal",
+      "scope": "BOT_API",
+      "method": "DIRECT_PUBLIC_PAGE",
+      "checked_date": "2026-10-08",
+      "source_owner": "Bank of Thailand",
+      "raw_snapshot_checksum": null
+    }
+  ],
+  "rate_displays": [
+    {
+      "product": "Statistics",
+      "plan": "Statistics Plan",
+      "quota_label": "unlimited",
+      "rate_calls": 2000,
+      "rate_period": "1 hour",
+      "source_id": "R5-E01",
+      "proof_level": "ADVERTISED_DISPLAY_ONLY",
+      "enforcement_scope": null
+    },
+    {
+      "product": "Exchange Rates",
+      "plan": "Exchange Rates Plan",
+      "quota_label": "unlimited",
+      "rate_calls": 200,
+      "rate_period": "1 hour",
+      "source_id": "R5-E02",
+      "proof_level": "ADVERTISED_DISPLAY_ONLY",
+      "enforcement_scope": null
+    },
+    {
+      "product": "Interest Rates",
+      "plan": "Interest Rates Plan",
+      "quota_label": "unlimited",
+      "rate_calls": 200,
+      "rate_period": "1 hour",
+      "source_id": "R5-E03",
+      "proof_level": "ADVERTISED_DISPLAY_ONLY",
+      "enforcement_scope": null
+    }
+  ],
+  "claims": [
+    {
+      "id": "R5-CLM-01",
+      "statement": "Statistics displayed 2000/hour unlimited quota",
+      "classification": "CONFIRMED_DISPLAY",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E01"
+      ],
+      "invalidation": "Product Plan can be changed; re-check before implementation."
+    },
+    {
+      "id": "R5-CLM-02",
+      "statement": "Exchange Rates displayed 200/hour unlimited quota",
+      "classification": "CONFIRMED_DISPLAY",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E02"
+      ],
+      "invalidation": "Product Plan can be changed."
+    },
+    {
+      "id": "R5-CLM-03",
+      "statement": "Interest Rates displayed 200/hour unlimited quota",
+      "classification": "CONFIRMED_DISPLAY",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E03"
+      ],
+      "invalidation": "Product Plan can be changed."
+    },
+    {
+      "id": "R5-CLM-04",
+      "statement": "Product rates differ",
+      "classification": "CONFIRMED_DISPLAY",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E01",
+        "R5-E02",
+        "R5-E03"
+      ],
+      "invalidation": "Future plan changes may alter contrast."
+    },
+    {
+      "id": "R5-CLM-05",
+      "statement": "Manual screenshot Statistics 1000/min",
+      "classification": "CONFIRMED_ILLUSTRATIVE",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E05"
+      ],
+      "invalidation": "No date/plan applicability; not enforcement proof."
+    },
+    {
+      "id": "R5-CLM-06",
+      "statement": "Dashboard performance weekly/calls/error/latency/filter/CSV",
+      "classification": "CONFIRMED_DOCUMENTED_UI",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E04",
+        "R5-E06"
+      ],
+      "invalidation": "No live account dashboard inspection or CSV schema."
+    },
+    {
+      "id": "R5-CLM-07",
+      "statement": "Top5/error breakdown/example 403 visible",
+      "classification": "CONFIRMED_ILLUSTRATIVE",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E04",
+        "R5-E07"
+      ],
+      "invalidation": "Screenshot 403 does not establish real gateway response."
+    },
+    {
+      "id": "R5-CLM-08",
+      "statement": "Provider can change usage limits and discontinue",
+      "classification": "CONFIRMED_PUBLISHED_TERMS",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E08"
+      ],
+      "invalidation": "Terms may be revised, not evidence of current limiter implementation."
+    },
+    {
+      "id": "R5-CLM-09",
+      "statement": "Historical 3 Oct 2026 maintenance notice exists",
+      "classification": "CONFIRMED_DATED_NOTICE",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E09"
+      ],
+      "invalidation": "Does not prove actual outage or current status."
+    },
+    {
+      "id": "R5-CLM-10",
+      "statement": "Maintenance Thai 11:00 vs English 23:00 conflict",
+      "classification": "CONFIRMED_TEXTUAL_CONTRADICTION_UNRESOLVED",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E09"
+      ],
+      "invalidation": "Correction from BOT could resolve; never choose one without evidence."
+    },
+    {
+      "id": "R5-CLM-11",
+      "statement": "Per-token/app/account limiter semantics",
+      "classification": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "evidence_ids": [
+        "R5-E01",
+        "R5-E04"
+      ],
+      "invalidation": "Specific provider policy or safe authorized measured evidence required."
+    },
+    {
+      "id": "R5-CLM-12",
+      "statement": "Retry-After and rate remaining/reset headers",
+      "classification": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "evidence_ids": [
+        "R5-E01",
+        "R5-E04"
+      ],
+      "invalidation": "No gateway HTTP response. Negative search does not prove non-existence."
+    },
+    {
+      "id": "R5-CLM-13",
+      "statement": "API telemetry CSV schema and lag",
+      "classification": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "evidence_ids": [
+        "R5-E04",
+        "R5-E06"
+      ],
+      "invalidation": "Requires actual authorized Dashboard export."
+    },
+    {
+      "id": "R5-CLM-14",
+      "statement": "Current BOT API service health",
+      "classification": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "evidence_ids": [
+        "R5-E09"
+      ],
+      "invalidation": "Historical notice is not a status endpoint."
+    },
+    {
+      "id": "R5-CLM-15",
+      "statement": "Quota unlimited and finite Rate not equivalent",
+      "classification": "SUPPORTED_SCOPE_DISTINCTION",
+      "confidence": "HIGH",
+      "evidence_ids": [
+        "R5-E01"
+      ],
+      "invalidation": "Exact accounting/enforcement still unknown."
+    }
+  ],
+  "dashboard": {
+    "scope": "ACCOUNT_DASHBOARD_DOCUMENTED_ONLY",
+    "documented": [
+      "Performance Overview",
+      "weekly example",
+      "total calls",
+      "success/errors",
+      "error rate",
+      "average latency",
+      "app filter",
+      "Export CSV",
+      "Top 5 highest error rates by API",
+      "Error breakdown"
+    ],
+    "demo_403_not_origin_proof": true,
+    "csv_schema": null,
+    "lag": null,
+    "retention": null,
+    "timezone": null,
+    "raw_export_captured": false
+  },
+  "maintenance": {
+    "source_id": "R5-E09",
+    "source_url": "https://portal.api.bot.or.th/maintenance/BOT_API_Maintenance.html",
+    "announced_date": "2026-10-03",
+    "thai_original": "วันที่ 3 ตุลาคม 2569 เวลา 9:00 - 11:00 น.",
+    "english_original": "on October 3, 2026, from 09:00 AM to 11:00 PM.",
+    "thai_interpreted_interval": "09:00-11:00",
+    "english_interpreted_interval": "09:00-23:00",
+    "resolved_end_time": null,
+    "conflict_id": "R5-CONFLICT-02",
+    "conflict_status": "UNRESOLVED",
+    "actual_downtime_observed": false,
+    "current_outage_claim": "NOT_ESTABLISHED",
+    "historical_notice_not_live_status": true
+  },
+  "conflicts": [
+    {
+      "id": "R5-CONFLICT-01",
+      "topic": "manual_screenshot_1000_per_min_vs_current_product_2000_per_hour",
+      "classification": "CONFIG_SCOPE_OR_VINTAGE_UNKNOWN",
+      "status": "UNRESOLVED",
+      "source_ids": [
+        "R5-E01",
+        "R5-E05"
+      ]
+    },
+    {
+      "id": "R5-CONFLICT-02",
+      "topic": "bilingual_maintenance_end_time_2026_10_03",
+      "classification": "OFFICIAL_TEXTUAL_CONTRADICTION",
+      "status": "UNRESOLVED",
+      "source_ids": [
+        "R5-E09"
+      ]
+    },
+    {
+      "id": "R5-NONCONFLICT-01",
+      "topic": "quota_unlimited_vs_rate_2000_per_hour",
+      "classification": "DIFFERENT_UI_DIMENSIONS",
+      "status": "NOT_A_CONTRADICTION",
+      "source_ids": [
+        "R5-E01"
+      ]
+    }
+  ],
+  "unknowns": [
+    "R5-U01",
+    "R5-U02",
+    "R5-U03",
+    "R5-U04",
+    "R5-U05",
+    "R5-U06",
+    "R5-U07",
+    "R5-U08",
+    "R5-U09",
+    "R5-U10"
+  ],
+  "preserved_unknowns": {
+    "day01": [
+      "BOT-U01",
+      "BOT-U02",
+      "BOT-U03",
+      "BOT-U04",
+      "BOT-U05",
+      "BOT-U06",
+      "BOT-U07",
+      "BOT-U08",
+      "BOT-U09"
+    ],
+    "day02": [
+      "D2-AUTH-U01",
+      "D2-AUTH-U02",
+      "D2-AUTH-U03",
+      "D2-AUTH-U04",
+      "D2-AUTH-U05",
+      "D2-AUTH-U06",
+      "D2-AUTH-U07",
+      "D2-AUTH-U08",
+      "D2-AUTH-U09",
+      "D2-AUTH-U10",
+      "D2-AUTH-U11"
+    ]
+  },
+  "rate_scope": "UNKNOWN",
+  "throttle_status": null,
+  "retry_after_header": null,
+  "rate_remaining_header": null,
+  "rate_reset_header": null,
+  "window_algorithm": null,
+  "active_scoped_blockers": [
+    "BOT-R3-CRED-01",
+    "BOT-R4-EGRESS-01"
+  ],
+  "research_risk": "BOT-R5-MAINT-01",
+  "day02_gate": "NOT_ASSESSED",
+  "production_connector": "HOLD",
+  "issue_status": "OPEN",
+  "next_round": 6,
+  "next_round_status": "NOT_STARTED",
+  "next_exact_action": "Day 2 R6 Secret & Security Model: documented future secret injection, log masking, CI handling, rotation/revoke; no token/connector implementation.",
+  "rule": "UNKNOWN != PASS"
+}

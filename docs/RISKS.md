@@ -25,6 +25,15 @@ Both are scoped to missing live evidence, not global blockers of the Issue #11 r
 **Resolution:** Use a permitted DNS/egress-enabled runner, verify exact BOT operation/method, send one bounded read-only negative request and capture sanitized actual origin HTTP metadata. More tests only when prerequisite succeeds; retain this blocked record as history.
 **Non-goals:** No secret harvesting, no credential sharing, no production connector implementation, no BOT outage claim.
 
+## BOT-R5-MAINT-01 — Contradictory BOT Maintenance Notice Times
+**Classification:** OPEN RESEARCH RISK / CONTRADICTION; **not** a current outage claim or a global blocker.
+**Owner:** BOT API notice publisher for correction; Thailand Economic OS research operator for follow-up and evidence retention.
+**Affected:** V0.2, Issue #11, Day 02 R5/R7 operational reliability and future maintenance-window interpretation.
+**Evidence:** official BOT announcement https://portal.api.bot.or.th/maintenance/BOT_API_Maintenance.html for 3 October 2026 contains Thai `9:00 - 11:00 น.` versus English `09:00 AM to 11:00 PM`. They cannot both define the same exact end time. Both source strings are retained in `research/issue-11/day-02-r5-bot-rate-operations.md` and `.json`.
+**Impact:** automated downtime calculation or maintenance scheduler could be wrong by 12 hours if silently choosing English or Thai wording. The page is a past dated notice, not real-time evidence of 8 October availability.
+**Mitigation/workaround:** treat as ambiguous; preserve both literal strings and defer exact downtime-window interpretation. Current service health remains UNKNOWN. No automated maintenance handling from this research claim.
+**Closure condition:** official corrected notice or explicit BOT API support confirmation resolving the scheduled end time and timezone; preserve earlier original evidence and document amendment. Official BOT API contact listed at https://portal.api.bot.or.th/about-us; **no contact sent**.
+
 ## R-001 — Source schema changes
 **Risk:** Public agencies may change APIs/files without notice.
 **Mitigation:** raw snapshots, parser tests, schema checks, source-health alerts.
