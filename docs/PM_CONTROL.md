@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day 2 FROZEN Research v1 / Gate BLOCKED_CRITICAL_EVIDENCE; R3/R4 live blocked; targeted gap closure next
+- **Current focus:** Day 2 gap #1 GitHub-runner BOT DNS/TCP/TLS PASS (no HTTP); Frozen v1/Gate BLOCKED_CRITICAL_EVIDENCE unchanged; R3/R4 live HTTP BLOCKED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -53,6 +53,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Day 2 R8 Frozen evidence baseline:** research/issue-11/day-02-bot-auth-FROZEN-v1.md and research/issue-11/day-02-bot-auth-FROZEN-v1.json — Frozen DOCUMENTARY baseline, gate BLOCKED_CRITICAL_EVIDENCE.
 - **Day 2 recovery self-audit:** research/issue-11/day-02-closure-audit.md — SAME-AGENT PASS 10/10 recoverability only.
 - **Day 2 Gate assessment:** research/issue-11/day-02-gate.md — BLOCKED_CRITICAL_EVIDENCE; R3/R4 live origin HTTP missing, security deployment/rate enforcement unknown.
+- **Day 2 gap #1:** research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.md and research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.json — [real GitHub network run 37796439277](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37796439277) confirms DNS/TCP443/TLSv1.3 for both official BOT hosts on GitHub-hosted runner; no HTTP or credential. R3/R4 still BLOCKED.
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -64,11 +65,11 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 ## NOW
 1. Day 1 BOT FROZEN v1.1 / GATE PASS, preserved.
 2. Day 2 R1–R8 research RECORDS preserved; Day-02 documentary evidence FROZEN v1, same-agent recovery self-audit PASS 10/10 only. **Day-02 Gate BLOCKED_CRITICAL_EVIDENCE (NOT PASS).**
-3. R3 live positive auth BLOCKED (BOT-R3-CRED-01); R4 origin negative HTTP BLOCKED (BOT-R4-EGRESS-01). R5 rate/maintenance UNKNOWN; R6 secret security DESIGN ONLY. Research risks BOT-R5-MAINT-01 and BOT-R6-PUBLIC-LEAK-01 remain OPEN (latter not a leak).
+3. Gap #1 alternative GitHub-hosted runner network prerequisite PASS for gateway/portal DNS/TCP/TLS; **not an HTTP or credential pass**. R3 live positive auth BLOCKED (BOT-R3-CRED-01); R4 origin negative HTTP BLOCKED (BOT-R4-EGRESS-01). R5 rate/maintenance UNKNOWN; R6 security DESIGN ONLY. Research risks BOT-R5-MAINT-01 and BOT-R6-PUBLIC-LEAK-01 remain OPEN.
 4. Issue #11 remains OPEN, current research day stays Day 2 (not marked completed). Production connector HOLD, no Day 3 automatic start.
 
 ## NEXT EXACT ACTION
-DAY 02 EVIDENCE GAP CLOSURE ONLY. Frozen v1 is recovery-grade documentary evidence; Gate remains BLOCKED_CRITICAL_EVIDENCE. Authorized BOT administrator must verify Statistics Approved Access and securely provision Token into trusted runner (no chat/Git). Authorized network operator must restore DNS/egress and confirm official API method/URL. Capture one bounded positive and negative real origin HTTP response with sanitized headers/status/timing (no assumptions). Seek BOT clarification for critical Token Hash/app/rate/spec/maintenance UNKNOWNs. Add evidence as versioned amendment then reassess Gate/CI/Issue. Do NOT start Day 3/Issue #12, close Issue #11, or implement production connector.
+DAY 02 EVIDENCE GAP CLOSURE: GitHub-hosted BOT DNS/TCP/TLS network prerequisite is now PASS ONLY for that runner/time (run 37796439277), and original local R4 DNS failure remains historical. Next verify exact BOT Stat Category read-only endpoint/method in current official spec, then perform a separately authorized single no-Authorization HTTP probe on reachable runner with strict sanitized origin-status capture. R4 error behavior still BLOCKED until that measurement; R3 positive authentication separately BLOCKED pending approved token from a protected owner-managed secret path. No Day3/Issue#12 or production connector; Frozen v1 and Day-02 Gate BLOCKED_CRITICAL_EVIDENCE unchanged.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof

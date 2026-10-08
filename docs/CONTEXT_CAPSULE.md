@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day 2 FROZEN Research Baseline v1 / Gate BLOCKED_CRITICAL_EVIDENCE; R3/R4 live BLOCKED; next Day-02 evidence gap closure**
+- Current focus: **Day 2 Critical Evidence Gap #1: BOT Gateway DNS/TCP/TLS PASS on GitHub-hosted runner only; R3/R4 live HTTP still BLOCKED; Frozen v1/Gate BLOCKED_CRITICAL_EVIDENCE unchanged**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -83,6 +83,7 @@ This is the single current execution entry point.
 - Day 2 R8 Frozen recovery baseline: `research/issue-11/day-02-bot-auth-FROZEN-v1.md` and `.json` — documentary/recovery-only FROZEN v1; Day-02 Gate BLOCKED_CRITICAL_EVIDENCE.
 - Day 2 Recovery Self-Audit: `research/issue-11/day-02-closure-audit.md` — SAME-AGENT PASS 10/10 for recovering answers, NOT independent semantic/API certification.
 - Day 2 Gate decision: `research/issue-11/day-02-gate.md` — BLOCKED_CRITICAL_EVIDENCE; missing R3/R4 live origin HTTP, enforcement, security controls; research Day2 is NOT added to completed days.
+- Day-02 gap #1 network evidence: research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.md and research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.json — real GitHub Actions run 37796439277 verifies BOT Portal/Gateway DNS/TCP/TLS (no HTTP/token); original local DNS failure persists as historical evidence; R3/R4 remain BLOCKED.
 - Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
@@ -116,7 +117,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 2 R8 created FROZEN v1 documentary baseline and same-agent recovery self-audit (10/10); the **DAY-02 GATE = BLOCKED_CRITICAL_EVIDENCE**, not PASS. Next exact action: TARGETED DAY-02 EVIDENCE GAP CLOSURE (legitimately approved BOT Statistics Token via protected runner, DNS/egress access, real sanitized positive and negative HTTP), plus BOT critical contract clarification, then versioned amendment and Gate reassessment. Do NOT automatically advance to Day 3, close Issue #11 or begin connector implementation.
+Day-02 gap #1 transport verified on GitHub-hosted runner: DNS/TCP/TLS PASS, but zero HTTP; original R4 local runner remains unverified. **Next exact action:** verify specific BOT read-only endpoint/method and separately authorize one safe unauthenticated origin HTTP probe on reachable runner; R3 positive auth still separately BLOCKED pending legitimate secure credential. Preserve Frozen v1; **Day-02 Gate BLOCKED_CRITICAL_EVIDENCE**, no Day3/connector.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
