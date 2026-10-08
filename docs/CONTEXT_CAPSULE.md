@@ -63,11 +63,11 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Current planned day: **Day 1 COMPLETE / Week 1**
-- Current focus: **Day 1 Round 6 COMPLETE — Evidence Hardening**
-- Latest research artifact: `research/issue-11/day-01-r6-bot-evidence-register.md`
-- Machine-readable evidence register: `research/issue-11/day-01-r6-bot-evidence-register.json`
-- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge, R5 Source Relationship Mapping, R6 Evidence Hardening**
-- Next planned round: **R7 — Contradiction Resolution**
+- Current focus: **Day 1 Round 7 COMPLETE — Contradiction Resolution**
+- Latest research artifact: `research/issue-11/day-01-r7-bot-contradiction-resolution.md`
+- Machine-readable contradiction register: `research/issue-11/day-01-r7-bot-contradiction-resolution.json`
+- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge, R5 Source Relationship Mapping, R6 Evidence Hardening, R7 Contradiction Resolution**
+- Next planned round: **R8 — Day 1 Freeze**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -100,7 +100,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 1 Round 7: resolve or explicitly scope contradictions among the hardened BOT claims. Separate real contradictions from authority-scope mismatches, retain UNKNOWN where unresolved, and do not silently reconcile official-source differences.
+Day 1 Round 8: freeze the Day-1 BOT Ecosystem Map into one compact recoverable baseline with confirmed facts, architecture/source-role conclusions, contradiction rules, explicit UNKNOWNs, a Do-Not-Assume list, and the exact handoff to Day 2. Do not solve Day-2 auth behavior.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
