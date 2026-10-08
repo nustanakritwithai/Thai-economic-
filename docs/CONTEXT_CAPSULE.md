@@ -100,7 +100,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 1 Round 8: freeze the Day-1 BOT Ecosystem Map into one compact recoverable baseline with confirmed facts, architecture/source-role conclusions, contradiction rules, explicit UNKNOWNs, a Do-Not-Assume list, and the exact handoff to Day 2. Do not solve Day-2 auth behavior.
+STOP after Day 1 closure. Next scheduled work is Day 2 — BOT Authentication & API Behavior. Do not start it in this work block unless explicitly authorized.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
