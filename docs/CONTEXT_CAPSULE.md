@@ -63,10 +63,10 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Current planned day: **Day 1 COMPLETE / Week 1**
-- Current focus: **Day 1 Round 4 COMPLETE — Architecture Challenge**
-- Latest research artifact: `research/issue-11/day-01-r4-bot-architecture-challenge.md`
-- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge**
-- Next planned round: **R5 — Source Relationship Mapping**
+- Current focus: **Day 1 Round 5 COMPLETE — Source Relationship Mapping**
+- Latest research artifact: `research/issue-11/day-01-r5-bot-source-relationship-map.md`
+- Day 1 rounds complete: **R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge, R5 Source Relationship Mapping**
+- Next planned round: **R6 — Evidence Hardening**
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -99,7 +99,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 1 Round 5: assign explicit roles to each BOT surface (acquisition, metadata, verification, lifecycle/change signal, fallback, semantic bridge) and build an evidence-backed relationship graph. Do not implement database tables.
+Day 1 Round 6: harden the most important BOT claims into a compact claim/evidence register with authority scope, evidence date, confidence, caveat, last verified, and explicit invalidation conditions.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
