@@ -1,0 +1,37 @@
+name: BOT Public Stat Category Raw OpenAPI Spec Evidence
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-stat-category-spec.yml"
+      - "research/issue-11/diagnostics/bot_openapi_spec_probe.py"
+      - "research/issue-11/diagnostics/test_bot_openapi_spec_probe.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bot-public-stat-category-spec-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  public-spec-download:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit tests with fake HTTP responses (no network)
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_bot_openapi_spec_probe.py' -v
+      - name: Retrieve one public BOT Stat Category spec export
+        run: |
+          python3 research/issue-11/diagnostics/bot_openapi_spec_probe.py --output-dir bot-public-spec-evidence
+          cat bot-public-spec-evidence/spec-summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain official-source bytes and sanitized report in run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-public-stat-category-spec-${{ github.run_id }}
+          path: bot-public-spec-evidence/
+          if-no-files-found: error
+          retention-days: 30
