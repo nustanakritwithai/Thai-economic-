@@ -1,0 +1,37 @@
+name: BOT Raw-Spec Canonical No-Token GET
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/bot-canonical-noauth-http.yml"
+      - "research/issue-11/diagnostics/bot_http_canonical_noauth_probe.py"
+      - "research/issue-11/diagnostics/test_bot_http_canonical_noauth_probe.py"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bot-canonical-noauth-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  canonical-get:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Offline no-token request safety tests
+        run: python3 -m unittest discover -s research/issue-11/diagnostics -p 'test_bot_http_canonical_noauth_probe.py' -v
+      - name: One GET against raw-spec-confirmed BOT Stat Category path (no token)
+        run: |
+          python3 research/issue-11/diagnostics/bot_http_canonical_noauth_probe.py --output-dir bot-canonical-noauth-evidence
+          cat bot-canonical-noauth-evidence/http-summary.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Retain no-secret response metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: bot-canonical-noauth-${{ github.run_id }}
+          path: bot-canonical-noauth-evidence/
+          if-no-files-found: error
+          retention-days: 30

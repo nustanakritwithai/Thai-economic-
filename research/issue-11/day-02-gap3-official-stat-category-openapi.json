@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue": 11,
+  "day": 2,
+  "gap": 3,
+  "checked_date": "2026-10-09",
+  "timezone": "Asia/Bangkok",
+  "status": "OFFICIAL_RAW_OPENAPI_RETRIEVED_AND_PATH_METHOD_VERIFIED",
+  "authoritative_public_download": {
+    "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/d48f73217fdf41995a38859ed2b6e2d5/docs/download",
+    "format": "JSON",
+    "openapi_version": "3.0.1",
+    "api_info_title": "Stat Category",
+    "api_info_version": "1.0.0",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "bytes": 6799,
+    "sha256": "282a1ceb6e707e702957eb6d507f04a98dc4be48cc15ec9e1608c81a7c1f2fcd",
+    "retrieved_at_utc": "2026-10-08T18:35:38.356810+00:00",
+    "source": "BANK_OF_THAILAND_PUBLIC_DEVELOPER_PORTAL",
+    "raw_spec_preserved_as_git_actions_artifact": true,
+    "raw_spec_saved_in_public_git_repository": false,
+    "run_id": 37825476140,
+    "run_commit": "01a10696d63c2df463210c028a9f53ac6b50a4df",
+    "artifact_id": 11571700056,
+    "artifact_name": "bot-public-stat-category-spec-37825476140",
+    "raw_zip_extracted_and_sha256_independently_verified": true
+  },
+  "contract": {
+    "server": "https://gateway.api.bot.or.th/categorylist",
+    "security_scheme": {
+      "scheme_key": "clientIdHeader",
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    },
+    "global_security_required": true,
+    "operations": [
+      {
+        "method": "GET",
+        "relative_path": "/category_list/",
+        "canonical_url": "https://gateway.api.bot.or.th/categorylist/category_list/",
+        "documented_response_status_keys": [
+          "200"
+        ],
+        "required_query_parameters": []
+      },
+      {
+        "method": "GET",
+        "relative_path": "/series_list/",
+        "canonical_url": "https://gateway.api.bot.or.th/categorylist/series_list/",
+        "documented_response_status_keys": [
+          "200"
+        ],
+        "required_query_parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  "previous_test_discrepancy": {
+    "prior_unauthorized_get_url": "https://gateway.api.bot.or.th/categorylist/category_list/get",
+    "prior_status": 401,
+    "prior_get_method": "GET",
+    "prior_path_matches_official_raw_openapi": false,
+    "prior_401_cause": "UNKNOWN",
+    "new_canonical_operation_not_yet_http_tested": true
+  },
+  "unknown_resolution": {
+    "BOT_U07": "PARTIAL_CURRENT_PUBLIC_EXPORT_RETRIEVED_AND_HASHED_VERSION_HISTORY_UNKNOWN",
+    "D2_AUTH_U09": "RAW_CURRENT_STAT_CATEGORY_EXPORT_RETRIEVED_METHOD_PATH_PROVEN",
+    "R7_U08": "PARTIAL_STABLE_DOWNLOAD_URL_DEMONSTRATED_HISTORY_UNKNOWN"
+  },
+  "scoped_live_blockers_remaining": [
+    "BOT-R3-CRED-01",
+    "BOT-R4-EGRESS-01"
+  ],
+  "day02_research_freeze": "FROZEN_v1_UNCHANGED",
+  "day02_gate": "BLOCKED_CRITICAL_EVIDENCE",
+  "production_connector": "HOLD",
+  "next": "ONE_READ_ONLY_NO_TOKEN_GET_TO_RAW_SPEC_CONFIRMED_URL_ON_GITHUB_RUNNER_THEN_ADD_MEASURED_RESULT",
+  "rule": "UNKNOWN != PASS"
+}
