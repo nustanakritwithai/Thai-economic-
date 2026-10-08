@@ -49,6 +49,7 @@ for rel in BASE_REQUIRED:
         ok = fail(f"missing required file: {rel}") and ok
 
 # PROJECT_STATE is the machine-readable NOW layer.
+state = {}
 state_path = ROOT / "PROJECT_STATE.json"
 if state_path.exists():
     try:
@@ -147,6 +148,38 @@ if capsule.exists():
     if active_version and active_version not in t:
         ok = fail("CONTEXT_CAPSULE does not mention active version") and ok
     print("PASS: Context Capsule recovery fields")
+
+# Frozen Day-1 state must stay synchronized across machine and human recovery layers.
+if state and state.get("day_01_gate") == "PASS":
+    if not str(state.get("day_01_status", "")).startswith("FROZEN"):
+        ok = fail("Day-1 gate PASS requires PROJECT_STATE day_01_status to be FROZEN*") and ok
+    if state.get("next_planned_day") != 2:
+        ok = fail("Day-1 gate PASS requires next_planned_day = 2") and ok
+    if state.get("next_planned_round") not in (None, ""):
+        ok = fail("Day-1 gate PASS must not keep a pending Day-1 next_planned_round") and ok
+
+    for key in ["latest_research_artifact", "latest_machine_research_artifact"]:
+        rel = state.get(key)
+        if not rel:
+            ok = fail(f"Day-1 gate PASS missing PROJECT_STATE {key}") and ok
+        elif not (ROOT / rel).exists():
+            ok = fail(f"PROJECT_STATE {key} points to missing file: {rel}") and ok
+
+    required_r7_json = ROOT / "research/issue-11/day-01-r7-bot-contradictions.json"
+    if not required_r7_json.exists():
+        ok = fail("Day-1 gate PASS requires machine contradiction register day-01-r7-bot-contradictions.json") and ok
+
+    pm_now = pm_path.read_text(encoding="utf-8") if pm_path.exists() else ""
+    cap_now = capsule.read_text(encoding="utf-8") if capsule.exists() else ""
+    for label, txt in [("PM_CONTROL", pm_now), ("CONTEXT_CAPSULE", cap_now)]:
+        if "Day 1 FROZEN" not in txt:
+            ok = fail(f"{label} must reflect Day 1 FROZEN after Day-1 gate PASS") and ok
+        if "Day 2 — BOT Authentication & API Behavior" not in txt:
+            ok = fail(f"{label} must point to Day 2 after Day-1 gate PASS") and ok
+        for stale in ["Current focus: **Day 1 Round 7", "Next planned round: **R8"]:
+            if stale in txt:
+                ok = fail(f"{label} contains stale post-freeze marker: {stale}") and ok
+    print("PASS: Day-1 frozen-state synchronization")
 
 # Issue template must prevent strategy-free work.
 issue_template = ROOT / ".github/ISSUE_TEMPLATE/active-release-task.md"
