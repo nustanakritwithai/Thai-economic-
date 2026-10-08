@@ -42,6 +42,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Completed Day 1 rounds:** R1–R8
 - **Next planned day:** Day 2 — BOT Authentication & API Behavior
 - **Day 2 status:** PLANNED ONLY / NOT STARTED
+- **Day 2 plan:** `research/issue-11/day-02-plan-only.md`
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
