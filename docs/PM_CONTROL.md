@@ -32,12 +32,16 @@ Implement a small, reliable set of official public-data connectors and prove ret
 ## Current research plan
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
-- **Current day:** Day 1 COMPLETE / Week 1
-- **Current focus:** Day 1 Round 7 COMPLETE — BOT Contradiction Resolution
-- **Latest artifact:** `research/issue-11/day-01-r7-bot-contradiction-resolution.md`
-- **Machine-readable artifact:** `research/issue-11/day-01-r7-bot-contradiction-resolution.json`
-- **Completed Day 1 rounds:** R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge, R5 Source Relationship Mapping, R6 Evidence Hardening, R7 Contradiction Resolution
-- **Next planned round:** R8 Day 1 Freeze
+- **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
+- **Current focus:** Day 1 post-freeze hardening COMPLETE
+- **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
+- **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
+- **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
+- **Limitations review:** `research/issue-11/day-01-limitations-review.md`
+- **Closure audit:** SELF-AUDIT PASS 10/10; independent semantic audit remains future validation
+- **Completed Day 1 rounds:** R1–R8
+- **Next planned day:** Day 2 — BOT Authentication & API Behavior
+- **Day 2 status:** PLANNED ONLY / NOT STARTED
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
