@@ -15,6 +15,7 @@ ENVIRONMENT = "bot-statistics-r3"
 API_ROOT = "https://api.github.com/repos/" + REPO + "/environments/" + ENVIRONMENT
 ENV_URL = API_ROOT
 POLICIES_URL = API_ROOT + "/deployment-branch-policies"
+LIST_URL = "https://api.github.com/repos/" + REPO + "/environments?per_page=100"
 MAX_BYTES = 32768
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -22,7 +23,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
         return None
 
 def public_get(url):
-    if url not in (ENV_URL, POLICIES_URL):
+    if url not in (ENV_URL, POLICIES_URL, LIST_URL):
         raise ValueError("GitHub metadata URL is not allowlisted")
     request = urllib.request.Request(url, headers={
         "Accept": "application/vnd.github+json",
@@ -58,6 +59,9 @@ def evaluate(environment, branch_policies=None):
         "evidence_kind": "PUBLIC_GITHUB_ENVIRONMENT_PROTECTION_METADATA_ONLY",
         "repository": REPO, "environment_name": ENVIRONMENT,
         "environment_http_status": environment.get("status"),
+        "environment_list_http_status": None,
+        "environment_list_complete": False,
+        "environment_found_in_list": "UNKNOWN",
         "branch_policy_http_status": (branch_policies or {}).get("status"),
         "environment_retrievable": False,
         "required_reviewer_rule_present": False,
@@ -124,24 +128,45 @@ def evaluate(environment, branch_policies=None):
 def collect(fetcher=public_get):
     env = fetcher(ENV_URL)
     policy = None
+    listed = None
     details = env.get("body")
-    # Only fetch policies if branch setting says custom; at most 2 GETs total.
-    if env.get("status") == 200 and isinstance(details, dict):
+    # If exact environment GET is 404, read at most one public listing
+    # to distinguish complete-list absence from inaccessible/unknown.
+    if env.get("status") == 404:
+        listed = fetcher(LIST_URL)
+    # Otherwise inspect custom branch policies only if configured.
+    elif env.get("status") == 200 and isinstance(details, dict):
         deployment = details.get("deployment_branch_policy")
         if (isinstance(deployment, dict) and
                 deployment.get("protected_branches") is False and
                 deployment.get("custom_branch_policies") is True):
             policy = fetcher(POLICIES_URL)
     output = evaluate(env, policy)
+    if listed is not None:
+        output["environment_list_http_status"] = listed.get("status")
+        listing = listed.get("body")
+        if listed.get("status") == 200 and isinstance(listing, dict):
+            environments = listing.get("environments")
+            count = listing.get("total_count")
+            if (isinstance(environments, list) and isinstance(count, int)
+                    and count == len(environments)):
+                output["environment_list_complete"] = True
+                is_listed = any(isinstance(x, dict) and x.get("name") == ENVIRONMENT
+                                for x in environments)
+                output["environment_found_in_list"] = is_listed
+                output["classification"] = (
+                    "BLOCKED_ENVIRONMENT_GET_404_BUT_LIST_CONTAINS_TARGET_INCONSISTENT"
+                    if is_listed else "BLOCKED_TARGET_NOT_LISTED_IN_COMPLETE_PUBLIC_ENVIRONMENT_LIST"
+                )
     output["checked_at_utc"] = datetime.now(timezone.utc).isoformat()
     output["runner"] = {
         "github_run_id": os.getenv("GITHUB_RUN_ID"),
         "commit_sha": os.getenv("GITHUB_SHA"),
     }
-    output["fetch_count"] = 1 + (1 if policy is not None else 0)
+    output["fetch_count"] = 1 + (1 if policy is not None else 0) + (1 if listed is not None else 0)
     output["limitations"] = [
         "Metadata is publicly retrievable on some repositories and can be unavailable without authentication",
-        "An inaccessible metadata endpoint is UNKNOWN, not proof that an Environment does not exist",
+        "A standalone 404 is not proof of absence; a full public list of environments strengthens the same-time classification",
         "Required reviewer metadata does not establish a particular reviewer gave approval for a job",
         "No Secrets API, secret names/values, BOT portal account, Token, or live BOT requests checked",
         "A metadata pass alone CANNOT enable R3 or certify actual environment secret injection",

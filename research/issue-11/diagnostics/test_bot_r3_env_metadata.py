@@ -1,7 +1,7 @@
 """Offline mocked GitHub Environment security metadata tests; zero real HTTP."""
 import json
 import unittest
-from bot_r3_env_metadata import ENV_URL, POLICIES_URL, evaluate, collect
+from bot_r3_env_metadata import ENV_URL, POLICIES_URL, LIST_URL, evaluate, collect
 
 def protected():
     return {
@@ -96,6 +96,38 @@ class Tests(unittest.TestCase):
         self.assertEqual(urls,[ENV_URL])
         self.assertEqual(r["fetch_count"],1)
         self.assertFalse(r["deployment_protection_metadata_pass"])
+
+
+    def test_complete_public_list_confirms_target_not_listed(self):
+        urls = []
+        def getter(url):
+            urls.append(url)
+            if url == ENV_URL:
+                return {"status": 404, "body": None, "problem": "no response"}
+            if url == LIST_URL:
+                return {"status": 200, "body": {
+                    "total_count": 1, "environments": [{"name": "github-pages", "id": 1234}]}, "problem": None}
+            raise AssertionError("Unexpected network endpoint")
+        r = collect(fetcher=getter)
+        self.assertEqual(urls, [ENV_URL, LIST_URL])
+        self.assertEqual(r["fetch_count"], 2)
+        self.assertTrue(r["environment_list_complete"])
+        self.assertFalse(r["environment_found_in_list"])
+        self.assertEqual(r["classification"], "BLOCKED_TARGET_NOT_LISTED_IN_COMPLETE_PUBLIC_ENVIRONMENT_LIST")
+        self.assertFalse(r["deployment_protection_metadata_pass"])
+        self.assertFalse(r["bot_token_provisioned_or_checked"])
+        self.assertNotIn("github-pages", json.dumps(r))
+
+    def test_incomplete_public_list_cannot_prove_absence(self):
+        def getter(url):
+            if url == ENV_URL:
+                return {"status": 404, "body": None, "problem": "no response"}
+            return {"status": 200, "body": {
+                "total_count": 150, "environments": [{"name": "github-pages"}]}, "problem": None}
+        r = collect(fetcher=getter)
+        self.assertFalse(r["environment_list_complete"])
+        self.assertEqual(r["environment_found_in_list"], "UNKNOWN")
+        self.assertEqual(r["classification"], "BLOCKED_UNVERIFIED_ENVIRONMENT_PROTECTION")
 
 if __name__=="__main__":
     unittest.main()
