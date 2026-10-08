@@ -18,3 +18,5 @@ jobs:
         run: python3 scripts/validate_repo.py
       - name: Check stale project state
         run: python3 scripts/check_stale_state.py
+      - name: Validate BOT public OAS snapshot and canonical HTTP proof
+        run: python3 scripts/verify_bot_stat_category_snapshot.py

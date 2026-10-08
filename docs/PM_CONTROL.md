@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day 2 gap #2 observed no-token GET HTTP 401 at BOT gateway hostname; API Method and auth error cause not independently verified; R3 BLOCKED, R4 partial, Gate BLOCKED_CRITICAL_EVIDENCE
+- **Current focus:** Day-2 Gap #3 official raw OAS GET /category_list/ verified + one canonical no-token GET HTTP401; R3 BLOCKED, full R4 error semantics UNKNOWN, Gate BLOCKED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -55,6 +55,8 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Day 2 Gate assessment:** research/issue-11/day-02-gate.md — BLOCKED_CRITICAL_EVIDENCE; R3/R4 live origin HTTP missing, security deployment/rate enforcement unknown.
 - **Day 2 gap #1:** research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.md and research/issue-11/day-02-network-diagnostic-evidence-2026-10-08.json — [real GitHub network run 37796439277](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37796439277) confirms DNS/TCP443/TLSv1.3 for both official BOT hosts on GitHub-hosted runner; no HTTP or credential. R3/R4 still BLOCKED.
 - **Day-02 gap #2 observed HTTP:** `research/issue-11/day-02-r4-followup-http-2026-10-09.md` and `research/issue-11/day-02-r4-followup-http-2026-10-09.json` — [GitHub HTTP run 37822323186](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37822323186) response **401 / application/json**, Content-Length header 46, one GET/no Token, method and BOT-specific cause still UNKNOWN. Frozen v1 not edited, Gate BLOCKED.
+- **Day-2 Gap #3 official Stat Category OAS:** `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.manifest.json` + archived `research/issue-11/official-snapshots/BOT_Stat_Category_OpenAPI_v1.0.0_2026-10-09.json.gz` (original SHA256 `282a1ceb6e707e702957eb6d507f04a98dc4be48cc15ec9e1608c81a7c1f2fcd`).
+- **Day-2 Gap #3 canonical GET no-auth 401:** `research/issue-11/day-02-gap3-canonical-http-2026-10-09.md` and `research/issue-11/day-02-gap3-canonical-http-2026-10-09.json`; verified OpenAPI GET /category_list/, run [37826019253](https://github.com/nustanakritwithai/Thai-economic-/actions/runs/37826019253); no Token, no response body, cause UNKNOWN; Day-02 Gate BLOCKED.
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -66,11 +68,11 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 ## NOW
 1. Day 1 BOT FROZEN v1.1 / GATE PASS, preserved.
 2. Day 2 R1–R8 research RECORDS preserved; Day-02 documentary evidence FROZEN v1, same-agent recovery self-audit PASS 10/10 only. **Day-02 Gate BLOCKED_CRITICAL_EVIDENCE (NOT PASS).**
-3. Gap #1 GitHub-hosted runner DNS/TCP/TLS PASS. Gap #2 GitHub-hosted runner one unauthenticated GET received actual HTTP 401, but API Method and 401 cause remain UNKNOWN. R3 live auth BLOCKED (BOT-R3-CRED-01); R4 full error taxonomy PARTIAL/BLOCKED (BOT-R4-EGRESS-01 original local runner history). R5 rate/maintenance UNKNOWN, R6 security DESIGN ONLY; research risks unchanged.
+3. Gap #1 DNS/TCP/TLS GitHub runner PASS; Gap #2 a noncanonical URL GET gave HTTP401; Gap #3 official raw OAS establishes GET /category_list/, and one canonical no-token GET also gives HTTP401. This confirms one actual negative response for correct Method/Path, not the internal 401 cause or complete R4 taxonomy. R3 BOT-R3-CRED-01 BLOCKED, R4 BOT-R4-EGRESS-01 OPEN, Day2 Gate BLOCKED.
 4. Issue #11 remains OPEN, current research day stays Day 2 (not marked completed). Production connector HOLD, no Day 3 automatic start.
 
 ## NEXT EXACT ACTION
-DAY 02 GAP #2: a GitHub-hosted no-Authorization GET yielded HTTP 401 / application/json / Content-Length 46, one request only (run 37822323186). It proves a remote HTTP response at verified BOT gateway host, NOT a full provider auth/error contract. Next acquire official raw Stat Category OpenAPI export/verified HTTP method and operation; clarify safe 401 semantics, possibly with BOT official docs; separately R3 requires approved Statistics Token provisioned to private trusted runner. Keep BOT-R3-CRED-01/BOT-R4-EGRESS-01 OPEN (the latter preserves original local DNS context), Frozen v1 and Day-02 Gate BLOCKED_CRITICAL_EVIDENCE. Do not start Day3/Issue#12 or production connector.
+Day-2 Gap #3 source confirmed: official public raw Stat Category OpenAPI identifies GET /category_list/; live GitHub-runner no-Authorization request to that canonical operation returned HTTP401 once. R3 positive BOT Statistics Token remains BLOCKED; the 401 cause/other error taxonomy UNKNOWN because OAS declares only 200 and response body was not read. Next obtain Approved Statistics access via trusted secret injection and authorized R3 positive proof, and verify 401 cause via BOT official evidence, not guesswork. Keep Frozen v1, Day-02 Gate BLOCKED_CRITICAL_EVIDENCE, Issue #11 OPEN, no Day3/connector.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof
@@ -86,7 +88,7 @@ DAY 02 GAP #2: a GitHub-hosted no-Authorization GET yielded HTTP 401 / applicati
 - [ ] V0.2 verification snapshot
 
 ## BLOCKERS
-Day-02 Gate BLOCKED_CRITICAL_EVIDENCE. Scoped blockers: **BOT-R3-CRED-01** (positive approved auth untested) and **BOT-R4-EGRESS-01** (historical original-runner DNS issue / source-verified full negative error semantics outstanding). New GitHub-hosted candidate GET returned 401, **partial remote HTTP evidence** only, not provider-specific error taxonomy PASS. See `docs/RISKS.md`.
+Day-02 Gate BLOCKED_CRITICAL_EVIDENCE. Scoped blockers **BOT-R3-CRED-01** (approved live positive auth absent), **BOT-R4-EGRESS-01** (original runner DNS issue and full negative taxonomy not closed). Raw canonical GET/OAS proof available, but neither credential success nor full provider-auth error contract certified. See `docs/RISKS.md`.
 
 ## NEXT
 **V0.3 Validation & Normalization**
