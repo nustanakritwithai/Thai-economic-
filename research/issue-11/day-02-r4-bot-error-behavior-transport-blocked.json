@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "project": "Thailand Economic OS",
+  "release": "V0.2",
+  "issue_number": 11,
+  "day": 2,
+  "round": 4,
+  "observed_date": "2026-10-08",
+  "execution_timezone": "Asia/Bangkok",
+  "round_status": "RECORDED_WITH_TRANSPORT_BLOCKER",
+  "verified_provider_http_error_contract": false,
+  "known_gateway_from_official_docs": "https://gateway.api.bot.or.th/",
+  "documented_candidate": {
+    "product": "Statistics",
+    "api": "Stat Category",
+    "spec_version_display": "1.0.0",
+    "base_url": "https://gateway.api.bot.or.th/categorylist",
+    "operation_path_display": "/category_list/get",
+    "candidate_combined_url": "https://gateway.api.bot.or.th/categorylist/category_list/get",
+    "http_method_contract_verified": false,
+    "extraction_caveat": "DIRECT_SPEC_HTML_DYNAMIC; INDEXED_BOT_TEXT_HAS_OPERATION_PATH; NOT_A_RAW_SPEC_EXPORT"
+  },
+  "source_evidence": [
+    {
+      "id": "R4-E01",
+      "url": "https://portal.api.bot.or.th/manual",
+      "authority": "approval_header_and_dashboard",
+      "evidence_date": "2026-10-08"
+    },
+    {
+      "id": "R4-E02",
+      "url": "https://portal.api.bot.or.th/migration",
+      "authority": "current_gateway_and_auth_header",
+      "evidence_date": "2026-10-08"
+    },
+    {
+      "id": "R4-E03",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "authority": "product_listen_path",
+      "evidence_date": "2026-10-08"
+    },
+    {
+      "id": "R4-E04",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/d48f73217fdf41995a38859ed2b6e2d5/docs",
+      "authority": "indexed_api_endpoint_display",
+      "evidence_date": "2026-10-08",
+      "raw_spec_export": false
+    },
+    {
+      "id": "R4-E05",
+      "url": "https://portal.api.bot.or.th/terms",
+      "authority": "non_disruption_and_secret_safety",
+      "evidence_date": "2026-10-08"
+    },
+    {
+      "id": "R4-E06",
+      "url": "https://portal.api.bot.or.th/",
+      "authority": "current_portal_identity",
+      "evidence_date": "2026-10-08"
+    }
+  ],
+  "local_diagnostics": [
+    {
+      "id": "R4-T00",
+      "purpose": "portal_dns_egress_diagnostic",
+      "url": "https://portal.api.bot.or.th/migration",
+      "method": "HEAD",
+      "timestamp_utc": null,
+      "exact_timestamp_captured": false,
+      "curl_exit_code": 6,
+      "curl_http_code_string": "000",
+      "error": "Could not resolve host: portal.api.bot.or.th",
+      "remote_ip": null,
+      "origin_http_status": null,
+      "origin_response_headers": null,
+      "origin_body_bytes": null,
+      "classification": "LOCAL_DNS_FAILURE_NO_HTTP"
+    },
+    {
+      "id": "R4-T01",
+      "purpose": "missing_auth_negative_probe",
+      "candidate_url": "https://gateway.api.bot.or.th/categorylist/category_list/get",
+      "method": "GET",
+      "authorization_header_present": false,
+      "attempted_at_utc": "2026-10-08T10:30:29Z",
+      "curl_exit_code": 6,
+      "curl_http_code_string": "000",
+      "error": "Could not resolve host: gateway.api.bot.or.th",
+      "curl_reported_local_total_seconds": 0.000095,
+      "origin_http_status": null,
+      "content_type": null,
+      "origin_response_headers": null,
+      "origin_response_bytes": null,
+      "http_response_retrieved_at": null,
+      "classification": "LOCAL_DNS_FAILURE_BEFORE_HTTP",
+      "network_send_to_gateway": false,
+      "credential_sent": false
+    },
+    {
+      "id": "R4-T02",
+      "purpose": "public_web_reader_gateway_fetch_check",
+      "candidate_url": "https://gateway.api.bot.or.th/categorylist/category_list/get",
+      "result": "WEB_READER_NOT_ACCESSIBLE",
+      "origin_http_status": null,
+      "actual_http_exchange_proven": false
+    }
+  ],
+  "attempted_local_gateway_connections": 1,
+  "completed_gateway_http_exchanges": 0,
+  "origin_http_statuses_observed": [],
+  "negative_matrix": [
+    {
+      "case": "missing_authorization",
+      "status": "TRANSPORT_BLOCKED",
+      "probe_id": "R4-T01",
+      "provider_http_status": null
+    },
+    {
+      "case": "malformed_credential",
+      "status": "NOT_EXECUTED_AFTER_DNS_FAILURE",
+      "provider_http_status": null
+    },
+    {
+      "case": "invalid_credential",
+      "status": "NOT_EXECUTED_AFTER_DNS_FAILURE",
+      "provider_http_status": null
+    },
+    {
+      "case": "invalid_endpoint",
+      "status": "NOT_EXECUTED_AFTER_DNS_FAILURE",
+      "provider_http_status": null
+    },
+    {
+      "case": "unsupported_method",
+      "status": "NOT_EXECUTED_AFTER_DNS_FAILURE",
+      "provider_http_status": null
+    },
+    {
+      "case": "invalid_parameter",
+      "status": "NOT_EXECUTED_AFTER_DNS_FAILURE",
+      "provider_http_status": null
+    },
+    {
+      "case": "permission_failure",
+      "status": "BLOCKED_NO_LEGITIMATE_APPROVED_CREDENTIAL",
+      "provider_http_status": null
+    }
+  ],
+  "block_status": {
+    "id": "BOT-R4-EGRESS-01",
+    "state": "OPEN",
+    "scope": "R4_ORIGIN_HTTP_NEGATIVE_BEHAVIOR",
+    "owner": "Research operator / authorized network runner administrator",
+    "observed_cause": "DNS_RESOLUTION_FAILURE_IN_THIS_EXECUTION_ENVIRONMENT",
+    "implication": "BOT_HTTP_STATUS_UNKNOWN_NOT_401_403_429",
+    "resolution": "Verify candidate HTTP method & exact endpoint; use authorized DNS/egress-enabled runner; make one normal read-only negative request and capture sanitized real origin HTTP evidence",
+    "adjacent_blocker": "BOT-R3-CRED-01"
+  },
+  "maintained_day02_unknowns": [
+    "D2-AUTH-U01",
+    "D2-AUTH-U02",
+    "D2-AUTH-U03",
+    "D2-AUTH-U04",
+    "D2-AUTH-U05",
+    "D2-AUTH-U06",
+    "D2-AUTH-U07",
+    "D2-AUTH-U08",
+    "D2-AUTH-U09",
+    "D2-AUTH-U10",
+    "D2-AUTH-U11"
+  ],
+  "maintained_bot_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "r3_live_auth_status": "BLOCKED_NO_AUTHORIZED_CREDENTIAL",
+  "r4_live_negative_status": "BLOCKED_NO_PROVIDER_HTTP",
+  "r5_status": "NOT_STARTED",
+  "day02_gate": "NOT_ASSESSED",
+  "issue11": "OPEN",
+  "connector": "HOLD",
+  "next_action": "Day2 R5 official rate-limit and operations docs research without stress testing; R3/R4 blockers stay open",
+  "rule": "UNKNOWN != PASS"
+}

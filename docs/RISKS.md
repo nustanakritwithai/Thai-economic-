@@ -1,7 +1,9 @@
 # Risk & Blocker Register
 
 ## Active blockers
-- **BOT-R3-CRED-01 (OPEN, scoped to V0.2 Issue #11 / Day 02 R3 positive live auth):** no approved usable BOT Statistics token is available to the current authorized execution context. This is **not** proof of provider denial, account nonexistence, network failure or global project research blockage. Other evidence research (including R4 safe negative behavior) may continue. Details below.
+- **BOT-R3-CRED-01 (OPEN, R3 positive live auth):** no usable approved BOT Statistics credential in this execution context. No conclusion about owner's account status or BOT outage.
+- **BOT-R4-EGRESS-01 (OPEN, R4 negative HTTP behavior):** local DNS failure prevents reaching `gateway.api.bot.or.th`; curl exit 6 and no provider HTTP response. Does not prove BOT is unavailable. Independent documentation research can continue.
+Both are scoped to missing live evidence, not global blockers of the Issue #11 research plan.
 
 ## BOT-R3-CRED-01 — Approved BOT Credential for Positive Authentication
 **Status:** OPEN / BLOCKED ONLY FOR DAY-02 R3 LIVE POSITIVE AUTH.
@@ -12,6 +14,16 @@
 **Workaround:** preserve blocked proof, continue R4 safe negative/error research without inferring real auth success or an HTTP error taxonomy. Do not paste tokens into chat or source control.
 **Resolution:** app/Statistics entitlement approved; credential supplied to a trusted secret-injected runner; exact safe request operation verified; one actual successful response captured as sanitized telemetry in a separate additive artifact, with CI/review as appropriate.
 **Non-goals:** no unauthorized account browsing, no secret inspection, no mock 200 and no production connector implementation.
+
+## BOT-R4-EGRESS-01 — Local DNS Prevents BOT Negative HTTP Observation
+**Status:** OPEN / SCOPED TO DAY 02 R4 provider HTTP negative tests.
+**Owner:** Research operator / authorized egress-runner/network administrator.
+**Affected:** V0.2, Issue #11, Day 02 R4 negative/error behavior proof. Not a global project research blocker.
+**Evidence:** R4-T01 attempted a read-only `GET` with absent Authorization to candidate `https://gateway.api.bot.or.th/categorylist/category_list/get` on 2026-10-08T10:30:29Z; curl exit code 6, resolver error; `http_code=000` is a curl no-response placeholder. R4-T00 also failed to resolve public BOT portal host. No origin HTTP response/status, content type, headers, size or server latency was observed. See `research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md`.
+**Impact:** Actual BOT missing/malformed-auth, path/method/parameter, permission error statuses remain UNKNOWN; no 401/403/429 mapping proven. R3 positive credential blocker is separate.
+**Workaround:** Retain local DNS evidence and prepare bounded future read-only tests; proceed to R5 documentary rate/ops research without live-stress or false PASS.
+**Resolution:** Use a permitted DNS/egress-enabled runner, verify exact BOT operation/method, send one bounded read-only negative request and capture sanitized actual origin HTTP metadata. More tests only when prerequisite succeeds; retain this blocked record as history.
+**Non-goals:** No secret harvesting, no credential sharing, no production connector implementation, no BOT outage claim.
 
 ## R-001 — Source schema changes
 **Risk:** Public agencies may change APIs/files without notice.

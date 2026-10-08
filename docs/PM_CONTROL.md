@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day 2 R3 Positive Access Test BLOCKED due to absent authorized usable credential; R4 NOT STARTED
+- **Current focus:** Day 2 R4 error behavior research RECORDED; local DNS blocks origin HTTP; R3 positive BLOCKED; R5 NOT STARTED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -41,11 +41,12 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Closure audit:** SELF-AUDIT PASS 10/10; independent semantic audit remains future validation
 - **Completed Day 1 rounds:** R1–R8
 - **Next planned day:** Day 2 — BOT Authentication & API Behavior
-- **Day 2 status:** R1 + R2 RECORDED / R3 LIVE AUTH BLOCKED / R4 NOT STARTED / Day-02 Gate NOT ASSESSED
+- **Day 2 status:** R1 + R2 RECORDED / R3 LIVE AUTH BLOCKED / R4 ORIGIN HTTP BLOCKED / R5 NOT STARTED / Day-02 Gate NOT ASSESSED
 - **Day 2 plan:** `research/issue-11/day-02-plan-only.md`
 - **Day 2 R1 artifact:** `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
 - **Day 2 R2 artifacts:** `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `research/issue-11/day-02-r2-bot-auth-revalidation.json` (2026-10-08)
 - **Day 2 R3 artifacts:** `research/issue-11/day-02-r3-bot-positive-access-blocked.md` and `.json` — documented auth PASS (documentation only); live positive test BLOCKED; zero HTTP calls (2026-10-08)
+- **Day 2 R4 artifacts:** `research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md` and `.json` — DNS error `curl 6`, `http_code=000` means no HTTP, not a BOT response; R4 negative status evidence BLOCKED.
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -57,13 +58,13 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 ## NOW
 1. Day 1 BOT Ecosystem Research: **FROZEN v1.1 / GATE PASS** (preserved)
 2. Closure Audit: **SELF-AUDIT PASS 10/10**; independent semantic review future validation
-3. Day 2 R1: **RECORDED**; R2: **REVALIDATED WITH CORRECTIONS/UNKNOWNS**; R3: **BLOCKED** (no authorized usable credential, zero HTTP calls)
-4. Next scheduled research: Day 2 — BOT Authentication & API Behavior; next exact round = R4 safe negative/error behavior research (R3 positive blocker remains OPEN)
+3. Day 2 R1: **RECORDED**; R2: **REVALIDATED WITH CORRECTIONS/UNKNOWNS**; R3: **BLOCKED** (no authorized credential); R4: **RECORDED/HTTP BLOCKED** (local DNS failure, no origin HTTP)
+4. Next scheduled research: Day 2 — BOT Authentication & API Behavior; next exact round = R5 official rates/operations document research (R3/R4 blockers OPEN)
 5. Issue #11 remains OPEN
 6. Production connector implementation remains HOLD
 
 ## NEXT EXACT ACTION
-Day 2 R4 — safe negative/error behavior research only. R3 positive access remains BLOCKED under `BOT-R3-CRED-01`: no authorized usable BOT token in this execution context; 0 HTTP calls. Never infer 401/403/429 statuses without measured BOT evidence. R3 may be re-opened after approved secure credential access. Keep Issue #11 OPEN and implementation HOLD.
+Day 2 R5 — evidence-only BOT rate-limit and operational behavior research. Do not conduct throttle stress tests or assert HTTP error codes without a live origin response. R3 token blocker `BOT-R3-CRED-01` remains OPEN; R4 DNS blocker `BOT-R4-EGRESS-01` also OPEN (curl exit 6, zero completed gateway HTTP exchanges). Issue #11 OPEN, Day-02 Gate NOT ASSESSED, production connector HOLD.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof
@@ -79,7 +80,7 @@ Day 2 R4 — safe negative/error behavior research only. R3 positive access rema
 - [ ] V0.2 verification snapshot
 
 ## BLOCKERS
-Scoped live-auth blocker: **BOT-R3-CRED-01** (Day 2 R3 positive BOT Statistics test); no approved usable token available to this execution context. **Does not block other research** but prevents positive live auth PASS and Day-02 Gate closure. Owner/closure evidence: `docs/RISKS.md`.
+Scoped blockers: **BOT-R3-CRED-01** (R3 positive token unavailable) and **BOT-R4-EGRESS-01** (R4 local DNS prevents origin HTTP error observation). Neither proves BOT outage; both block live proofs, not independent documentation research. See `docs/RISKS.md`.
 
 ## NEXT
 **V0.3 Validation & Normalization**

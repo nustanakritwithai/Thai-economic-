@@ -9,15 +9,15 @@
   "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
   "status": "ACTIVE_DEEP_RESEARCH",
   "current_gate": "Issue #11 Deep Research — P0 Source Inventory",
-  "next_exact_action": "Day 2 R4 — safe negative/error behavior research only; record observed BOT HTTP status where safely measured, otherwise UNKNOWN. Keep R3 live positive auth BLOCKED until secure approved Statistics Token is available; no rate stress or production connector.",
+  "next_exact_action": "Day 2 R5 — investigate official BOT product rates, quota enforcement scope, headers/Retry-After, portal operational telemetry and maintenance notices; documentary research only, no stress testing. Keep BOT-R3-CRED-01 and BOT-R4-EGRESS-01 OPEN, no connector implementation.",
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
-  "last_verified_main": "4be014c2574e60385074cd7e6f770a829171aa1a",
-  "last_verified_ci_run": 37762837317,
-  "last_verified_pages_run": 37762835798,
+  "last_verified_main": "fe05f12a14c39b28a27b80fef8cc6210ab9f40ca",
+  "last_verified_ci_run": 37763673992,
+  "last_verified_pages_run": 37763674055,
   "pages_refresh_pending_for_latest_ui": false,
-  "state_updated_at": "2026-10-08T10:28:03.344Z",
+  "state_updated_at": "2026-10-08T10:32:52.803Z",
   "stale_after_days": 14,
   "current_plan_ref": "docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md",
   "research_window": {
@@ -28,7 +28,7 @@
   },
   "current_research_day": 2,
   "current_week": 1,
-  "current_focus": "Day 2 R3 positive BOT auth test BLOCKED (no authorized usable credential available to execution context); R4 not started",
+  "current_focus": "Day 2 R4 negative/error behavior research RECORDED; HTTP error evidence BLOCKED by local DNS; R3 positive BLOCKED; R5 not started",
   "daily_log_required": true,
   "calendar_sync": {
     "status": "SYNCED",
@@ -43,7 +43,7 @@
   "completed_research_days": [
     1
   ],
-  "latest_research_artifact": "research/issue-11/day-02-r3-bot-positive-access-blocked.md",
+  "latest_research_artifact": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md",
   "day_01_status": "FROZEN_v1_1",
   "next_planned_day": 2,
   "next_planned_focus": "BOT Authentication & API Behavior",
@@ -62,20 +62,20 @@
   "day_01_round_03_status": "PASS",
   "day_01_round_04_status": "PASS",
   "day_01_round_05_status": "PASS",
-  "latest_machine_research_artifact": "research/issue-11/day-02-r3-bot-positive-access-blocked.json",
+  "latest_machine_research_artifact": "research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.json",
   "day_01_round_06_status": "PASS",
   "day_01_round_07_status": "PASS",
   "day_01_gate": "PASS",
   "day_01_closure_audit": "SELF_AUDIT_PASS_10_OF_10",
-  "today_stop_point": "Day 2 R3 preflight BLOCKED; no HTTP call; R4 not started; Issue #11 OPEN; implementation HOLD",
+  "today_stop_point": "R4 documented with DNS transport block, no provider HTTP statuses; R3 positive blocked; R5 not started; Issue #11 OPEN; implementation HOLD",
   "day_01_independent_semantic_audit": "FUTURE_VALIDATION",
   "day_01_limitations_review": "research/issue-11/day-01-limitations-review.md",
   "day_01_evidence_manifest": "research/issue-11/day-01-official-evidence-manifest.json",
-  "day_02_status": "R1_R2_RECORDED_R3_BLOCKED_R4_NOT_STARTED",
+  "day_02_status": "R1_R2_RECORDED_R3_AUTH_BLOCKED_R4_HTTP_BLOCKED_R5_NOT_STARTED",
   "verification_semantics": "last_verified_* records the most recent repository head verified before the current metadata commit; current-head truth is GitHub Actions.",
   "day_02_plan_ref": "research/issue-11/day-02-plan-only.md",
   "day_02_round_01_status": "DISCOVERY_RECORDED_AWAITING_INDEPENDENT_REVALIDATION",
-  "day_02_next_round": 4,
+  "day_02_next_round": 5,
   "day_02_first_execution_date": "2026-10-08",
   "day_02_plan_original_date": "2026-10-09",
   "day_02_gate": "NOT_ASSESSED",
@@ -107,8 +107,18 @@
       "id": "BOT-R3-CRED-01",
       "scope": "R3_LIVE_POSITIVE_AUTH_ONLY",
       "status": "OPEN"
+    },
+    {
+      "id": "BOT-R4-EGRESS-01",
+      "scope": "R4_LIVE_NEGATIVE_HTTP_ONLY",
+      "status": "OPEN"
     }
   ],
   "day_02_pending_positive_test": true,
-  "day_02_r3_request_count": 0
+  "day_02_r3_request_count": 0,
+  "day_02_round_04_status": "RECORDED_WITH_TRANSPORT_BLOCKER_NO_PROVIDER_HTTP",
+  "day_02_negative_http_test": "BLOCKED_LOCAL_DNS_NO_PROVIDER_RESPONSE",
+  "day_02_negative_http_statuses_observed": 0,
+  "day_02_r4_local_attempts": 1,
+  "day_02_r4_completed_gateway_http_exchanges": 0
 }

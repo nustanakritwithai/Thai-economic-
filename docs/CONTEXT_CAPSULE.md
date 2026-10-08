@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day 2 R3 Positive Access Test BLOCKED (no authorized usable credential in execution context); R4 NOT STARTED**
+- Current focus: **Day 2 R4 Error Behavior RECORDED / origin HTTP BLOCKED by local DNS; R3 positive BLOCKED; R5 NOT STARTED**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -71,11 +71,12 @@ This is the single current execution entry point.
 - Closure audit: **SELF-AUDIT PASS 10/10**; independent semantic audit remains future validation
 - Day 1 rounds complete: **R1–R8**
 - Next planned day: **Day 2 — BOT Authentication & API Behavior**
-- Day 2 status: **R1 + R2 RECORDED / R3 LIVE AUTH BLOCKED / R4 NOT STARTED / GATE NOT ASSESSED**
+- Day 2 status: **R1 + R2 RECORDED / R3 LIVE AUTH BLOCKED / R4 NEGATIVE HTTP BLOCKED / R5 NOT STARTED / GATE NOT ASSESSED**
 - Day 2 plan: `research/issue-11/day-02-plan-only.md`
 - Day 2 R1 evidence: `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
 - Day 2 R2 evidence: `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `.json` (2026-10-08; corrections and UNKNOWNs explicit)
 - Day 2 R3 evidence: `research/issue-11/day-02-r3-bot-positive-access-blocked.md` and `.json` — documented auth PASS (docs-only), live positive test BLOCKED (no HTTP request). Scoped blocker: `BOT-R3-CRED-01`.
+- Day 2 R4 evidence: `research/issue-11/day-02-r4-bot-error-behavior-transport-blocked.md` and `.json` — curl exit 6 local DNS failure, no provider HTTP response; scoped blocker: `BOT-R4-EGRESS-01`.
 - Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
@@ -109,7 +110,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 2 R3 is recorded as **BLOCKED** (no authorized usable BOT credential in this agent context; no live request). **Next round: R4 safe negative/error behavior research only** (NOT STARTED); continue without claiming R3 PASS. Reopen R3 only when an approved credential is available to a secure authorized runner. No rate-limit stress testing or connector implementation.
+Day 2 R4 research recorded; missing-Authorization candidate GET failed at **local DNS** before HTTP (not a BOT status code). R3 live positive remains BLOCKED, R4 provider HTTP responses remain BLOCKED. **Next round: R5 official rate-limit and operational evidence review only** (NOT STARTED); no stress testing, no connector implementation; both scoped blockers remain open.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
