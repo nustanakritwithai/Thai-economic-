@@ -1,0 +1,118 @@
+{
+  "register_version": 1,
+  "provider": "BOT",
+  "research_day": 1,
+  "round": 7,
+  "evidence_date": "2026-10-08",
+  "result": "PASS",
+  "taxonomy": [
+    "TRUE_CONTRADICTION_RESOLVED",
+    "SCOPE_MISMATCH",
+    "VINTAGE_DIFFERENCE",
+    "IDENTIFIER_NAMESPACE_DIFFERENCE",
+    "CONFIG_SCOPE_DIFFERENCE",
+    "TERMINOLOGY_AMBIGUITY",
+    "UNRESOLVED_MAPPING",
+    "NO_CONTRADICTION"
+  ],
+  "resolutions": [
+    {
+      "id": "CR-01",
+      "topic": "legacy_vs_current_api_navigation",
+      "classification": "TRUE_CONTRADICTION_RESOLVED",
+      "status": "RESOLVED",
+      "rule": "Current API product/spec documentation and Migration Guide override generic navigation; legacy URL retained only as lineage alias."
+    },
+    {
+      "id": "CR-02",
+      "topic": "discontinued_series_label_vs_table_objects",
+      "classification": "TERMINOLOGY_AMBIGUITY",
+      "status": "RESOLVED_BY_SCOPE",
+      "rule": "Treat lifecycle records as publication table/report objects unless API-series evidence exists."
+    },
+    {
+      "id": "CR-03",
+      "topic": "table_lifecycle_vs_api_series_lifecycle",
+      "classification": "SCOPE_MISMATCH",
+      "status": "CONTROLLED_UNKNOWN",
+      "rule": "Table/report lifecycle FACT; API series lifecycle UNKNOWN."
+    },
+    {
+      "id": "CR-04",
+      "topic": "pci_revision_snapshots",
+      "classification": "VINTAGE_DIFFERENCE",
+      "status": "RESOLVED",
+      "rule": "Retain both vintages; do not overwrite earlier published value."
+    },
+    {
+      "id": "CR-05",
+      "topic": "general_vs_table_release_schedule",
+      "classification": "NO_CONTRADICTION",
+      "status": "RESOLVED",
+      "rule": "Specific table metadata governs when available."
+    },
+    {
+      "id": "CR-06",
+      "topic": "table_report_series_identifiers",
+      "classification": "IDENTIFIER_NAMESPACE_DIFFERENCE",
+      "status": "CONTROLLED_UNKNOWN",
+      "rule": "Namespace table_code/report_id/api_series separately; mapping requires evidence."
+    },
+    {
+      "id": "CR-07",
+      "topic": "product_rate_limits",
+      "classification": "CONFIG_SCOPE_DIFFERENCE",
+      "status": "RESOLVED",
+      "rule": "Rate config belongs at product/plan scope."
+    },
+    {
+      "id": "CR-08",
+      "topic": "api_versions",
+      "classification": "CONFIG_SCOPE_DIFFERENCE",
+      "status": "RESOLVED",
+      "rule": "Version belongs to API name/spec, not provider-wide or product-wide."
+    },
+    {
+      "id": "CR-09",
+      "topic": "title_similarity_vs_mapping",
+      "classification": "UNRESOLVED_MAPPING",
+      "status": "CONTROLLED_UNKNOWN",
+      "rule": "Title similarity creates candidate mapping only."
+    },
+    {
+      "id": "CR-10",
+      "topic": "api_vs_btws_file_truth",
+      "classification": "UNRESOLVED_MAPPING",
+      "status": "CONTROLLED_UNKNOWN",
+      "rule": "Preserve raw surfaces/vintages; classify differences before normalization."
+    },
+    {
+      "id": "CR-11",
+      "topic": "revision_policy_vs_observed_revision",
+      "classification": "NO_CONTRADICTION",
+      "status": "RESOLVED",
+      "rule": "Policy and retained-vintage evidence reinforce each other."
+    },
+    {
+      "id": "CR-12",
+      "topic": "source_table_change_vs_canonical_concept",
+      "classification": "SCOPE_MISMATCH",
+      "status": "RESOLVED_BY_MODEL",
+      "rule": "Canonical concept can remain stable while external publication objects change, subject to semantic revalidation."
+    }
+  ],
+  "open_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "next_round": 8,
+  "next_focus": "Day 1 Freeze",
+  "rule": "UNKNOWN != PASS"
+}
