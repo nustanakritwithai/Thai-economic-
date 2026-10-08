@@ -33,10 +33,10 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Current day:** Day 1 COMPLETE / Week 1
-- **Current focus:** Day 1 Round 3 COMPLETE — BOT Ecosystem Gap Hunt
-- **Latest artifact:** `research/issue-11/day-01-r3-bot-ecosystem-gap-hunt.md`
-- **Completed Day 1 rounds:** R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt
-- **Next planned round:** R4 Architecture Challenge
+- **Current focus:** Day 1 Round 4 COMPLETE — BOT Architecture Challenge
+- **Latest artifact:** `research/issue-11/day-01-r4-bot-architecture-challenge.md`
+- **Completed Day 1 rounds:** R1 Discovery, R2 Independent Revalidation, R3 Gap Hunt, R4 Architecture Challenge
+- **Next planned round:** R5 Source Relationship Mapping
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -49,7 +49,8 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 1. Day 1 R1 — Discovery: **COMPLETE**
 2. Day 1 R2 — Independent Revalidation: **PASS**
 3. Day 1 R3 — Gap Hunt: **PASS**
-4. Next: Day 1 R4 — Architecture Challenge
+4. Day 1 R4 — Architecture Challenge: **PASS**
+5. Next: Day 1 R5 — Source Relationship Mapping
 3. Continue the 28-day Issue #11 research plan one day/question at a time
 4. Preserve daily evidence logs and explicit UNKNOWNs
 5. Complete Week 1 BOT → Week 2 NESDC/TPSO → Week 3 MOF/Customs → Week 4 validation/freeze
