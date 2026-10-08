@@ -15,6 +15,8 @@ Both are scoped to missing live evidence, not global blockers of the Issue #11 r
 **Resolution:** app/Statistics entitlement approved; credential supplied to a trusted secret-injected runner; exact safe request operation verified; one actual successful response captured as sanitized telemetry in a separate additive artifact, with CI/review as appropriate.
 **Non-goals:** no unauthorized account browsing, no secret inspection, no mock 200 and no production connector implementation.
 
+**Day-2 Gap #4 update (2026-10-09):** Research-only R3 offline harness was added, GitHub run 37828117237 passed 10/10 synthetic tests and a fail-closed OFFLINE receipt (0 real BOT HTTP and 0 actual credential access). Report research/issue-11/day-02-gap4-r3-offline-readiness.md. The first mock assertion failed on a common harmless field name; fixed with unique synthetic sentinel and test passed. No approved Application access, protected Environment/Secret store or privileged runner configured or verified. This does NOT close BOT-R3-CRED-01.
+
 ## BOT-R4-EGRESS-01 — Local DNS Prevents BOT Negative HTTP Observation
 **Status:** OPEN / SCOPED TO DAY 02 R4 provider HTTP negative tests.
 **Owner:** Research operator / authorized egress-runner/network administrator.
