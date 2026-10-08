@@ -33,7 +33,7 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Plan:** `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - **Window:** 2026-10-08 → 2026-11-04
 - **Last completed day:** Day 1 / Week 1 — FROZEN v1.1 / GATE PASS
-- **Current focus:** Day 2 R1 Authentication Discovery RECORDED; R2 NOT STARTED
+- **Current focus:** Day 2 R2 Authentication Revalidation RECORDED with corrections/UNKNOWNs; R3 NOT STARTED
 - **Recovery baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - **Machine baseline:** `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - **Evidence manifest:** `research/issue-11/day-01-official-evidence-manifest.json`
@@ -41,9 +41,10 @@ Implement a small, reliable set of official public-data connectors and prove ret
 - **Closure audit:** SELF-AUDIT PASS 10/10; independent semantic audit remains future validation
 - **Completed Day 1 rounds:** R1–R8
 - **Next planned day:** Day 2 — BOT Authentication & API Behavior
-- **Day 2 status:** R1 RECORDED / R2 NOT STARTED
+- **Day 2 status:** R1 + R2 RECORDED / R3 NOT STARTED / Day-02 Gate NOT ASSESSED
 - **Day 2 plan:** `research/issue-11/day-02-plan-only.md`
-- **Day 2 R1 artifact:** `research/issue-11/day-02-r1-bot-auth-discovery.md` (executed 2026-10-08)
+- **Day 2 R1 artifact:** `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
+- **Day 2 R2 artifacts:** `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `research/issue-11/day-02-r2-bot-auth-revalidation.json` (2026-10-08)
 - **Rule:** planned calendar end does not authorize Issue #11 closure; critical UNKNOWNs extend the research period.
 - **Implementation hold:** no production connector work until Issue #11 is evidence-complete.
 - **Calendar sync:** 28 daily research events + 1 window event created in Google Calendar (Asia/Bangkok).
@@ -55,13 +56,13 @@ https://github.com/nustanakritwithai/Thai-economic-/issues/11
 ## NOW
 1. Day 1 BOT Ecosystem Research: **FROZEN v1.1 / GATE PASS** (preserved)
 2. Closure Audit: **SELF-AUDIT PASS 10/10**; independent semantic review future validation
-3. Day 2 R1 Authentication Discovery: **RECORDED**; R2 **NOT STARTED**
-4. Next scheduled research: Day 2 — BOT Authentication & API Behavior; next exact round = R2 independent revalidation
+3. Day 2 R1: **RECORDED**; R2 **REVALIDATED WITH CORRECTIONS/UNKNOWNS**; R3 **NOT STARTED**
+4. Next scheduled research: Day 2 — BOT Authentication & API Behavior; next exact round = R3 safe positive test if legitimately credentialed
 5. Issue #11 remains OPEN
 6. Production connector implementation remains HOLD
 
 ## NEXT EXACT ACTION
-Day 2 R2 — independently revalidate R1's BOT Account → Product/Plan → Application → Approval → Token → Authorization documentation. R2 not started. Maintain implementation hold. Reference: `research/issue-11/day-02-r1-bot-auth-discovery.md`.
+Day 2 R3 — one safe positive BOT auth test only if legitimate credential is available. If unavailable: DOCUMENTED AUTH = PASS / LIVE AUTH TEST = BLOCKED. R3 NOT STARTED; no R4/connector/rate-limit test. R2: `research/issue-11/day-02-r2-bot-auth-revalidation.md`.
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof

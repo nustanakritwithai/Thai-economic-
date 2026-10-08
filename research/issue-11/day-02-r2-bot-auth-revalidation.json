@@ -1,0 +1,295 @@
+{
+  "version": 1,
+  "project": "Thailand Economic OS",
+  "issue": 11,
+  "release": "V0.2",
+  "day": 2,
+  "round": 2,
+  "actual_date": "2026-10-08",
+  "timezone": "Asia/Bangkok",
+  "scheduled_date": "2026-10-09",
+  "result": "COMPLETE_WITH_CORRECTIONS_AND_UNKNOWNS",
+  "independence": "FRESH_OFFICIAL_SOURCE_REVALIDATION_WITHIN_SAME_AGENT_NOT_THIRD_PARTY_AUDIT",
+  "limitations": [
+    "NO_IMMUTABLE_EXTERNAL_SNAPSHOTS",
+    "DYNAMIC_SPEC_EXTRACTION_LIMIT",
+    "NO_LIVE_AUTH",
+    "NO_CREDENTIAL_TESTS"
+  ],
+  "evidence": [
+    {
+      "id": "E01",
+      "url": "https://portal.api.bot.or.th/",
+      "scope": "current_portal",
+      "review_method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E02",
+      "url": "https://portal.api.bot.or.th/manual",
+      "scope": "manual",
+      "review_method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E03",
+      "url": "https://portal.api.bot.or.th/migration",
+      "scope": "migration",
+      "review_method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E04",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1",
+      "scope": "statistics_product",
+      "review_method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E05",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e2dcfd41460e49a86276db01aeb3cd1f/docs",
+      "scope": "observations_spec",
+      "review_method": "DYNAMIC_HTML_INDEXED_EXCERPT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E06",
+      "url": "https://portal.api.bot.or.th/portal/catalogue-products/statistics-1/e581631f50164ffc72525b11050b5744/docs",
+      "scope": "search_spec",
+      "review_method": "DYNAMIC_HTML_INDEXED_EXCERPT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E07",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%207-1.png",
+      "scope": "cart_image",
+      "review_method": "OFFICIAL_SCREENSHOT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E08",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%207-2.png",
+      "scope": "app_selection_image",
+      "review_method": "OFFICIAL_SCREENSHOT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E09",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%209.png",
+      "scope": "credential_image",
+      "review_method": "OFFICIAL_SCREENSHOT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E10",
+      "url": "https://portal.api.bot.or.th/assets/images/manual/Illustration%2010-1.png",
+      "scope": "postman_image",
+      "review_method": "OFFICIAL_SCREENSHOT",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    },
+    {
+      "id": "E11",
+      "url": "https://portal.api.bot.or.th/terms",
+      "scope": "terms",
+      "review_method": "DIRECT_HTML",
+      "checked_date": "2026-10-08",
+      "snapshot_checksum": null
+    }
+  ],
+  "claims": [
+    {
+      "topic": "account_registration",
+      "status": "CONFIRMED",
+      "evidence": [
+        "E01",
+        "E02"
+      ]
+    },
+    {
+      "topic": "product_plan",
+      "status": "CONFIRMED",
+      "evidence": [
+        "E02",
+        "E04"
+      ]
+    },
+    {
+      "topic": "cart_not_approval",
+      "status": "CONFIRMED",
+      "evidence": [
+        "E02",
+        "E07"
+      ]
+    },
+    {
+      "topic": "application_request",
+      "status": "CONFIRMED",
+      "evidence": [
+        "E02",
+        "E08"
+      ]
+    },
+    {
+      "topic": "existing_app_credential_reuse",
+      "status": "STILL_UNKNOWN",
+      "evidence": [
+        "E02",
+        "E08"
+      ]
+    },
+    {
+      "topic": "approved_token_visibility",
+      "status": "CONFIRMED_DOCUMENTED",
+      "evidence": [
+        "E02",
+        "E09"
+      ]
+    },
+    {
+      "topic": "token_copy_for_gateway",
+      "status": "CONFIRMED_DOCUMENTED",
+      "evidence": [
+        "E02",
+        "E10"
+      ]
+    },
+    {
+      "topic": "token_hash_runtime_role",
+      "status": "STILL_UNKNOWN",
+      "evidence": [
+        "E09",
+        "E10"
+      ]
+    },
+    {
+      "topic": "gateway_authorization",
+      "status": "CONFIRMED",
+      "evidence": [
+        "E01",
+        "E03"
+      ]
+    },
+    {
+      "topic": "indexed_api_key_header_example",
+      "status": "CONFIRMED_WITH_RENDER_CAVEAT",
+      "evidence": [
+        "E05",
+        "E06"
+      ]
+    },
+    {
+      "topic": "current_plan_display_2000_hour",
+      "status": "CONFIRMED_AS_DISPLAY",
+      "evidence": [
+        "E04"
+      ]
+    },
+    {
+      "topic": "manual_screenshot_rate_1000_minute",
+      "status": "CONFIRMED_AS_SCREENSHOT",
+      "evidence": [
+        "E07",
+        "E09"
+      ]
+    },
+    {
+      "topic": "rate_disagreement_cause",
+      "status": "STILL_UNKNOWN",
+      "evidence": [
+        "E04",
+        "E07",
+        "E09"
+      ]
+    },
+    {
+      "topic": "expiry_policy",
+      "status": "STILL_UNKNOWN",
+      "evidence": [
+        "E09"
+      ]
+    },
+    {
+      "topic": "bot_terms_access_secret_service_rights",
+      "status": "NEW_FINDING",
+      "evidence": [
+        "E11"
+      ]
+    }
+  ],
+  "corrections": [
+    {
+      "id": "R2-C01",
+      "topic": "existing_app",
+      "classification": "UI_TERMINOLOGY_AMBIGUITY",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "R2-C02",
+      "topic": "rate_limit_display",
+      "classification": "OFFICIAL_CONFIG_CONFLICT",
+      "status": "CAUSE_UNKNOWN",
+      "bot_unknown": "BOT-U06"
+    },
+    {
+      "id": "R2-C03",
+      "topic": "credential_labels",
+      "classification": "SEPARATE_UI_FIELDS",
+      "status": "PARTIALLY_RESOLVED_RUNTIME_UNKNOWN"
+    },
+    {
+      "id": "R2-C04",
+      "topic": "api_spec_extraction",
+      "classification": "EVIDENCE_LIMITATION",
+      "status": "RAW_SPEC_NOT_CAPTURED",
+      "bot_unknown": "BOT-U07"
+    },
+    {
+      "id": "R2-C05",
+      "topic": "cart_subscribe_vs_approval",
+      "classification": "WORKFLOW_STAGE",
+      "status": "CLARIFIED"
+    }
+  ],
+  "day2_unknowns": [
+    "D2-AUTH-U01",
+    "D2-AUTH-U02",
+    "D2-AUTH-U03",
+    "D2-AUTH-U04",
+    "D2-AUTH-U05",
+    "D2-AUTH-U06",
+    "D2-AUTH-U07",
+    "D2-AUTH-U08",
+    "D2-AUTH-U09",
+    "D2-AUTH-U10",
+    "D2-AUTH-U11"
+  ],
+  "day1_unknowns": [
+    "BOT-U01",
+    "BOT-U02",
+    "BOT-U03",
+    "BOT-U04",
+    "BOT-U05",
+    "BOT-U06",
+    "BOT-U07",
+    "BOT-U08",
+    "BOT-U09"
+  ],
+  "next_round": 3,
+  "next_round_status": "NOT_STARTED",
+  "live_auth_test": "NOT_PERFORMED",
+  "day2_gate": "NOT_ASSESSED",
+  "production_connector": "HOLD",
+  "issue_status": "OPEN",
+  "next_action": "Day 2 R3 positive auth test with legitimate credential only; if none record DOCUMENTED AUTH PASS / LIVE AUTH BLOCKED",
+  "rule": "UNKNOWN != PASS"
+}

@@ -63,7 +63,7 @@ This is the single current execution entry point.
 
 - Planned window: **2026-10-08 → 2026-11-04**
 - Last completed day: **Day 1 / Week 1 — FROZEN v1.1 / GATE PASS**
-- Current focus: **Day 2 R1 Authentication Discovery RECORDED; R2 NOT STARTED**
+- Current focus: **Day 2 R2 Authentication Revalidation RECORDED with corrections/UNKNOWNs; R3 NOT STARTED**
 - Recovery baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.md`
 - Machine baseline: `research/issue-11/day-01-bot-ecosystem-FROZEN-v1.1.json`
 - Evidence manifest: `research/issue-11/day-01-official-evidence-manifest.json`
@@ -71,9 +71,11 @@ This is the single current execution entry point.
 - Closure audit: **SELF-AUDIT PASS 10/10**; independent semantic audit remains future validation
 - Day 1 rounds complete: **R1–R8**
 - Next planned day: **Day 2 — BOT Authentication & API Behavior**
-- Day 2 status: **R1 RECORDED / R2 NOT STARTED**
+- Day 2 status: **R1 + R2 RECORDED / R3 NOT STARTED / GATE NOT ASSESSED**
 - Day 2 plan: `research/issue-11/day-02-plan-only.md`
-- Day 2 R1 evidence: `research/issue-11/day-02-r1-bot-auth-discovery.md` (executed 2026-10-08 after handoff authorization; calendar day 2026-10-09 remains a scheduling aid)
+- Day 2 R1 evidence: `research/issue-11/day-02-r1-bot-auth-discovery.md` (2026-10-08)
+- Day 2 R2 evidence: `research/issue-11/day-02-r2-bot-auth-revalidation.md` and `.json` (2026-10-08; corrections and UNKNOWNs explicit)
+- Day 2 calendar date 2026-10-09 remains advisory, not a gate.
 - Canonical plan: `docs/V0.2_ISSUE11_28_DAY_RESEARCH_PLAN.md`
 - Calendar: **SYNCED** — Day 1–28 are scheduled as individual all-day project events in Asia/Bangkok, plus one 28-day research-window event.
 - Extension is allowed. Calendar completion does not equal research PASS.
@@ -106,7 +108,7 @@ A V0.2 connector is not complete until it proves:
 - CI evidence.
 
 ## NEXT EXACT ACTION
-Day 2 R1 BOT Authentication Discovery is recorded. Next exact round: **R2 independent revalidation ONLY** (not started). Verify the R1 official Account/Product/Plan/App/Approval/Token/Authorization relationships; explicitly retain UNKNOWN. No live auth tests or production connector work.
+Day 2 R2 revalidation is recorded. **Next round R3 (NOT STARTED):** attempt one safe BOT positive authentication test only with a legitimately approved credential and secure handling. If unavailable, mark DOCUMENTED AUTH = PASS / LIVE AUTH TEST = BLOCKED. No R4, no connector implementation, no rate-limit stress test.
 
 ## DO NOT DO YET
 - Full V0.3 normalization engine
