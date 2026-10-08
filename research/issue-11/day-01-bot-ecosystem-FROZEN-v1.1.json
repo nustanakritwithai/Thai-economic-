@@ -1,0 +1,89 @@
+{
+  "profile_version": "DAY1-FROZEN-v1.1",
+  "predecessor": "research/issue-11/day-01-bot-ecosystem-FROZEN-v1.md",
+  "provider": "BOT",
+  "freeze_date": "2026-10-08",
+  "post_freeze_hardening_date": "2026-10-08",
+  "scope": "ecosystem_understanding",
+  "status": "GATE_PASS",
+  "closure_audit": {
+    "status": "PASS_10_OF_10",
+    "kind": "SAME_AGENT_RECOVERY_SELF_AUDIT",
+    "independent_semantic_certification": false
+  },
+  "evidence_manifest": "research/issue-11/day-01-official-evidence-manifest.json",
+  "machine_access": {
+    "portal": "https://portal.api.bot.or.th/",
+    "gateway": "https://gateway.api.bot.or.th/",
+    "product": "Statistics",
+    "apis": [
+      "categorylist",
+      "search-series",
+      "observations"
+    ]
+  },
+  "identifier_namespaces": [
+    "BOT:product",
+    "BOT:api",
+    "BOT:api_series",
+    "BOT:table_code",
+    "BOT:report_id",
+    "ThailandOS:canonical_series"
+  ],
+  "unknowns": [
+    {
+      "id": "BOT-U01",
+      "topic": "Statistics API list direct URL/file type/schema",
+      "closure_route": "Day 3 targeted discovery / later targeted gap work"
+    },
+    {
+      "id": "BOT-U02",
+      "topic": "Exact PCI total API series code",
+      "closure_route": "Day 3 + Day 5"
+    },
+    {
+      "id": "BOT-U03",
+      "topic": "Exact live observations response schema",
+      "closure_route": "Day 4"
+    },
+    {
+      "id": "BOT-U04",
+      "topic": "Revision/release metadata in observations API",
+      "closure_route": "Day 4 + Day 6"
+    },
+    {
+      "id": "BOT-U05",
+      "topic": "BTWS row/table to API series mapping",
+      "closure_route": "Day 3/5/6"
+    },
+    {
+      "id": "BOT-U06",
+      "topic": "Rate-limit enforcement scope/live throttling",
+      "closure_route": "Day 2"
+    },
+    {
+      "id": "BOT-U07",
+      "topic": "Stable API spec export URL/history/changelog",
+      "closure_route": "Day 2/3 targeted inspection or implementation evidence"
+    },
+    {
+      "id": "BOT-U08",
+      "topic": "CSV/XLS equivalence to API fallback",
+      "closure_route": "Day 5/6 or later proof"
+    },
+    {
+      "id": "BOT-U09",
+      "topic": "API series-code lifecycle",
+      "closure_route": "Day 6 or explicit BOT evidence"
+    }
+  ],
+  "next_day": {
+    "day": 2,
+    "title": "BOT Authentication & API Behavior",
+    "status": "PLANNED_ONLY_NOT_STARTED"
+  },
+  "implementation_hold": true,
+  "cross_provider_generalization": "UNPROVEN",
+  "external_source_snapshot_checksums": "NOT_YET_GUARANTEED",
+  "rule": "UNKNOWN != PASS"
+}
