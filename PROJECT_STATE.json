@@ -9,7 +9,7 @@
   "active_issue_url": "https://github.com/nustanakritwithai/Thai-economic-/issues/11",
   "status": "ACTIVE_DEEP_RESEARCH",
   "current_gate": "Issue #11 Deep Research — P0 Source Inventory",
-  "next_exact_action": "Keep Day 2 as plan only. Day 1 post-freeze hardening is complete; next execution, when explicitly authorized, is Day 2 — BOT Authentication & API Behavior.",
+  "next_exact_action": "Keep Day 2 as plan only. Review/repair Day-1 post-freeze limitations only; start Day 2 execution only after explicit authorization.",
   "blocked": false,
   "blockers": [],
   "previous_release": "V0.1",
@@ -72,5 +72,6 @@
   "day_01_limitations_review": "research/issue-11/day-01-limitations-review.md",
   "day_01_evidence_manifest": "research/issue-11/day-01-official-evidence-manifest.json",
   "day_02_status": "PLANNED_ONLY_NOT_STARTED",
-  "verification_semantics": "last_verified_* records the most recent repository head verified before the current metadata commit; current-head truth is GitHub Actions."
+  "verification_semantics": "last_verified_* records the most recent repository head verified before the current metadata commit; current-head truth is GitHub Actions.",
+  "day_02_plan_ref": "research/issue-11/day-02-plan-only.md"
 }
