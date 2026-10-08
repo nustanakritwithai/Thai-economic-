@@ -47,19 +47,12 @@ Implement a small, reliable set of official public-data connectors and prove ret
 https://github.com/nustanakritwithai/Thai-economic-/issues/11
 
 ## NOW
-1. Day 1 R1 — Discovery: **COMPLETE**
-2. Day 1 R2 — Independent Revalidation: **PASS**
-3. Day 1 R3 — Gap Hunt: **PASS**
-4. Day 1 R4 — Architecture Challenge: **PASS**
-5. Day 1 R5 — Source Relationship Mapping: **PASS**
-6. Day 1 R6 — Evidence Hardening: **PASS**
-7. Day 1 R7 — Contradiction Resolution: **PASS**
-8. Next: Day 1 R8 — Freeze
-7. Continue the 28-day Issue #11 research plan one round/question at a time
-8. Preserve daily evidence logs and explicit UNKNOWNs
-9. Complete Week 1 BOT → Week 2 NESDC/TPSO → Week 3 MOF/Customs → Week 4 validation/freeze
-10. Do not define/implement the production connector until Issue #11 is complete
-11. If Day 28 still has critical UNKNOWNs, extend Issue #11 instead of forcing PASS
+1. Day 1 BOT Ecosystem Research: **FROZEN v1 / GATE PASS**
+2. Closure Audit: **PASS 10/10**
+3. STOP current work block at Day 1 boundary
+4. Next scheduled research: Day 2 — BOT Authentication & API Behavior
+5. Issue #11 remains OPEN
+6. Production connector implementation remains HOLD
 
 ## CURRENT GATE — V0.2
 - [ ] BOT connector proof
